@@ -9,7 +9,14 @@
 :root {
     --max-container-width: 124rem;
     --content-padding: 2rem;
-    --primary-color: #13B17C;
+    --primary-color: #12214D;
+    --blue: #295F98;
+    --gray: #333333;
+    --white: #FFFFFF;
+    --gray-blue: #EDF3FB;
+    --soft-red: #EA7464;
+    --jost: 'Jost', sans-serif;
+    --nurito: 'Nunito', sans-serif;
 }
 
 html {
@@ -28,7 +35,8 @@ body {
     display: flex;
     flex-direction: column;
     font-family: sans-serif;
-    color: black;
+    font-family: var(--nurito);
+    color: var(--gray);
 }
 
 main {
