@@ -1243,8 +1243,8 @@ select:-webkit-autofill:focus {
   color: var(--soft-red);
   -webkit-box-shadow: inset 0px 0px 0px 1px var(--soft-red);
           box-shadow: inset 0px 0px 0px 1px var(--soft-red);
-  -webkit-mask: url("/img/button-sprite.webp");
-          mask: url("/img/button-sprite.webp");
+  -webkit-mask: url("../img/button-sprite.webp");
+          mask: url("../img/button-sprite.webp");
   -webkit-mask-size: 3000% 100%;
           mask-size: 3000% 100%;
   -webkit-mask-position: 100% 0;

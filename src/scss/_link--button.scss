@@ -36,7 +36,7 @@
   background-color: var(--white);
   color: var(--soft-red);
   box-shadow: inset 0px 0px 0px 1px var(--soft-red);
-  mask: url("/img/button-sprite.webp");
+  mask: url("../img/button-sprite.webp");
   mask-size: 3000% 100%;
   mask-position: 100% 0;
   animation: link--button-anim2 0.8s steps(29) forwards;
