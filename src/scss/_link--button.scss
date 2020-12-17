@@ -1,0 +1,61 @@
+.link--button {
+  position: relative;
+  display: inline-block;
+  font-family: var(--jost);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2.3rem;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: var(--white);
+  border-radius: 1.1rem;
+  cursor: pointer;
+  overflow: hidden;
+  &:link {
+    color: var(--soft-red);
+  }
+  &:hover {
+    .link--button__text--for {
+      animation-name: link--button-anim;
+    }
+  }
+}
+.link--button__text {
+  padding: 2rem 2.6rem;
+  display: block;
+  border-radius: 1.1rem;
+}
+.link--button__text--bg {
+  position: absolute;
+  background-color: var(--soft-red);
+  color: var(--white);
+}
+.link--button__text--for {
+  position: relative;
+  background-color: var(--white);
+  color: var(--soft-red);
+  box-shadow: inset 0px 0px 0px 1px var(--soft-red);
+  mask: url("/img/button-sprite.webp");
+  mask-size: 3000% 100%;
+  mask-position: 100% 0;
+  animation: link--button-anim2 0.8s steps(29) forwards;
+}
+@keyframes link--button-anim {
+  from {
+   mask-position: 100% 0;
+  }
+ 
+  to {
+   mask-position: 0 0;
+  }
+ }
+ @keyframes link--button-anim2 {
+ from {
+  mask-position: 0 0;
+ }
+
+ to {
+  mask-position: 100% 0;
+ }
+}

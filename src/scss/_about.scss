@@ -1,9 +1,20 @@
 .about {
+  overflow: hidden;
   background-color: var(--gray-blue);
 }
 .about__container {
   padding-top: 13rem;
-  display: flex;
+  padding-bottom: 13rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 8.6rem;
+
+  @include breakpoint (mobile) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    grid-template-columns: 1fr;
+    grid-gap: 4rem;
+  }
 }
 .about__header {
   font-family: var(--jost);
@@ -13,54 +24,82 @@
 }
 .about__header-text {
   display: block;
+  font-style: italic;
 }
 .about__header-text--large {
   font-size: 6.2rem;
-  line-height: 9rem;
+  line-height: 146%;
+
+  @include breakpoint (mobile) {
+    font-size: 3rem;
+  }
 }
 .about__header-text--small {
   font-size: 2rem;
-  line-height: 2.6rem;
+  line-height: 130%;
+
+  @include breakpoint (mobile) {
+    font-size: 1.3rem;
+  }
 }
 .about__text {
   padding: 5.4rem 0 3.6rem;
   font-size: 2rem;
-  line-height: 2.6rem;
-}
-
-.link--button {
-  display: inline-block;
-  padding: 2rem 2.6rem;
-  font-family: var(--jost);
-  font-weight: 700;
-  font-size: 1.6rem;
-  line-height: 2.3rem;
-  text-align: center;
-  text-transform: uppercase;
-  background-color: var(--soft-red);
-  border-radius: 1.1rem;
-  cursor: pointer;
-  transition: 0.15s ease-in-out;
-  &:link {
-    color: var(--white);
-  }
-  &:hover {
-    background-color: var(--primary-color);
-  }
-}
-.about__description-container,
-.about__video-container {
-  flex: 1 50%;
+  line-height: 130%;
 }
 .about__video-container {
   position: relative;
+}
+.about__video-preview {
+  height: 36rem;
+  display: block;
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+
+  &:hover {
+    .about__video-preview-mask {
+      opacity: 0;
+    }
+  }
+
+  @include breakpoint (mobile) {
+    height: 28rem;
+  }
 }
 .about__video-bg {
-  width: 120%;
-  max-width: 120%;
+  width: 140%;
+  max-width: 140%;
   position: absolute;
-  transform: translateX(var(--content-padding));
+  transform: translateX(-10%);
 }
 .about__video {
+  width: 100%;
+  height: 100%;
   position: relative;
+  @include objectFitCover;
+}
+.about__video-preview-mask {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(0deg, rgba(18, 33, 77, 0.11), rgba(18, 33, 77, 0.11));
+  transition: 0.25s ease-in-out;
+}
+.about__video-play-button {
+  width: 10.6rem;
+  height: 10.6rem;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  @include breakpoint (mobile) {
+    width: 7rem;
+    height: 7rem;
+  }
 }
