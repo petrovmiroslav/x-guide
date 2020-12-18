@@ -1,0 +1,127 @@
+.form-section {
+  position: relative;
+  overflow: hidden;
+}
+.form-section__bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  @include objectFitCoverTop;
+}
+.form-section__container {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+// .form-section__headers-container,
+// .form-section__form-container {
+//   flex: 1 50%;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+// }
+.contacts__form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+
+  @include breakpoint(mobile) {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      align-items: initial;
+  }
+}
+.form-section__header {
+  padding-top: 2.2rem;
+  padding-bottom: 2.2rem;
+  font-family: var(--jost);
+  font-style: italic;
+  font-weight: 900;
+  font-size: 6.2rem;
+  line-height: 110%;
+  color: var(--white);
+}
+.form-section__header-description {
+  padding-top: 2.2rem;
+  padding-bottom: 2.2rem;
+  font-family: var(--nunito);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2rem;
+  line-height: 125%;
+  color: var(--white);
+}
+
+.contacts__form-content {
+  max-width: 42rem;
+  margin-left: auto;
+  background-color: var(--white);
+  box-shadow: 0 0.4rem 2.5rem rgba(239, 239, 239, 0.5);
+  border-radius: 1rem;
+  position: relative;
+}
+.franchise-contact__form {
+  padding: 4rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-gap: 3rem;
+
+  .parsley-errors-list.filled {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      color: var(--soft-red);
+  }
+
+  @include breakpoint(mobile) {
+      padding: 2.4rem;
+      grid-gap: 2rem;
+  }
+}
+.contacts__form-heading {
+  margin-bottom: 1.8rem;
+
+  font-family: var(--jost);
+  font-style: italic;
+  font-weight: 900;
+  font-size: 2.6rem;
+  line-height: 123%;
+  text-transform: uppercase;
+  color: var(--primary-color);
+
+  @include breakpoint(mobile) {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+  }
+}
+.franchise-contact__form-input {
+  height: 6.8rem;
+  padding: 0 3rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(18, 35, 77, 0.2);
+
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.4rem;
+  line-height: 143%;
+  color: var(--primary-color);
+  
+  @include placeholder {
+    opacity: 0.6;
+  }
+
+  @include breakpoint(mobile) {
+      font-size: 1.6rem;
+      padding: 0 2rem;
+      height: 5rem;
+  }
+}
+
+textarea.franchise-contact__form-input {
+  height: 14rem;
+  padding: 1.4rem 3rem;
+}
