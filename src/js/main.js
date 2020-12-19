@@ -1,5 +1,6 @@
 import polyfills from './polyfills';
 import detectTouch from './detectTouch';
+import './about-fadeout';
 import MainAccordion from './accordion';
 import './form-section-parallax';
 import PhoneMask from './phoneMask';

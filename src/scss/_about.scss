@@ -1,6 +1,9 @@
 .about {
   overflow: hidden;
   background-color: var(--gray-blue);
+
+  /* delete */
+  margin-top: 100vh;
 }
 .about__container {
   padding-top: 13rem;
@@ -16,11 +19,20 @@
     grid-gap: 4rem;
   }
 }
+.about__header,
+.about__text,
+.about__link {
+  opacity: 0;
+  visibility: hidden;
+}
 .about__header {
   font-family: var(--jost);
   font-weight: 900;
   text-transform: uppercase;
   color: var(--primary-color);
+
+  opacity: 0;
+  visibility: hidden;
 }
 .about__header-text {
   display: block;
