@@ -1,3 +1,8 @@
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 let animating = false;
 
 function openAccordeon(element) {
@@ -13,7 +18,8 @@ function openAccordeon(element) {
         element.style.maxHeight = 'none';
         element.removeEventListener('transitionend', transitionEndHandler);
         animating = false;
-        // ScrollTrigger.refresh(true);
+        console.log(ScrollTrigger)
+        ScrollTrigger.refresh(true);
     };
     element.addEventListener('transitionend', transitionEndHandler);
     element.style.maxHeight = `${computedHeight}`;
@@ -28,7 +34,7 @@ function closeAccordeon(element) {
 
     element.style.maxHeight = '';
 
-    // ScrollTrigger.refresh(true);
+    ScrollTrigger.refresh(true);
 }
 
 export default function(accordionElements, openFirst = false) {
