@@ -1,8 +1,9 @@
 import polyfills from './polyfills';
 import detectTouch from './detectTouch';
-import './about-fadeout';
+import AboutTextFadeout from './about-fadeout';
+import ReviewsSlider from './reviews-slider';
 import MainAccordion from './accordion';
-import './form-section-parallax';
+import FormBGParallax from './form-section-parallax';
 import PhoneMask from './phoneMask';
 import Validation from './validation';
 
@@ -10,7 +11,10 @@ document.addEventListener('DOMContentLoaded', function() {
     polyfills();
     detectTouch();
 
+    AboutTextFadeout();
+    ReviewsSlider();
     MainAccordion();
+    FormBGParallax();
     PhoneMask();
     Validation();
 });

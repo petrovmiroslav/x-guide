@@ -83,10 +83,24 @@
 
 
       <h3 class="gallery-reviews__header reviews__header">Отзывы</h3>
-      <div class="reviews__grid">
-        <div class="reviews__slider">
+      <div class="reviews__grid js-reviews-slider">
+        {{!-- <div class="reviews__slider">
           <div class="reviews__slider-item slider__item">
             <img class="slider__item-bg-img" src="./img/review-img-1.webp" alt="review-img">
+          </div>
+        </div> --}}
+        <div class="swiper-container reviews__slider">
+          <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="#" class="reviews__slider-item slider__item">
+                  <img class="slider__item-bg-img" src="./img/review-img-1.webp" alt="review-img">
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="reviews__slider-item slider__item">
+                  <img class="slider__item-bg-img" src="./img/gallery__item-2.jpg" alt="review-img">
+                </a>
+              </div>
           </div>
         </div>
         <div class="reviews__slider-nav-buttons-container">

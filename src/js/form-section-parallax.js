@@ -3,13 +3,15 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-ScrollTrigger.create({
-  trigger: '.form-section',
-  start: 'top 100%',
-  end: 'top 40%',
-  scrub: 1,
-  animation: gsap.fromTo(
-    '.form-section__bg',
-    { yPercent: 100 },
-    { yPercent: 0 }),
-});
+export default function FormBGParallax () {
+  ScrollTrigger.create({
+    trigger: '.form-section',
+    start: 'top 100%',
+    end: 'top 40%',
+    scrub: 1,
+    animation: gsap.fromTo(
+      '.form-section__bg',
+      { yPercent: 100 },
+      { yPercent: 0 }),
+  });
+}
