@@ -1217,7 +1217,6 @@ select:-webkit-autofill:focus {
   line-height: 2.3rem;
   text-align: center;
   text-transform: uppercase;
-  background-color: var(--white);
   border-radius: 1.1rem;
   cursor: pointer;
   overflow: hidden; }
@@ -1837,24 +1836,24 @@ select:-webkit-autofill:focus {
   font-family: 'object-fit: cover; object-position: center top;'; }
 
 .form-section__container {
-  min-height: 100vh;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
+  padding-top: 18rem;
+  padding-bottom: 20rem;
+  position: relative; }
+  @media only screen and (max-width: 767px) {
+    .form-section__container {
+      padding-top: 8rem;
+      padding-bottom: 10rem; } }
 
-.contacts__form-row {
+.form-section__form-row {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
   @media only screen and (max-width: 767px) {
-    .contacts__form-row {
+    .form-section__form-row {
       grid-template-columns: repeat(1, minmax(0, 1fr));
+      grid-gap: 3rem;
       -webkit-box-align: initial;
           -ms-flex-align: initial;
               align-items: initial; } }
@@ -1868,6 +1867,9 @@ select:-webkit-autofill:focus {
   font-size: 6.2rem;
   line-height: 110%;
   color: var(--white); }
+  @media only screen and (max-width: 767px) {
+    .form-section__header {
+      font-size: 4rem; } }
 
 .form-section__header-description {
   padding-top: 2.2rem;
@@ -1878,42 +1880,46 @@ select:-webkit-autofill:focus {
   font-size: 2rem;
   line-height: 125%;
   color: var(--white); }
+  @media only screen and (max-width: 767px) {
+    .form-section__header-description {
+      font-size: 1.6rem; } }
 
-.contacts__form-content {
+.form-section__form-content {
   max-width: 42rem;
   margin-left: auto;
   position: relative;
   overflow: hidden;
   background-color: var(--white);
-  -webkit-box-shadow: 0 0.4rem 2.5rem rgba(239, 239, 239, 0.5);
-          box-shadow: 0 0.4rem 2.5rem rgba(239, 239, 239, 0.5);
   border-radius: 1rem; }
+  @media only screen and (max-width: 767px) {
+    .form-section__form-content {
+      margin-right: auto; } }
 
-.contacts__form-bg {
+.form-section__form-bg {
   width: 120%;
   max-width: unset;
   position: absolute;
   bottom: 0;
   -webkit-transform: translate(10%, 20%);
           transform: translate(10%, 20%);
-  opacity: 0.15; }
+  opacity: 0.25; }
 
-.franchise-contact__form {
+.form-section__form {
   padding: 4rem;
   position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  grid-gap: 1.5rem; }
-  .franchise-contact__form .parsley-errors-list.filled {
-    margin-top: 1rem;
+  grid-gap: 2.5rem; }
+  .form-section__form .parsley-errors-list.filled {
+    margin-top: 0.5rem;
     font-size: 1.2rem;
-    color: var(--soft-red); }
+    color: var(--soft-red);
+    position: absolute; }
   @media only screen and (max-width: 767px) {
-    .franchise-contact__form {
-      padding: 2.4rem;
-      grid-gap: 2rem; } }
+    .form-section__form {
+      padding: 2.4rem 2.4rem 3.4rem; } }
 
-.contacts__form-heading {
+.form-section__form-heading {
   padding-bottom: 1rem;
   font-family: var(--jost);
   font-style: italic;
@@ -1923,10 +1929,13 @@ select:-webkit-autofill:focus {
   text-transform: uppercase;
   color: var(--primary-color); }
   @media only screen and (max-width: 767px) {
-    .contacts__form-heading {
+    .form-section__form-heading {
       font-size: 2.2rem; } }
 
-.franchise-contact__form-input {
+.form-section__form-group {
+  position: relative; }
+
+.form-section__form-input {
   height: 6rem;
   padding: 0 2rem;
   border-radius: 1rem;
@@ -1937,24 +1946,24 @@ select:-webkit-autofill:focus {
   font-size: 1.4rem;
   line-height: 143%;
   color: var(--primary-color); }
-  .franchise-contact__form-input::-webkit-input-placeholder {
+  .form-section__form-input::-webkit-input-placeholder {
     opacity: 0.6; }
-  .franchise-contact__form-input:-moz-placeholder {
+  .form-section__form-input:-moz-placeholder {
     opacity: 0.6; }
-  .franchise-contact__form-input::-moz-placeholder {
+  .form-section__form-input::-moz-placeholder {
     opacity: 0.6; }
-  .franchise-contact__form-input:-ms-input-placeholder {
+  .form-section__form-input:-ms-input-placeholder {
     opacity: 0.6; }
   @media only screen and (max-width: 767px) {
-    .franchise-contact__form-input {
+    .form-section__form-input {
       font-size: 1.6rem;
       height: 5rem; } }
 
-textarea.franchise-contact__form-input {
+textarea.form-section__form-input {
   height: 10rem;
   padding: 1.4rem 2rem; }
 
-.franchise-contact__form-checkbox {
+.form-section__form-checkbox {
   max-width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1974,11 +1983,11 @@ textarea.franchise-contact__form-input {
   line-height: 120%;
   color: var(--primary-color); }
   @media only screen and (max-width: 767px) {
-    .franchise-contact__form-checkbox {
+    .form-section__form-checkbox {
       font-size: 1.2rem;
       line-height: 1.2; } }
 
-.franchise-contact__form-checkbox-input {
+.form-section__form-checkbox-input {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -1989,7 +1998,7 @@ textarea.franchise-contact__form-input {
   width: 1px;
   white-space: nowrap; }
 
-.franchise-contact__form-checkbox-mark {
+.form-section__form-checkbox-mark {
   width: 1.6rem;
   height: 1.6rem;
   position: relative;
@@ -2002,7 +2011,7 @@ textarea.franchise-contact__form-input {
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
   opacity: 0.4; }
-  .franchise-contact__form-checkbox-mark::before {
+  .form-section__form-checkbox-mark::before {
     content: '';
     position: absolute;
     left: 50%;
@@ -2017,19 +2026,19 @@ textarea.franchise-contact__form-input {
     transition: opacity 0.2s;
     opacity: 0; }
     @media only screen and (max-width: 767px) {
-      .franchise-contact__form-checkbox-mark::before {
+      .form-section__form-checkbox-mark::before {
         width: 50%;
         height: 50%; } }
 
-.franchise-contact__form-checkbox-text {
+.form-section__form-checkbox-text {
   opacity: 0.5; }
 
-.franchise-contact__form-checkbox-input:checked ~ .franchise-contact__form-checkbox-mark::before {
+.form-section__form-checkbox-input:checked ~ .form-section__form-checkbox-mark::before {
   opacity: 1; }
 
-.form__submit {
+.form-section__submit {
   width: 100%;
-  margin-top: 2rem;
-  margin-bottom: .5rem; }
-  .form__submit .link--button__text {
+  padding-top: 2rem;
+  padding-bottom: .5rem; }
+  .form-section__submit .link--button__text {
     width: 100%; }

@@ -99,6 +99,7 @@ gulp.task('serve', function () {
         server: 'build/',
         port: 7000,
         ghostMode: false,
+        open: false,
     });
     gulp.watch(['./src/**/*.hbs', './src/pages/data**/*.json'], gulp.series('handlebars'));
 

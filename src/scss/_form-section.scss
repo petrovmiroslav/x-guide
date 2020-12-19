@@ -13,26 +13,24 @@
   @include objectFitCoverTop;
 }
 .form-section__container {
-  min-height: 100vh;
+  padding-top: 18rem;
+  padding-bottom: 20rem;
   position: relative;
-  display: flex;
-  align-items: center;
+
+  @include breakpoint(mobile) {
+    padding-top: 8rem;
+    padding-bottom: 10rem;
+  }
 }
-// .form-section__headers-container,
-// .form-section__form-container {
-//   flex: 1 50%;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-// }
-.contacts__form-row {
+.form-section__form-row {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: center;
 
   @include breakpoint(mobile) {
-      grid-template-columns: repeat(1, minmax(0, 1fr));
-      align-items: initial;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-gap: 3rem;
+    align-items: initial;
   }
 }
 .form-section__header {
@@ -44,6 +42,10 @@
   font-size: 6.2rem;
   line-height: 110%;
   color: var(--white);
+
+  @include breakpoint(mobile) {
+    font-size: 4rem;
+  }
 }
 .form-section__header-description {
   padding-top: 2.2rem;
@@ -54,44 +56,51 @@
   font-size: 2rem;
   line-height: 125%;
   color: var(--white);
+
+  @include breakpoint(mobile) {
+    font-size: 1.6rem;
+  }
 }
 
-.contacts__form-content {
+.form-section__form-content {
   max-width: 42rem;
   margin-left: auto;
   position: relative;
   overflow: hidden;
   background-color: var(--white);
-  box-shadow: 0 0.4rem 2.5rem rgba(239, 239, 239, 0.5);
   border-radius: 1rem;
+
+  @include breakpoint(mobile) {
+    margin-right: auto;
+  }
 }
-.contacts__form-bg {
+.form-section__form-bg {
   width: 120%;
   max-width: unset;
   position: absolute;
   bottom: 0;
   transform: translate(10%, 20%);
-  opacity: 0.15;
+  opacity: 0.25;
 }
-.franchise-contact__form {
+.form-section__form {
   padding: 4rem;
   position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  grid-gap: 1.5rem;
+  grid-gap: 2.5rem;
 
   .parsley-errors-list.filled {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     font-size: 1.2rem;
     color: var(--soft-red);
+    position: absolute;
   }
 
   @include breakpoint(mobile) {
-    padding: 2.4rem;
-    grid-gap: 2rem;
+    padding: 2.4rem 2.4rem 3.4rem;
   }
 }
-.contacts__form-heading {
+.form-section__form-heading {
   padding-bottom: 1rem;
   font-family: var(--jost);
   font-style: italic;
@@ -105,7 +114,10 @@
     font-size: 2.2rem;
   }
 }
-.franchise-contact__form-input {
+.form-section__form-group {
+  position: relative;
+}
+.form-section__form-input {
   height: 6rem;
   padding: 0 2rem;
   border-radius: 1rem;
@@ -128,12 +140,12 @@
   }
 }
 
-textarea.franchise-contact__form-input {
+textarea.form-section__form-input {
   height: 10rem;
   padding: 1.4rem 2rem;
 }
 
-.franchise-contact__form-checkbox {
+.form-section__form-checkbox {
   max-width: 90%;
   display: flex;
   align-items: flex-start;
@@ -152,11 +164,11 @@ textarea.franchise-contact__form-input {
   }
 }
 
-.franchise-contact__form-checkbox-input {
+.form-section__form-checkbox-input {
   @include visuallyHidden();
 }
 
-.franchise-contact__form-checkbox-mark {
+.form-section__form-checkbox-mark {
   width: 1.6rem;
   height: 1.6rem;
   position: relative;
@@ -189,17 +201,17 @@ textarea.franchise-contact__form-input {
   }
 }
 
-.franchise-contact__form-checkbox-text {
+.form-section__form-checkbox-text {
   opacity: 0.5;
 }
 
-.franchise-contact__form-checkbox-input:checked ~ .franchise-contact__form-checkbox-mark::before {
+.form-section__form-checkbox-input:checked ~ .form-section__form-checkbox-mark::before {
   opacity: 1;
 }
-.form__submit {
+.form-section__submit {
   width: 100%;
-  margin-top: 2rem;
-  margin-bottom: .5rem;
+  padding-top: 2rem;
+  padding-bottom: .5rem;
 
   & .link--button__text {
     width: 100%;
