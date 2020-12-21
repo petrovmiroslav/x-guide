@@ -1,6 +1,7 @@
 import polyfills from './polyfills';
 import detectTouch from './detectTouch';
 import AboutTextFadeout from './about-fadeout';
+import TeamSlider from './team-slider';
 import ReviewsSlider from './reviews-slider';
 import MainAccordion from './accordion';
 import FormBGParallax from './form-section-parallax';
@@ -12,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     detectTouch();
 
     AboutTextFadeout();
+    TeamSlider();
     ReviewsSlider();
     MainAccordion();
     FormBGParallax();

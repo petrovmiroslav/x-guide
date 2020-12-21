@@ -12,7 +12,7 @@ export default function ReviewsSlider () {
       updateOnWindowResize: true,
       speed: 700,
       loop: true,
-      loopedSlides: 10,
+      loopedSlides: 3,
       effect: 'fade',
       fadeEffect: {
         crossFade: true,
