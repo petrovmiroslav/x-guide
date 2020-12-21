@@ -9,24 +9,17 @@ export default function ReviewsSlider () {
     const container = element.querySelector('.swiper-container');
 
     new Swiper(container, {
-        // watchOverflow: true,
-        // slidesPerView: 'auto',
-        speed: 700,
-        // centeredSlides: true,
-        loop: true,
-        // loopedSlides: 1,
-        effect: 'fade',
-        fadeEffect: {
-          crossFade: true,
-        },
-        navigation: {
-            nextEl: element.querySelector('.slider__nav-button--next'),
-            prevEl: element.querySelector('.slider__nav-button--prev')
-        },
-
-
-        /* updateOnWindowResize: true, */
-        /* virtualTranslate: true, */
+      updateOnWindowResize: true,
+      speed: 700,
+      loop: true,
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true,
+      },
+      navigation: {
+        nextEl: element.querySelector('.slider__nav-button--next'),
+        prevEl: element.querySelector('.slider__nav-button--prev'),
+      },
     });
   })
 }
