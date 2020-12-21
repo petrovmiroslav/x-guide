@@ -7,19 +7,6 @@
 .accordion__item {
   max-width: 103rem;
   padding-bottom: 4rem;
-
-  &.active {
-    .accordion__item-button-icon {
-      transform: rotate(180deg);
-    }
-
-    .accordion__item-button-text--open {
-      display: none;
-    }
-    .accordion__item-button-text--close {
-      display: inline-block;
-    }
-  }
 }
 .accordion__item-header {
   max-width: 90%;
@@ -46,6 +33,7 @@
 }
 .accordion__item-text--hidden {
   max-height: 0;
+  margin-bottom: 0;
   overflow: hidden;
   transition: max-height .4s ease-in-out;
 }
@@ -71,12 +59,24 @@
   line-height: 120%;
   color: var(--gray);
 }
+.accordion__item-button-text--open {
+  .accordion__item.active & {
+    display: none;
+  }
+}
 .accordion__item-button-text--close {
   display: none;
+  .accordion__item.active & {
+    display: inline-block;
+  }
 }
 .accordion__item-button-icon {
   width: 1rem;
   height: 0.4rem;
   vertical-align: middle;
   transition: transform 0.25s ease-in-out;
+
+  .accordion__item.active & {
+    transform: rotate(180deg);
+  }
 }

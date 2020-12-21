@@ -14,10 +14,8 @@
   &:link {
     color: var(--soft-red);
   }
-  &:hover {
-    .link--button__text--for {
-      animation-name: link--button-anim;
-    }
+  &:active {
+    opacity: 0.6;
   }
 }
 .link--button__text {
@@ -27,34 +25,38 @@
 }
 .link--button__text--bg {
   position: absolute;
-  background-color: var(--soft-red);
-  color: var(--white);
+  color: var(--soft-red);
+  box-shadow: inset 0 0 0 1px var(--soft-red);
 }
 .link--button__text--for {
   position: relative;
-  background-color: var(--white);
-  color: var(--soft-red);
-  box-shadow: inset 0px 0px 0px 1px var(--soft-red);
-  mask: url("../img/button-sprite.webp");
+  background-color: var(--soft-red);
+  color: var(--white);
+  mask: url(../img/button-sprite.png);
   mask-size: 3000% 100%;
   mask-position: 100% 0;
+  mask-repeat: no-repeat;
   animation: link--button-anim2 0.8s steps(29) forwards;
+
+  .link--button:hover & {
+    animation-name: link--button-anim;
+  }
 }
 @keyframes link--button-anim {
   from {
-   mask-position: 100% 0;
+    mask-position: 100% 0;
   }
  
   to {
-   mask-position: 0 0;
+    mask-position: 0 0;
   }
  }
  @keyframes link--button-anim2 {
  from {
-  mask-position: 0 0;
+    mask-position: 0 0;
  }
 
  to {
-  mask-position: 100% 0;
+    mask-position: 100% 0;
  }
 }

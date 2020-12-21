@@ -17,6 +17,5 @@ export default function AboutTextFadeout () {
       duration: 0.25 })
     .to(['.about__text', '.about__link'],
     { autoAlpha: 1,
-      duration: 2, },
-      '>1');
+      duration: 2, },);
 }
