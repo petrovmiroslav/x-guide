@@ -4,6 +4,11 @@
 .blog__container {
   padding-top: 7.4rem;
   padding-bottom: 7.4rem;
+
+  @include breakpoint (mobile) {
+    padding-top: 4rem;
+    padding-bottom: 5.4rem;
+  }
 }
 .blog__header {
   font-family: var(--jost);
@@ -145,15 +150,6 @@
   line-height: 130%;
   color: var(--primary-color);
 
-  .blog__item:first-child &,
-  .blog__item:nth-child(2) & {
-    color: var(--white);
-
-    @include breakpoint (mobile) {
-      font-size: 2rem;
-    }
-  }
-
   .blog__item:first-child &{
     font-size: 4.1rem;
     line-height: 120%;
@@ -162,6 +158,15 @@
   .blog__item:nth-child(2) & {
     font-size: 2.4rem;
     line-height: 130%;
+  }
+  
+  .blog__item:first-child &,
+  .blog__item:nth-child(2) & {
+    color: var(--white);
+
+    @include breakpoint (mobile) {
+      font-size: 2rem;
+    }
   }
 }
 .blog__item-text {

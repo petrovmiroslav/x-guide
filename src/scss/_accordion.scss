@@ -3,6 +3,10 @@
 }
 .accordion__container {
   padding-top: 10rem;
+
+  @include breakpoint (mobile) {
+    padding-top: 6rem; 
+  }
 }
 .accordion__item {
   max-width: 103rem;
