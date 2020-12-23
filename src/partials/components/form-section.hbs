@@ -1,6 +1,6 @@
 <section class="form-section">
   <picture>
-    <source type="image/webp" media="(min-width: 1024px)" srcset="./img/form-section-bg-crop.webp">
+    <source type="image/webp" media="(min-width: 768px)" srcset="./img/form-section-bg-crop.webp">
     <source media="(max-width: 767px)" srcset="./img/form-section-bg-crop-768.png">
     <img class="form-section__bg" src="./img/form-section-bg-crop.png" alt="form-section background">
   </picture>
@@ -14,26 +14,37 @@
       </div>
       <div class="form-section__form-col">
         <div class="form-section__form-content">
-          <img class="form-section__form-bg" src="./img/bg-shape.png" alt="bg-shape">
+          <div class="form-section__form-bg">
+            <img class="form-section__form-bg-img" src="./img/bg-shape.png" alt="bg-shape">
+          </div>
           <form action="/" method="POST" class="form-section__form" data-need-validation="">
             <h2 class="form-section__form-heading">
               Заявка на консультацию
             </h2>
             <div class="form-section__form-group">
-              <input type="tel" class="form-section__form-input js-phone-input" placeholder="Телефон" data-parsley-phone required>
+              <input id="phone-number-input" type="tel" class="form-section__form-input js-phone-input" placeholder="Телефон" data-parsley-phone required>
+              <label for="phone-number-input" class="form-section__form-label">
+                <span class="form-section__form-label-text">Телефон</span>
+              </label>
             </div>
+
             <div class="form-section__form-group">
-              <textarea class="form-section__form-input" placeholder="Пожелания к туру"></textarea>
+              <textarea id="tour-wishes-input" class="form-section__form-input" placeholder="Пожелания к туру"></textarea>
+              <label for="tour-wishes-input" class="form-section__form-label">
+                <span class="form-section__form-label-text">Пожелания к туру</span>
+              </label>
             </div>
+
             <div class="form-section__form-group">
               <button type="submit" class="link--button form-section__submit">
                 <span class="link--button__text link--button__text--bg">Отправить</span>
                 <span class="link--button__text link--button__text--for">Отправить</span>
               </button>
             </div>
+
             <div class="form-section__form-group">
-              <label class="form-section__form-checkbox">
-                <input type="checkbox" name="policy" class="form-section__form-checkbox-input" checked required>
+              <label for="policy" class="form-section__form-checkbox">
+                <input id="policy" type="checkbox" name="policy" class="form-section__form-checkbox-input" checked required>
                 <span class="form-section__form-checkbox-mark">
                 </span>
                 <div class="form-section__form-checkbox-text">
@@ -42,8 +53,17 @@
               </label>
             </div>
           </form>
+
+          <div class="form-section__form-modal form-modal--hidden">
+            <h3 class="form-section__form-modal-header">Спасибо! Ваша заявка отправлена!
+            </h3>
+            <p class="form-section__form-modal-text">Наши специалисты свяжутся с Вами после обработки заявки
+            </p>
+          </div>
         </div>
       </div>
     </div>
+  </div>
+  <div class="form-section__bg-gradient">
   </div>
 </section>
