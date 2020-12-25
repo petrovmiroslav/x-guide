@@ -1606,20 +1606,15 @@ select:-webkit-autofill:focus {
 .tours-slider__item-description-container {
   max-height: 0;
   overflow: hidden;
-  -webkit-transition: max-height .75s, padding .75s;
-  transition: max-height .75s, padding .75s;
-  -webkit-transition: 0.75s ease;
-  transition: 0.75s ease; }
+  -webkit-transition: 0.75s ease-in-out;
+  transition: 0.75s ease-in-out; }
   .tours-slider__item:hover .tours-slider__item-description-container {
-    max-height: 253px;
-    padding-bottom: 2.2rem; }
+    max-height: 253px; }
   @media only screen and (max-width: 767px) {
     .tours-slider__item-description-container {
-      max-height: 253px;
-      padding-bottom: 2.2rem; } }
+      max-height: 253px; } }
 
 .tours-slider__item-text {
-  margin-top: 1rem;
   font-family: var(--nunito);
   font-style: normal;
   font-weight: normal;
@@ -1628,7 +1623,8 @@ select:-webkit-autofill:focus {
   color: var(--white); }
 
 .tours-slider__item-specifications {
-  margin-top: 2.4rem; }
+  margin-top: 2.4rem;
+  padding-bottom: 2.2rem; }
 
 .tours-slider__item-specification {
   margin-top: 0.6rem;
