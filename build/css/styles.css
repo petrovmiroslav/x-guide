@@ -936,7 +936,7 @@ button.swiper-pagination-bullet {
   padding: 0; }
 
 :root {
-  --max-container-width: 124rem;
+  --max-container-width: 132rem;
   --content-padding: 2rem;
   --primary-color: #12214D;
   --blue: #295F98;
@@ -1342,7 +1342,7 @@ select:-webkit-autofill:focus {
     fill: var(--white); }
   .slider__nav-button:active {
     opacity: 0.6; }
-  .slider__nav-button.swiper-button-disabled {
+  .slider__nav-button.swiper-button-disabled, .slider__nav-button.button-disabled {
     opacity: 0.2; }
 
 .slider__nav-button--prev {
@@ -1377,11 +1377,282 @@ select:-webkit-autofill:focus {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg); }
 
+.tours-slider__container {
+  padding-top: 18.5rem;
+  padding-bottom: 20rem; }
+  @media only screen and (max-width: 767px) {
+    .tours-slider__container {
+      padding-top: 2rem;
+      padding-bottom: 6rem; } }
+
+.tours-slider__top-row {
+  padding-bottom: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  @media only screen and (max-width: 767px) {
+    .tours-slider__top-row {
+      padding-bottom: 2rem;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
+
+.tours-slider__header {
+  max-width: 35.8rem;
+  font-family: var(--jost);
+  font-style: italic;
+  font-weight: 900;
+  font-size: 4.5rem;
+  line-height: 136.3%;
+  text-transform: uppercase;
+  color: var(--primary-color); }
+  @media only screen and (max-width: 767px) {
+    .tours-slider__header {
+      padding-bottom: 2rem; } }
+
+.tours-slider__tabs-nav {
+  margin-top: 1rem;
+  margin-left: 10rem;
+  color: var(--blue); }
+  @media only screen and (max-width: 767px) {
+    .tours-slider__tabs-nav {
+      margin: auto;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+      overflow-y: hidden;
+      margin-left: calc(-1*var(--content-padding));
+      margin-right: calc(-1*var(--content-padding));
+      padding: 0 var(--content-padding); } }
+
+.tours-slider__nav-link {
+  padding: 1rem 2rem;
+  display: inline-block;
+  border-radius: 1rem;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out; }
+  .tours-slider__nav-link.active {
+    background-color: var(--blue);
+    color: var(--white); }
+
+.tours-slider__bottom-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  @media only screen and (max-width: 767px) {
+    .tours-slider__bottom-row {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start; } }
+
+.tours-slider__left-col {
+  max-width: 25rem;
+  margin-right: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  /* delete */
+  z-index: 10; }
+  @media only screen and (max-width: 767px) {
+    .tours-slider__left-col {
+      display: contents; } }
+
+.tours-slider__description {
+  font-family: var(--nunito);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2rem;
+  line-height: 130%; }
+
+.tours-slider__link {
+  padding-top: 3.7rem;
+  display: inline-block; }
+  @media only screen and (max-width: 767px) {
+    .tours-slider__link {
+      margin-left: auto;
+      -webkit-box-ordinal-group: 2;
+          -ms-flex-order: 1;
+              order: 1; } }
+
+.tours-slider__slider-nav-buttons-container {
+  margin-top: auto; }
+  @media only screen and (max-width: 767px) {
+    .tours-slider__slider-nav-buttons-container {
+      margin-left: auto;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      display: inline-block; } }
+
+.tours-slider__right-col {
+  min-width: 0;
+  max-width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1; }
+
+.tab-items {
+  position: relative; }
+
+.tab-items__item {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s, visibility 0s linear 0.4s, -webkit-transform 0s linear 0.4s;
+  transition: opacity 0.4s, visibility 0s linear 0.4s, -webkit-transform 0s linear 0.4s;
+  transition: opacity 0.4s, transform 0s linear 0.4s, visibility 0s linear 0.4s;
+  transition: opacity 0.4s, transform 0s linear 0.4s, visibility 0s linear 0.4s, -webkit-transform 0s linear 0.4s;
+  -webkit-transform: translateX(20%);
+          transform: translateX(20%);
+  z-index: 1; }
+  .tab-items__item.active {
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-transition: all 0.4s, -webkit-transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: all 0.4s, -webkit-transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: all 0.4s, transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: all 0.4s, transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), -webkit-transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+
+.tours-slider__item {
+  width: 100%;
+  height: 100%;
+  padding: 2.2rem 2.5rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #C4C4C4;
+  border-radius: 1rem;
+  overflow: hidden;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  /* .swiper-slide.active & */ }
+  .swiper-slide-active .tours-slider__item {
+    -webkit-transform: scale(1.1) translateX(-5%);
+            transform: scale(1.1) translateX(-5%); }
+    @media only screen and (max-width: 767px) {
+      .swiper-slide-active .tours-slider__item {
+        -webkit-transform: none;
+                transform: none; } }
+
+.tours-slider__item-content-container {
+  position: relative; }
+
+.tours-slider__item .slider__item-bg-img {
+  -webkit-transition: 0.7s ease-in-out;
+  transition: 0.7s ease-in-out; }
+
+.swiper-slide-active .tours-slider__item:hover .slider__item-bg-img {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3); }
+
+.tours-slider__item-header {
+  font-family: var(--jost);
+  font-style: italic;
+  font-weight: 900;
+  font-size: 2rem;
+  line-height: 130%;
+  text-transform: uppercase;
+  color: var(--white); }
+
+.tours-slider__item-text {
+  margin-top: 1rem;
+  font-family: var(--nunito);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.4rem;
+  line-height: 130%;
+  color: var(--white); }
+
+.tours-slider__item-specifications {
+  margin-top: 2.4rem; }
+
+.tours-slider__item-specification {
+  margin-top: 0.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: var(--nunito);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 140%;
+  color: var(--white); }
+
+.tours-slider__item-specification-name {
+  opacity: 0.6; }
+
+.tours-slider__slider-wrapper .swiper-container {
+  overflow: visible; }
+
+.tours-slider__slider-wrapper .swiper-slide {
+  width: 32.2rem;
+  height: 50.6rem;
+  -webkit-transition: opacity 0.7s, visibility 0.7s, -webkit-transform 0.7s;
+  transition: opacity 0.7s, visibility 0.7s, -webkit-transform 0.7s;
+  transition: opacity 0.7s, transform 0.7s, visibility 0.7s;
+  transition: opacity 0.7s, transform 0.7s, visibility 0.7s, -webkit-transform 0.7s;
+  -webkit-transform-origin: left center;
+          transform-origin: left center; }
+  @media only screen and (max-width: 767px) {
+    .tours-slider__slider-wrapper .swiper-slide {
+      width: 32.2rem;
+      height: 44rem; } }
+  .tours-slider__slider-wrapper .swiper-slide:not(.swiper-slide-visible) {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    visibility: hidden;
+    -webkit-transition: opacity 0.7s, visibility 0s linear 0.7s, -webkit-transform 0.7s;
+    transition: opacity 0.7s, visibility 0s linear 0.7s, -webkit-transform 0.7s;
+    transition: opacity 0.7s, transform 0.7s, visibility 0s linear 0.7s;
+    transition: opacity 0.7s, transform 0.7s, visibility 0s linear 0.7s, -webkit-transform 0.7s; }
+  @media only screen and (max-width: 767px) {
+    .tours-slider__slider-wrapper .swiper-slide:not(.swiper-slide-visible) {
+      opacity: 1;
+      visibility: visible;
+      -webkit-transform: none;
+              transform: none; } }
+
+.tours-slider__slider-wrapper .swiper-slide-active ~ .swiper-slide {
+  -webkit-transform: none !important;
+          transform: none !important;
+  opacity: 1;
+  visibility: visible; }
+
 .about {
   overflow: hidden;
-  background-color: var(--gray-blue);
-  /* delete */
-  margin-top: 100vh; }
+  background-color: var(--gray-blue); }
 
 .about__container {
   padding-top: 13rem;
@@ -1437,7 +1708,7 @@ select:-webkit-autofill:focus {
   position: relative; }
 
 .about__video-preview {
-  height: 32rem;
+  height: 36.8rem;
   display: block;
   position: relative;
   border-radius: 1rem;
@@ -1653,7 +1924,7 @@ select:-webkit-autofill:focus {
   grid-area: grid-gal;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 26rem;
+  grid-auto-rows: 28rem;
   grid-gap: 3rem; }
   @media only screen and (max-width: 767px) {
     .gallery__grid {
@@ -2528,15 +2799,14 @@ textarea.form-section__form-input {
       .form-section__form-checkbox-mark::before {
         width: 50%;
         height: 50%; } }
+  .form-section__form-checkbox-input:checked ~ .form-section__form-checkbox-mark::before {
+    opacity: 1; }
 
 .form-section__form-checkbox-text {
   opacity: 0.5; }
   .parsley-error .form-section__form-checkbox-text {
     color: var(--soft-red);
     opacity: 1; }
-
-.form-section__form-checkbox-input:checked ~ .form-section__form-checkbox-mark::before {
-  opacity: 1; }
 
 .form-section__submit {
   width: 100%;

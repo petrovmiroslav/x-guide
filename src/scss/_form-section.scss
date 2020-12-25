@@ -315,6 +315,10 @@ textarea.form-section__form-input {
       height: 50%;
     }
   }
+
+  .form-section__form-checkbox-input:checked ~ &::before {
+    opacity: 1;
+  }
 }
 
 .form-section__form-checkbox-text {
@@ -326,9 +330,6 @@ textarea.form-section__form-input {
   }
 }
 
-.form-section__form-checkbox-input:checked ~ .form-section__form-checkbox-mark::before {
-  opacity: 1;
-}
 
 .form-section__submit {
   width: 100%;
@@ -345,9 +346,7 @@ textarea.form-section__form-input {
 .form-section__bg-gradient {
   height: 20rem;
   position: relative;
-  background: linear-gradient(
-180deg
-, transparent,  #131020);
+  background: linear-gradient(180deg, transparent, #131020);
 
   @include breakpoint(mobile) {
     height: 10rem;

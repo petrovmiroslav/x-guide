@@ -1,5 +1,7 @@
 import polyfills from './polyfills';
 import detectTouch from './detectTouch';
+import Tabs from './tabs';
+import ToursSlider from './tours-slider';
 import AboutTextFadeout from './about-fadeout';
 import TeamSlider from './team-slider';
 import ReviewsSlider from './reviews-slider';
@@ -11,7 +13,8 @@ import Validation from './validation';
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
     detectTouch();
-
+    Tabs.init();
+    ToursSlider.init();
     AboutTextFadeout();
     TeamSlider();
     ReviewsSlider();
