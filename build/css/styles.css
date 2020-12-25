@@ -1570,7 +1570,7 @@ select:-webkit-autofill:focus {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background: #C4C4C4;
+  background-color: #C4C4C4;
   border-radius: 1rem;
   overflow: hidden;
   -webkit-transition: 0.7s;
@@ -1987,7 +1987,7 @@ select:-webkit-autofill:focus {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background: #C4C4C4;
+  background-color: #C4C4C4;
   border-radius: 1rem;
   overflow: hidden; }
   .gallery__item:hover .play-button__cirlce {
