@@ -53,6 +53,9 @@
 }
 .about__text {
   padding: 5.4rem 0 3.6rem;
+  font-family: var(--nunito);
+  font-style: normal;
+  font-weight: normal;
   font-size: 2rem;
   line-height: 130%;
 }
@@ -66,14 +69,23 @@
   border-radius: 1rem;
   overflow: hidden;
 
-  &:hover {
-    .about__video-preview-mask {
-      opacity: 0;
-    }
-  }
-
   @include breakpoint (mobile) {
     height: 28rem;
+  }
+
+  &:hover .play-button__cirlce {
+    fill: var(--primary-color);
+  }
+  &:hover .play-button__triangle {
+    fill: var(--white);
+  }
+  &:active .play-button__cirlce {
+    transition: unset;
+    fill: var(--white);
+  }
+  &:active .play-button__triangle {
+    transition: unset;
+    fill: var(--primary-color);
   }
 }
 .about__video-bg {
@@ -95,7 +107,6 @@
   left: 0;
   right: 0;
   background: linear-gradient(0deg, rgba(18, 33, 77, 0.11), rgba(18, 33, 77, 0.11));
-  transition: 0.25s ease-in-out;
 }
 .about__video-play-button {
   width: 10.6rem;

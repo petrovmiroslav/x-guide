@@ -34,6 +34,7 @@
   position: relative;
   display: flex;
   flex-direction: row;
+  border-radius: 1rem;
   overflow: hidden;
 
   &:first-child,
@@ -82,6 +83,11 @@
 .blog__item-bg {
   @include objectFitCover;
   border-radius: 1rem;
+  transition: 0.35s ease-in-out;
+
+  .blog__item:hover & {
+    transform: scale(1.05);
+  }
 }
 .blog__bg-mask {
   display: none;

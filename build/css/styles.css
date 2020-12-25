@@ -1420,15 +1420,18 @@ select:-webkit-autofill:focus {
 .tours-slider__tabs-nav {
   margin-top: 1rem;
   margin-left: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   color: var(--blue); }
   @media only screen and (max-width: 767px) {
     .tours-slider__tabs-nav {
       margin: auto;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-wrap: nowrap;
-          flex-wrap: nowrap;
       overflow-y: hidden;
       margin-left: calc(-1*var(--content-padding));
       margin-right: calc(-1*var(--content-padding));
@@ -1440,7 +1443,12 @@ select:-webkit-autofill:focus {
   display: inline-block;
   border-radius: 1rem;
   -webkit-transition: 0.25s ease-in-out;
-  transition: 0.25s ease-in-out; }
+  transition: 0.25s ease-in-out;
+  font-family: var(--nunito);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 122%; }
   .tours-slider__nav-link.active {
     background-color: var(--blue);
     color: var(--white); }
@@ -1715,6 +1723,9 @@ select:-webkit-autofill:focus {
 
 .about__text {
   padding: 5.4rem 0 3.6rem;
+  font-family: var(--nunito);
+  font-style: normal;
+  font-weight: normal;
   font-size: 2rem;
   line-height: 130%; }
 
@@ -1727,11 +1738,21 @@ select:-webkit-autofill:focus {
   position: relative;
   border-radius: 1rem;
   overflow: hidden; }
-  .about__video-preview:hover .about__video-preview-mask {
-    opacity: 0; }
   @media only screen and (max-width: 767px) {
     .about__video-preview {
       height: 28rem; } }
+  .about__video-preview:hover .play-button__cirlce {
+    fill: var(--primary-color); }
+  .about__video-preview:hover .play-button__triangle {
+    fill: var(--white); }
+  .about__video-preview:active .play-button__cirlce {
+    -webkit-transition: unset;
+    transition: unset;
+    fill: var(--white); }
+  .about__video-preview:active .play-button__triangle {
+    -webkit-transition: unset;
+    transition: unset;
+    fill: var(--primary-color); }
 
 .about__video-bg {
   width: 140%;
@@ -1757,9 +1778,7 @@ select:-webkit-autofill:focus {
   left: 0;
   right: 0;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(18, 33, 77, 0.11)), to(rgba(18, 33, 77, 0.11)));
-  background: linear-gradient(0deg, rgba(18, 33, 77, 0.11), rgba(18, 33, 77, 0.11));
-  -webkit-transition: 0.25s ease-in-out;
-  transition: 0.25s ease-in-out; }
+  background: linear-gradient(0deg, rgba(18, 33, 77, 0.11), rgba(18, 33, 77, 0.11)); }
 
 .about__video-play-button {
   width: 10.6rem;
@@ -1961,6 +1980,18 @@ select:-webkit-autofill:focus {
   background: #C4C4C4;
   border-radius: 1rem;
   overflow: hidden; }
+  .gallery__item:hover .play-button__cirlce {
+    fill: var(--primary-color); }
+  .gallery__item:hover .play-button__triangle {
+    fill: var(--white); }
+  .gallery__item:active .play-button__cirlce {
+    -webkit-transition: unset;
+    transition: unset;
+    fill: var(--white); }
+  .gallery__item:active .play-button__triangle {
+    -webkit-transition: unset;
+    transition: unset;
+    fill: var(--primary-color); }
 
 .gallery__item-bg {
   -o-object-fit: cover;
@@ -1974,7 +2005,12 @@ select:-webkit-autofill:focus {
   top: 0;
   bottom: 0;
   left: 0;
-  right: 0; }
+  right: 0;
+  -webkit-transition: 0.35s ease-in-out;
+  transition: 0.35s ease-in-out; }
+  .gallery__item:hover .gallery__item-bg {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05); }
 
 .gallery__item-info-label {
   position: relative; }
@@ -2041,18 +2077,6 @@ select:-webkit-autofill:focus {
   width: 100%;
   height: 100%;
   position: relative; }
-  .play-button:hover .play-button__cirlce {
-    fill: var(--primary-color); }
-  .play-button:hover .play-button__triangle {
-    fill: var(--white); }
-  .play-button:active .play-button__cirlce {
-    -webkit-transition: unset;
-    transition: unset;
-    fill: var(--white); }
-  .play-button:active .play-button__triangle {
-    -webkit-transition: unset;
-    transition: unset;
-    fill: var(--primary-color); }
 
 .play-button__cirlce,
 .play-button__triangle {
@@ -2102,6 +2126,29 @@ select:-webkit-autofill:focus {
   -webkit-clip-path: url(#jreview-clip-path);
           clip-path: url(#jreview-clip-path); }
 
+.reviews__slider-item:hover .play-button__cirlce {
+  fill: var(--primary-color); }
+
+.reviews__slider-item:hover .play-button__triangle {
+  fill: var(--white); }
+
+.reviews__slider-item:active .play-button__cirlce {
+  -webkit-transition: unset;
+  transition: unset;
+  fill: var(--white); }
+
+.reviews__slider-item:active .play-button__triangle {
+  -webkit-transition: unset;
+  transition: unset;
+  fill: var(--primary-color); }
+
+.slider__item-bg-img {
+  -webkit-transition: 0.35s ease-in-out;
+  transition: 0.35s ease-in-out; }
+  .reviews__slider-item:hover .slider__item-bg-img {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05); }
+
 .reviews__slider-item-quotes-icon {
   width: 2rem;
   height: 1rem;
@@ -2146,6 +2193,24 @@ select:-webkit-autofill:focus {
 
 .reviews__slider-item-author-name {
   color: var(--white); }
+
+.reviews__slider-item-video-play-button {
+  width: 10.6rem;
+  height: 10.6rem;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-transform: translateY(-40%);
+          transform: translateY(-40%); }
+  @media only screen and (max-width: 767px) {
+    .reviews__slider-item-video-play-button {
+      width: 6.6rem;
+      height: 6.6rem;
+      -webkit-transform: translateY(-80%);
+              transform: translateY(-80%); } }
 
 .reviews__slider-nav-buttons-container {
   margin-top: auto;
@@ -2198,6 +2263,7 @@ select:-webkit-autofill:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  border-radius: 1rem;
   overflow: hidden; }
   .blog__item:first-child, .blog__item:nth-child(2) {
     padding: 2.6rem 3.4rem 4rem;
@@ -2248,7 +2314,12 @@ select:-webkit-autofill:focus {
   -o-object-position: center;
      object-position: center;
   font-family: 'object-fit: cover; object-position: center;';
-  border-radius: 1rem; }
+  border-radius: 1rem;
+  -webkit-transition: 0.35s ease-in-out;
+  transition: 0.35s ease-in-out; }
+  .blog__item:hover .blog__item-bg {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05); }
 
 .blog__bg-mask {
   display: none;

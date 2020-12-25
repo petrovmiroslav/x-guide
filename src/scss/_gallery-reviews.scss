@@ -54,6 +54,21 @@
   background: #C4C4C4;
   border-radius: 1rem;
   overflow: hidden;
+
+  &:hover .play-button__cirlce {
+    fill: var(--primary-color);
+  }
+  &:hover .play-button__triangle {
+    fill: var(--white);
+  }
+  &:active .play-button__cirlce {
+    transition: unset;
+    fill: var(--white);
+  }
+  &:active .play-button__triangle {
+    transition: unset;
+    fill: var(--primary-color);
+  }
 }
 .gallery__item-bg {
   @include objectFitCover;
@@ -64,6 +79,11 @@
   bottom: 0;
   left: 0;
   right: 0;
+  transition: 0.35s ease-in-out;
+
+  .gallery__item:hover & {
+    transform: scale(1.05);
+  }
 }
 .gallery__item-info-label {
   position: relative;
@@ -124,20 +144,6 @@
   width: 100%;
   height: 100%;
   position: relative;
-  &:hover .play-button__cirlce {
-    fill: var(--primary-color);
-  }
-  &:hover .play-button__triangle {
-    fill: var(--white);
-  }
-  &:active .play-button__cirlce {
-    transition: unset;
-    fill: var(--white);
-  }
-  &:active .play-button__triangle {
-    transition: unset;
-    fill: var(--primary-color);
-  }
 }
 .play-button__cirlce,
 .play-button__triangle {
@@ -191,7 +197,29 @@
   //     transition: transform 0.3s linear;
   // }
 }
+.reviews__slider-item {
+  &:hover .play-button__cirlce {
+    fill: var(--primary-color);
+  }
+  &:hover .play-button__triangle {
+    fill: var(--white);
+  }
+  &:active .play-button__cirlce {
+    transition: unset;
+    fill: var(--white);
+  }
+  &:active .play-button__triangle {
+    transition: unset;
+    fill: var(--primary-color);
+  }
+ }
+.slider__item-bg-img {
+  transition: 0.35s ease-in-out;
 
+  .reviews__slider-item:hover & {
+    transform: scale(1.05);
+  }
+ }
 .reviews__slider-item-quotes-icon {
   width: 2rem;
   height: 1rem;
@@ -239,6 +267,23 @@
 }
 .reviews__slider-item-author-name {
   color: var(--white);
+}
+.reviews__slider-item-video-play-button {
+  width: 10.6rem;
+  height: 10.6rem;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(-40%);
+
+  @include breakpoint (mobile) {
+    width: 6.6rem;
+    height: 6.6rem;
+    transform: translateY(-80%);
+  }
 }
 .reviews__slider-nav-buttons-container {
   margin-top: auto;
