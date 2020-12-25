@@ -8,6 +8,8 @@
   @include breakpoint (mobile) {
     padding-top: 2rem;
     padding-bottom: 6rem;
+    display: flex;
+    flex-direction: column;
   }
 }
 .tours-slider__top-row {
@@ -15,8 +17,9 @@
   display: flex;
 
   @include breakpoint (mobile) {
-    padding-bottom: 2rem;
-    flex-direction: column;
+    // padding-bottom: 2rem;
+    // flex-direction: column;
+    display: contents;
   }
 }
 .tours-slider__header {
@@ -31,6 +34,7 @@
 
   @include breakpoint (mobile) {
     padding-bottom: 2rem;
+    order: -2;
   }
 }
 .tours-slider__tabs-nav {
@@ -45,7 +49,7 @@
     overflow-y: hidden;
     margin-left: calc(-1*var(--content-padding));
     margin-right: calc(-1*var(--content-padding));
-    padding: 0 var(--content-padding);
+    padding: 2rem var(--content-padding);
   }
 }
 .tours-slider__nav-link {
@@ -63,8 +67,9 @@
   display: flex;
 
   @include breakpoint (mobile) {
-    flex-direction: column;
-    align-items: flex-start;
+    // flex-direction: column;
+    // align-items: flex-start;
+    display: contents;
   }
 }
 .tours-slider__left-col {
@@ -87,6 +92,10 @@
   font-weight: normal;
   font-size: 2rem;
   line-height: 130%;
+
+  @include breakpoint (mobile) {
+    order: -1;
+  }
 }
 .tours-slider__link {
   padding-top: 3.7rem;
@@ -101,10 +110,10 @@
   margin-top: auto;
 
   @include breakpoint (mobile) {
-    margin-left: auto;
-    padding-top: 2rem;
+    /* margin-left: auto;
     padding-bottom: 2rem;
-    display: inline-block;
+    display: inline-block; */
+    display: none;
   }
 }
 .tours-slider__right-col {
