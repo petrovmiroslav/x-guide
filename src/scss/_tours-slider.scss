@@ -120,6 +120,13 @@
   min-width: 0;
   max-width: 100%;
   flex: 1;
+
+  @include breakpoint (tablet) {
+    transform: translateX(2rem);
+  }
+  @include breakpoint (mobile) {
+    transform: none;
+  }
 }
 .tab-items {
   position: relative;

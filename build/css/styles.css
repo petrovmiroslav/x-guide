@@ -1508,6 +1508,14 @@ select:-webkit-autofill:focus {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1; }
+  @media only screen and (max-width: 1024px) {
+    .tours-slider__right-col {
+      -webkit-transform: translateX(2rem);
+              transform: translateX(2rem); } }
+  @media only screen and (max-width: 767px) {
+    .tours-slider__right-col {
+      -webkit-transform: none;
+              transform: none; } }
 
 .tab-items {
   position: relative; }
