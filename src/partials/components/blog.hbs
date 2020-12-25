@@ -107,11 +107,33 @@
             </div>
           </a>
         </div>
-        <div class="blog__link-container">
-          <a href="#" class="link--button">
-            <span class="link--button__text link--button__text--bg">Все статьи</span>
-            <span class="link--button__text link--button__text--for">Все статьи</span>
-          </a>
+
+        <div class="blog__bottom-row">
+          <div class="blog__form-container">
+            <h3 class="blog__form-header">Подпишитесь на нашу рассылку и будьте в курсе всех новостей!
+            </h3>
+
+            <form action="/" method="POST" class="blog__form" data-need-validation="">
+              <div class="blog__form-group">
+                <input id="email-input" type="email" class="blog__form-input" placeholder="Введите адрес эл. почты" required>
+                
+              </div>
+
+              <button type="submit" class="blog__form-submit">
+                <svg class="blog__form-submit-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <use href="#arrow"/>
+                </svg>
+              </button>
+            </form>
+          </div>
+
+          <div class="blog__link-container">
+            <a href="#" class="link--button">
+              <span class="link--button__text link--button__text--bg">Все статьи</span>
+              <span class="link--button__text link--button__text--for">Все статьи</span>
+            </a>
+          </div>
         </div>
+        
     </div>
 </section>

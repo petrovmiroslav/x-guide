@@ -233,4 +233,123 @@
 }
 .blog__link-container {
   text-align: right;
+  margin-left: auto;
+}
+
+.blog__bottom-row {
+  display: flex;
+
+  @include breakpoint (mobile) {
+    flex-direction: column-reverse;
+  }
+}
+.blog__form-container {
+  display: flex;
+  align-items: center;
+
+  @include breakpoint (mobile) {
+    display: block;
+  }
+}
+.blog__form-header {
+  max-width: 31rem;
+  margin-right: 4rem;
+  font-family: var(--jost);
+  font-style: italic;
+  font-weight: 900;
+  font-size: 1.5rem;
+  line-height: 160%;
+  text-transform: uppercase;
+  color: var(--primary-color);
+
+  @include breakpoint (mobile) {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+}
+.blog__form {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.blog__form-group {
+  position: relative;
+  min-width: 0;
+}
+.blog__form-input {
+  max-width: 100%;
+  width: 52rem;
+  height: 6.6rem;
+  padding: 0 6.6rem 0 3.2rem;
+  border-radius: 10rem;
+  background-color: var(--white);
+  border: 1px solid var(--white);
+  transition: 0.15s ease-in-out;
+  font-family: var(--nunito);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.4rem;
+  line-height: 143%;
+  color: var(--primary-color);
+  box-shadow: 0 0 0px 1000px var(--white) inset;
+
+  @include breakpoint (mobile) {
+    font-size: 1.6rem;
+  }
+
+  &.parsley-error {
+    border-color: var(--soft-red);
+  }
+}
+.blog__form .parsley-errors-list.filled {
+  margin: 0;
+  top: 0;
+  left: 0;
+  opacity: 1;
+}
+.blog__form .parsley-errors-list.filled li {
+  transform: translateY(-116%);
+
+  &::before {
+    top: auto;
+    left: auto;
+    transform: translateY(50%) rotate(45deg);
+    
+    @include breakpoint (mobile) {
+      top: auto;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      transform: translateY(50%) rotate(45deg);
+    }
+  }
+}
+.blog__form-submit {
+  width: 5.5rem;
+  height: 5.5rem;
+  position: absolute;
+  right: 0.8rem;
+  z-index: 1;
+  border-radius: 50%;
+  border: 1px solid rgba(234, 116, 100, 0.25);
+  background-color: var(--white);
+  transition: 0.15s ease-in-out;
+
+  &:hover {
+    background-color: var(--soft-red);
+  }
+
+  &:active {
+    transition: 0;
+    opacity: 0.6;
+  }
+}
+.blog__form-submit-icon {
+  width: 1.4rem;
+  height: 1rem;
+  fill: var(--soft-red);
+
+  .blog__form-submit:hover & {
+    fill: var(--white);
+  }
 }
