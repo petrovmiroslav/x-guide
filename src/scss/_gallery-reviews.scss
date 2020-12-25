@@ -182,7 +182,7 @@
   height: 100%;
   padding: 2.6rem 3.4rem 5rem;
   position: relative;
-  clip-path: url(#jreview-clip-path);
+  clip-path: url(#review-clip-path);
   
   // .swiper-slide-next & {
   //   transform: translateZ(0) translateX(8rem);
@@ -198,6 +198,8 @@
   // }
 }
 .reviews__slider-item {
+  overflow: hidden;
+  
   &:hover .play-button__cirlce {
     fill: var(--primary-color);
   }
