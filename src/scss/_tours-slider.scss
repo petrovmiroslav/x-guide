@@ -6,7 +6,7 @@
   padding-bottom: 20rem;
 
   @include breakpoint (mobile) {
-    padding-top: 2rem;
+    padding-top: 4rem;
     padding-bottom: 6rem;
     display: flex;
     flex-direction: column;
@@ -35,6 +35,7 @@
   @include breakpoint (mobile) {
     padding-bottom: 2rem;
     order: -2;
+    font-size: 2.6rem;
   }
 }
 .tours-slider__tabs-nav {
@@ -68,6 +69,10 @@
   &.active {
     background-color: var(--blue);
     color: var(--white);
+  }
+
+  @include breakpoint (mobile) {
+    font-size: 1.6rem;
   }
 }
 .tours-slider__bottom-row {

@@ -1,5 +1,7 @@
 import polyfills from './polyfills';
 import detectTouch from './detectTouch';
+import Searchform from './search-form';
+import Hero from './hero';
 import Tabs from './tabs';
 import ToursSlider from './tours-slider';
 import AboutTextFadeout from './about-fadeout';
@@ -13,6 +15,8 @@ import Validation from './validation';
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
     detectTouch();
+    Searchform();
+    Hero();
     Tabs.init();
     ToursSlider.init();
     AboutTextFadeout();

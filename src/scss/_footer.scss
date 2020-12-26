@@ -23,37 +23,37 @@
   }
 }
 .footer__logo {
-  margin-right: 6rem;
+  // margin-right: 6rem;
 }
 .footer__logo-link {
-  display: flex;
-  align-items: center;
+  // display: flex;
+  // align-items: center;
 
-  &:hover, &:focus {
-    opacity: 0.6;
-  }
+  // &:hover, &:focus {
+  //   opacity: 0.6;
+  // }
 
   @include breakpoint (mobile) {
     padding: 1rem 0;
   }
 }
 .footer__logo-link-icon {
-  max-width: 5.5rem;
-  max-height: 5.7rem;
-  margin-right: 1.7rem;
+  // max-width: 5.5rem;
+  // max-height: 5.7rem;
+  // margin-right: 1.7rem;
 
-  @include breakpoint(mobile) {
-    max-height: 4rem;
-    margin-right: 0;
-  }
+  // @include breakpoint(mobile) {
+  //   max-height: 4rem;
+  //   margin-right: 0;
+  // }
 }
 .footer__logo-link-text {
-  max-width: 9.7rem;
-  max-height: 2.1rem;
+  // max-width: 9.7rem;
+  // max-height: 2.1rem;
 
-  @include breakpoint(mobile) {
-    max-height: 1.5rem;
-  }
+  // @include breakpoint(mobile) {
+  //   max-height: 1.5rem;
+  // }
 }
 .nav-links {
   color: var(--white);
@@ -61,6 +61,7 @@
 .nav-links-link {
   margin-right: 2rem;
   padding: 1rem;
+  flex-shrink: 0;
   font-family: var(--nunito);
   font-style: normal;
   font-weight: bold;
@@ -73,12 +74,16 @@
 
   @include breakpoint(mobile) {
     display: block;
+    font-size: 1.4rem;
   }
 }
 .phone-number {
   margin-left: auto;
   color: var(--white);
 
+  
+}
+.footer__phone-number {
   @include breakpoint(mobile) {
     margin-top: 1rem;
     margin-left: 0;
@@ -97,6 +102,11 @@
 
   &:hover, &:focus {
     opacity: 0.6;
+  }
+
+  @include breakpoint(mobile) {
+    padding: 0.5rem 1.4rem;
+    font-size: 1.4rem;
   }
 }
 .page-footer__bottom-panel-bottom-row {
