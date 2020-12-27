@@ -1,5 +1,6 @@
 import polyfills from './polyfills';
 import detectTouch from './detectTouch';
+import Intro from './intro';
 import Searchform from './search-form';
 import Hero from './hero';
 import Tabs from './tabs';
@@ -12,9 +13,11 @@ import FormBGParallax from './form-section-parallax';
 import PhoneMask from './phoneMask';
 import Validation from './validation';
 
+
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
     detectTouch();
+    Intro.init();
     Searchform();
     Hero();
     Tabs.init();
