@@ -2285,10 +2285,24 @@ select:-webkit-autofill:focus {
   @media only screen and (max-width: 767px) {
     .daterangepicker {
       width: auto;
+      padding: 3rem 0 2.4rem;
       left: max(env(safe-area-inset-left, 1.4rem), var(--content-padding)) !important;
-      right: max(env(safe-area-inset-left, 1.4rem), var(--content-padding)) !important; } }
+      right: max(env(safe-area-inset-left, 1.4rem), var(--content-padding)) !important;
+      text-align: center; } }
   .daterangepicker::before, .daterangepicker::after {
     display: none; }
+
+.daterangepicker .drp-calendar.left {
+  padding-right: 2rem; }
+
+.daterangepicker .drp-calendar.right {
+  padding-left: 2rem; }
+
+@media only screen and (max-width: 767px) {
+  .daterangepicker .drp-calendar {
+    display: inline-block !important;
+    float: none !important;
+    padding: 0 !important; } }
 
 .daterangepicker.show-calendar .drp-buttons {
   padding: 2rem 0 0;
@@ -2298,6 +2312,9 @@ select:-webkit-autofill:focus {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; }
+  @media only screen and (max-width: 767px) {
+    .daterangepicker.show-calendar .drp-buttons {
+      padding: 2rem 2rem 0; } }
 
 .drp-buttons .drp-selected {
   display: none; }
@@ -2350,12 +2367,11 @@ select:-webkit-autofill:focus {
 
 .daterangepicker .calendar-table td, .daterangepicker .calendar-table th {
   width: 2.9rem;
+  min-width: unset;
   height: 2.7rem; }
 
-.daterangepicker thead tr:first-child th {
-  padding-bottom: 2rem; }
-
 .daterangepicker thead tr:nth-child(2) th {
+  padding-top: 2rem;
   padding-bottom: 1rem;
   font-family: var(--nunito);
   font-style: normal;
