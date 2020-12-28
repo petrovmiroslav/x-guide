@@ -1378,6 +1378,12 @@ select:-webkit-autofill:focus {
             transform: rotate(180deg); }
 
 .page-header {
+  position: relative;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 3; }
+
+.page-header__content-layout {
   min-height: 100vh;
   position: relative;
   display: -webkit-box;
@@ -1386,9 +1392,7 @@ select:-webkit-autofill:focus {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
-          flex-direction: column;
-  opacity: 0;
-  visibility: hidden; }
+          flex-direction: column; }
 
 .hero__bg-slider {
   width: 100%;
@@ -1760,6 +1764,194 @@ select:-webkit-autofill:focus {
   .page-header__form--shown .page-header__form-bottom-line {
     -webkit-transform: scaleX(1);
             transform: scaleX(1); }
+
+.search-tours-form__container {
+  position: relative;
+  z-index: 1; }
+
+.search-tours-form__wrapper {
+  position: relative; }
+
+.search-tours-form {
+  width: 100%;
+  height: 9rem;
+  padding: 0 14.4rem 0 2rem;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5rem;
+  background-color: var(--white);
+  -webkit-box-shadow: 0px 13px 20px rgba(0, 0, 0, 0.09);
+          box-shadow: 0px 13px 20px rgba(0, 0, 0, 0.09); }
+  @media only screen and (max-width: 767px) {
+    .search-tours-form {
+      height: auto;
+      margin-bottom: 3rem;
+      padding: 1rem 0;
+      position: relative;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-transform: none;
+              transform: none;
+      border-radius: 1rem; } }
+
+.search-tours-form__group {
+  width: 25%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  @media only screen and (max-width: 767px) {
+    .search-tours-form__group {
+      width: 100%;
+      padding: 2rem 0 0; } }
+  .search-tours-form__group:after {
+    content: "";
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: var(--primary-color);
+    opacity: 0.15; }
+
+.search-tours-form__submit {
+  width: 6.2rem;
+  height: 6.2rem;
+  position: absolute;
+  right: 2rem;
+  border-radius: 50%;
+  background-color: var(--blue);
+  -webkit-transition: 0.15s ease-in-out;
+  transition: 0.15s ease-in-out; }
+  @media only screen and (max-width: 767px) {
+    .search-tours-form__submit {
+      margin: 4rem 0 2rem;
+      position: relative;
+      right: auto; } }
+  .search-tours-form__submit:hover, .search-tours-form__submit:focus {
+    opacity: 0.6; }
+  .search-tours-form__submit:active {
+    -webkit-transition: 0s;
+    transition: 0s;
+    opacity: 1; }
+
+.search-tours-form__submit-icon {
+  width: 1.87rem;
+  height: 1.87rem;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  fill: var(--white); }
+
+.search-tours-form__label {
+  padding-left: 6rem;
+  font-family: var(--nunito);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.4rem;
+  line-height: 140%;
+  color: var(--primary-color); }
+
+.search-tours-form__input-placeholder {
+  padding-left: 6rem;
+  position: absolute;
+  bottom: 0;
+  font-family: var(--nunito);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 137%;
+  color: #E5E5E5;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: 0.15s ease-in-out;
+  transition: 0.15s ease-in-out; }
+
+.search-tours-form__input-placeholder--hidden {
+  opacity: 0;
+  -webkit-transition: 0s;
+  transition: 0s; }
+
+.search-tours-form__select-input-layout {
+  position: relative; }
+
+.search-tours-form__input--select {
+  margin: 0; }
+
+.search-tours-form__input--select-inner {
+  min-height: auto;
+  background-color: unset;
+  border: none; }
+  .choices.search-tours-form__input--select .search-tours-form__input--select-inner {
+    padding: 0 4rem 0 6rem; }
+
+.search-tours-form__input-icon {
+  width: 1.2rem;
+  height: 0.6rem;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 2.7rem;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+  fill: #B6B6B6; }
+  .is-open ~ .search-tours-form__input-icon {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg); }
+
+.search-tours-form__select-option-list {
+  border-radius: 0 0 1rem 1rem;
+  border: none; }
+  .search-tours-form__select-option-list.choices__list--single {
+    padding: 0; }
+  .search-tours-form__select-option-list.choices__list--dropdown {
+    -webkit-box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.09);
+            box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.09); }
+  .choices__list--dropdown .search-tours-form__select-option-list {
+    padding-bottom: 1rem; }
+
+.search-tours-form__select-option-list .search-tours-form__select-option {
+  font-family: var(--nunito);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 130%;
+  color: var(--primary-color);
+  background-color: unset !important; }
+  .choices__list--single .search-tours-form__select-option-list .search-tours-form__select-option {
+    padding: 0; }
+  .choices__list--dropdown .search-tours-form__select-option-list .search-tours-form__select-option {
+    padding: 1.2rem 1rem 1.2rem 6rem; }
+    .choices__list--dropdown .search-tours-form__select-option-list .search-tours-form__select-option:hover {
+      color: var(--soft-red); }
+
+.choices::after {
+  display: none; }
 
 .tours-slider__container {
   padding-top: 18.5rem;
@@ -3059,7 +3251,8 @@ select:-webkit-autofill:focus {
   -webkit-transition: -webkit-transform 0.25s ease-in-out;
   transition: -webkit-transform 0.25s ease-in-out;
   transition: transform 0.25s ease-in-out;
-  transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out; }
+  transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
+  fill: var(--gray); }
   .accordion__item.active .accordion__item-button-icon {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg); }

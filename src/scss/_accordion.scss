@@ -79,6 +79,7 @@
   height: 0.4rem;
   vertical-align: middle;
   transition: transform 0.25s ease-in-out;
+  fill: var(--gray);
 
   .accordion__item.active & {
     transform: rotate(180deg);

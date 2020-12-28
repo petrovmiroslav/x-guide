@@ -2,6 +2,7 @@ import polyfills from './polyfills';
 import detectTouch from './detectTouch';
 import Intro from './intro';
 import Searchform from './search-form';
+import SearchToursForm from './search-tours-form';
 import Hero from './hero';
 import Tabs from './tabs';
 import ToursSlider from './tours-slider';
@@ -19,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
     detectTouch();
     Intro.init();
     Searchform();
+    SearchToursForm.init();
     Hero();
     Tabs.init();
     ToursSlider.init();
