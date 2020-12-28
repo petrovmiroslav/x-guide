@@ -20,6 +20,7 @@
     "choices.js": "^7.1.5",
     "core-js": "^3.1.4",
     "css-vars-ponyfill": "^2.1.2",
+    "daterangepicker": "^3.1.0",
     "dayjs": "^1.9.7",
     "detect-it": "^3.0.5",
     "gsap": "^3.5.1",

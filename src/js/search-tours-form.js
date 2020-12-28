@@ -1,8 +1,65 @@
 import Choices from 'choices.js';
+import $ from "jquery";
+import moment from 'moment';
+import daterangepicker from 'daterangepicker';
+
+moment.locale('ru');
 
 const SearchToursForm = document.querySelector('.search-tours-form');
 
 function init () {
+  const DateRangeInput = SearchToursForm.querySelector('.search-tours-form__input--date-range');
+
+  let date = new Date();
+  date.setDate(date.getDate() + 7);
+
+  const PickerOption = {
+    // showDropdowns: true,
+    endDate: date,
+    minDate: new Date(),
+    buttonClasses: 'search-tours-form__date-button',
+    applyButtonClasses: 'search-tours-form__date-button--apply',
+    cancelButtonClasses: 'search-tours-form__date-button--cancel',
+    "locale": {
+      "lang": 'fr',
+      "format": "D MMMM",
+      "separator": " - ",
+      "applyLabel": "Применить",
+      "cancelLabel": "Сбросить",
+      "fromLabel": "From",
+      "toLabel": "To",
+      "customRangeLabel": "Custom",
+      "weekLabel": "W",
+      "daysOfWeek": [
+        'Вс',
+        'Пн',
+        'Вт',
+        'Ср',
+        'Чт',
+        'Пт',
+        'Сб',
+      ],
+      "monthNames": [
+        'Январь',
+        'Февраль',
+        'Март',
+        'Апрель',
+        'Май',
+        'Июнь',
+        'Июль',
+        'Август',
+        'Сентябрь',
+        'Октябрь',
+        'Ноябрь',
+        'Декабрь'
+      ],
+      "firstDay": 1
+    },
+  };
+
+  $(DateRangeInput).daterangepicker(PickerOption);
+
+
   const SearchToursFormSelectInputs = Array.from(SearchToursForm.querySelectorAll('.search-tours-form__input--select'));
 
   SearchToursFormSelectInputs.forEach(input => {
