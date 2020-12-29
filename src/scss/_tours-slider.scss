@@ -62,13 +62,15 @@
   transition: 0.25s ease-in-out;
   font-family: var(--nunito);
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 1.8rem;
   line-height: 122%;
+  opacity: 0.7;
 
   &.active {
     background-color: var(--blue);
     color: var(--white);
+    opacity: 1;
   }
 
   @include breakpoint (mobile) {

@@ -66,13 +66,12 @@
     right: auto;
   }
 
-  &:hover, &:focus {
-    opacity: 0.6;
+  &:hover {
+    background-color: var(--soft-red);
   }
 
   &:active {
-    transition: 0s;
-    opacity: 1;
+    opacity: 0.6;
   }
 }
 .search-tours-form__submit-icon {
@@ -88,7 +87,7 @@
 }
 .search-tours-form__label {
   margin-left: 6rem;
-  padding-bottom: 0.2rem;
+  padding-bottom: 0.3rem;
   font-family: var(--nunito);
   font-style: normal;
   font-weight: normal;
@@ -169,7 +168,7 @@
   font-weight: bold;
   font-size: 1.6rem;
   line-height: 130%;
-  color: var(--primary-color);
+  color: var(--blue);
   background-color: unset !important;
 
   .choices__list--single & {
@@ -335,7 +334,8 @@
 .daterangepicker .calendar-table .next {
 
   & span {
-    border-color: var(--primary-color);
+    border-color: var(--blue);
+    border-width: 0 0.1rem 0.1rem 0;
     opacity: 0.5;
   }
 }
@@ -345,7 +345,7 @@
   font-weight: bold;
   font-size: 1.6rem;
   line-height: 137%;
-  color: var(--primary-color);
+  color: var(--blue);
 }
 
 .search-tours-form__input--date-range {
@@ -356,5 +356,5 @@
   font-weight: bold;
   font-size: 1.6rem;
   line-height: 137%;
-  color: var(--primary-color);
+  color: var(--blue);
 }

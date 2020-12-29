@@ -74,18 +74,10 @@
   }
 
   &:hover .play-button__cirlce {
-    fill: var(--primary-color);
+    animation-name: none;
   }
   &:hover .play-button__triangle {
-    fill: var(--white);
-  }
-  &:active .play-button__cirlce {
-    transition: unset;
-    fill: var(--white);
-  }
-  &:active .play-button__triangle {
-    transition: unset;
-    fill: var(--primary-color);
+    transform: scale(1.3);
   }
 }
 .about__video-bg {

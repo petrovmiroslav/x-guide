@@ -11,7 +11,7 @@ export default function FormBGParallax () {
     scrub: 1,
     animation: gsap.fromTo(
       '.form-section__bg',
-      { yPercent: 100 },
+      { yPercent: 50 },
       { yPercent: 0 }),
   });
 }
