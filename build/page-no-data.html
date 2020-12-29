@@ -34,7 +34,13 @@
     
 
     <div class="page-content">
-        <header class="page-header hero js-hero-slider">
+        <section class="menu">
+          <div class="menu__inner">
+            <div class="container">
+              
+            </div>
+          </div>
+        </section>        <header class="page-header hero js-hero-slider">
           <div class="hero__bg-slider js-hero-bg-slider">
             <div class="hero__bg-slider-wrapper">
               <div class="swiper-container">
@@ -110,16 +116,25 @@
                 <a href="#" class="nav-links-link">
                   О нас
                 </a>
-        
-                <button class="page-header__search-button js-header-search-form-button">
-                  <svg class="page-header__search-button-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <use href="#loupe"/>
-                  </svg>
-                </button>
               </div>
         
-              <div class="phone-number">
-                <a href="tel:+78009833838" class="phone-number__phone-link">8 800 983 38 38</a>
+              <div class="page-header__search-container">
+                <form action="/" method="POST" class="page-header__search-form" autocomplete="off">
+                  <input id="search-input" type="text" class="page-header__search-form-input" placeholder="ПОИСК">
+                  <div class="page-header__search-button-wrapper">
+                    <button type="submit" class="page-header__search-button js-header-search-form-button">
+                      <svg class="page-header__search-button-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <use href="#loupe"/>
+                      </svg>
+                    </button>
+                  </div>
+                </form>
+              </div>
+        
+              <div class="page-header__phone-number-wrapper">
+                <div class="phone-number page-header__phone-number">
+                  <a href="tel:+78009833838" class="phone-number__phone-link">8 800 983 38 38</a>
+                </div>
               </div>
             </div>
         
@@ -128,7 +143,7 @@
                 <div class="page-header__form-group">
                   <input id="search-input" type="text" class="page-header__form-input" placeholder="ПОИСК">
                 </div>
-                <button type="button" class="page-header__form-close-button js-header-search-form-button">
+                <button type="submit" class="page-header__form-close-button js-header-search-form-button">
                   <div class="page-header__form-close-button-line"></div>
                   <div class="page-header__form-close-button-line page-header__form-close-button-line--rotate"></div>
                 </button>

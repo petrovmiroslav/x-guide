@@ -1,12 +1,63 @@
 export default function Searchform () {
-  const SearchForm = document.querySelector('.page-header__form');
-  const SearchFormToggleButtons = Array.from(document.querySelectorAll('.js-header-search-form-button'));
+  let searchFormIsEnable = false;
 
-  SearchFormToggleButtons.forEach(button => {
-    button.addEventListener('click', toggleSearchForm);
-  });
+  const SearchForm = document.querySelector('.page-header__search-form');
+  const Input = SearchForm.querySelector('.page-header__search-form-input');
+  const SubmitButton = SearchForm.querySelector('.js-header-search-form-button');
+  const PhoneNumber = document.querySelector('.page-header__phone-number');
 
-  function toggleSearchForm () {
-    SearchForm.classList.toggle('page-header__form--shown');
+  document.body.addEventListener('click', clickHandler);
+
+  function getClosestButtonOrForm (elem) {
+    if (elem === SubmitButton) return elem;
+    if (elem === SearchForm) return elem;
+    
+    while(elem = elem.parentElement) {
+      if (elem === SubmitButton) return elem;
+      if (elem === SearchForm) return elem;
+    }
+  }
+
+  function clickHandler (event) {
+    let target = getClosestButtonOrForm(event.target);
+
+    if (target === SubmitButton) {
+      return submitButtonHandler(event);
+    }
+    
+    if (target === SearchForm) return;
+
+    disableSearchForm();
+  }
+
+  function submitButtonHandler (event) {
+    if (Input.value !== "") return;
+
+    event.preventDefault();
+    if (searchFormIsEnable) {
+      return disableSearchForm(); 
+    }
+    enableSearchForm();
+  }
+
+  function enableSearchForm () {
+    searchFormIsEnable = true;
+
+    toggleForm(true);
+  }
+
+  function disableSearchForm () {
+    searchFormIsEnable = false;
+    Input.value = "";
+
+    toggleForm(false);
+  }
+
+  function toggleForm (enable) {
+    SearchForm.classList.toggle('page-header__search-form-active', enable);
+
+    if (window.matchMedia('(max-width: 1600px)').matches) {
+      PhoneNumber.classList.toggle('page-header__phone-number--fadeout', enable);
+    }
   }
 }
