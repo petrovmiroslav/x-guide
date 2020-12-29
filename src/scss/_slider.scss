@@ -30,7 +30,7 @@
   border-radius: 1rem;
   overflow: hidden;
 
-  &:hover, &:focus {
+  &:hover {
     .slider__nav-button-bg {
       background-color: var(--soft-red);
     }

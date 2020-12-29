@@ -44,9 +44,12 @@ function init () {
   );
 
   if (window.matchMedia("(min-width: 768px)").matches) {
-    introTimeline.to(
+    introTimeline.fromTo(
       SearchToursForm,
+      { yPercent: 0,
+        opacity: 0 },
       { yPercent: -50,
+        opacity: 1,
         duration: 1 },
     );
   }

@@ -27,6 +27,7 @@
   grid-gap: 5.4rem 3rem;
 
   @include breakpoint (mobile) {
+    padding-bottom: 2rem;
     grid-template-columns: 1fr;
   }
 }

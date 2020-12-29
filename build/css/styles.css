@@ -1658,9 +1658,9 @@ select:-webkit-autofill:focus {
   position: relative;
   border-radius: 1rem;
   overflow: hidden; }
-  .slider__nav-button:hover .slider__nav-button-bg, .slider__nav-button:focus .slider__nav-button-bg {
+  .slider__nav-button:hover .slider__nav-button-bg {
     background-color: var(--soft-red); }
-  .slider__nav-button:hover .slider__nav-button-icon, .slider__nav-button:focus .slider__nav-button-icon {
+  .slider__nav-button:hover .slider__nav-button-icon {
     fill: var(--white); }
   .slider__nav-button:active {
     opacity: 0.6; }
@@ -1963,7 +1963,8 @@ select:-webkit-autofill:focus {
 .page-header__search-button-icon {
   width: 1.8rem;
   height: 1.8rem;
-  fill: var(--white); }
+  fill: var(--white);
+  vertical-align: middle; }
 
 .page-header__form {
   padding: 3rem 4.4rem 1rem;
@@ -3311,6 +3312,7 @@ select:-webkit-autofill:focus {
   grid-gap: 5.4rem 3rem; }
   @media only screen and (max-width: 767px) {
     .blog__grid {
+      padding-bottom: 2rem;
       grid-template-columns: 1fr; } }
 
 .blog__item {
