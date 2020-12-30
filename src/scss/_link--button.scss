@@ -11,6 +11,11 @@
   border-radius: 1.1rem;
   cursor: pointer;
   overflow: hidden;
+
+  @include breakpoint (mobile) {
+    width: 100%;
+  }
+
   &:link {
     color: var(--soft-red);
   }
@@ -22,13 +27,12 @@
   padding: 2rem 2.6rem;
   display: block;
   border-radius: 1.1rem;
-
-  @include breakpoint (mobile) {
-    padding: 1.5rem 1.6rem;
-  }
 }
 .link--button__text--bg {
+  margin: auto;
   position: absolute;
+  left: 0;
+  right: 0;
   color: var(--soft-red);
   box-shadow: inset 0 0 0 1px var(--soft-red);
 }

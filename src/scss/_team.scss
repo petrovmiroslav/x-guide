@@ -18,6 +18,10 @@
   grid-template-columns: 1fr 1fr;
   grid-gap: 1rem;
   grid-template-areas: "header buttons" "slider slider";
+
+  @include breakpoint (mobile) {
+    display: block;
+  }
 }
 .team__header {
   grid-area: header;
@@ -30,12 +34,16 @@
   color: var(--primary-color);
 
   @include breakpoint (mobile) {
-    font-size: 2.6rem;
+    font-size: 3rem;
   }
 }
 .team__slider-nav-buttons-container {
   grid-area: buttons;
   justify-self: end;
+
+  @include breakpoint (mobile) {
+    display: none;
+  }
 }
 .slider__nav-button-bg {
   .team__slider-nav-buttons-container & {
@@ -47,6 +55,10 @@
   min-width: 0;
   display: flex;
   justify-content: center;
+
+  @include breakpoint (mobile) {
+    display: block;
+  }
 }
 .team__slider-container-inner {
   padding-top: 8rem;
@@ -85,22 +97,23 @@
   overflow: hidden;
 
   @include breakpoint (mobile) {
-    width: 29rem;
-    height: 38rem;
+    width: 27rem;
+    height: 35rem;
+    margin: 0 2rem 0 0;
   }
 }
 .team__slider-item--s {
   width: 27rem;
   height: 35rem;
-
-  @include breakpoint (mobile) {
-    width: 29rem;
-    height: 38rem;
-  }
 }
 .team__slider-item--m {
   width: 29rem;
   height: 38rem;
+
+  @include breakpoint (mobile) {
+    width: 27rem;
+    height: 35rem;
+  }
 }
 .team__slider-item--up {
   transform: translateY(-25%);

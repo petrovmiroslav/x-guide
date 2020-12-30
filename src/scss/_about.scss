@@ -10,10 +10,16 @@
   grid-gap: 8.6rem;
 
   @include breakpoint (mobile) {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-    grid-template-columns: 1fr;
-    grid-gap: 4rem;
+    padding-top: 4.8rem;
+    padding-bottom: 7rem;
+    display: flex;
+    flex-direction: column;
+    grid-gap: unset;
+  }
+}
+.about__description-container {
+  @include breakpoint (mobile) {
+    display: contents;
   }
 }
 .about__header,
@@ -46,10 +52,6 @@
 .about__header-text--small {
   font-size: 2rem;
   line-height: 130%;
-
-  @include breakpoint (mobile) {
-    font-size: 1.3rem;
-  }
 }
 .about__text {
   padding: 5.4rem 0 3.6rem;
@@ -58,6 +60,18 @@
   font-weight: normal;
   font-size: 2rem;
   line-height: 130%;
+
+  @include breakpoint (mobile) {
+    padding-top: 3.8rem;
+    padding-bottom: 5rem;
+  }
+}
+.about__link {
+  @include breakpoint (mobile) {
+    order: 1;
+    padding-top: 4rem;
+    z-index: 1;
+  }
 }
 .about__video-container {
   position: relative;
@@ -70,7 +84,7 @@
   overflow: hidden;
 
   @include breakpoint (mobile) {
-    height: 28rem;
+    height: 21.5rem;
   }
 
   &:hover .play-button__cirlce {
@@ -85,6 +99,14 @@
   max-width: 140%;
   position: absolute;
   transform: translateX(-10%);
+
+  @include breakpoint (mobile) {
+    width: 200%;
+    max-width: 200%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-36%,-40%);
+  }
 }
 .about__video {
   width: 100%;

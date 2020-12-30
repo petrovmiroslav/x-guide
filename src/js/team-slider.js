@@ -30,12 +30,8 @@ export default function TeamSlider () {
       updateOnWindowResize: true,
       speed: speed,
       slidesPerView: 'auto',
-      centeredSlides: true,
+      //centeredSlides: true,
       watchOverflow: true,
-      navigation: {
-        prevEl: prevArrow,
-        nextEl: nextArrow,
-      },
     });
   }
 
@@ -49,7 +45,6 @@ export default function TeamSlider () {
       updateOnWindowResize: true,
       speed: speed,
       loop: true,
-      //loopedSlides: 1,
       slidesPerView: 'auto',
       centeredSlides: true,
       watchOverflow: true,

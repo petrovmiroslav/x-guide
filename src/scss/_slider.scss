@@ -1,3 +1,12 @@
+.slider__item-bg-img-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
 .slider__item-bg-img,
 .slider__item-bg-gradient {
   width: 100%;
@@ -11,6 +20,7 @@
 }
 .slider__item-bg-img {
   @include objectFitCover;
+  transition: 0.35s ease-in-out;
 }
 .slider__item-bg-gradient {
   background: linear-gradient(180deg, rgba(18, 33, 77, 0) 47.31%, rgba(18, 33, 77, 0.68) 81.87%);
