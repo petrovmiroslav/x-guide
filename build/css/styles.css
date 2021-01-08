@@ -2713,6 +2713,12 @@ select:-webkit-autofill:focus {
   min-width: unset;
   height: 2.7rem; }
 
+.daterangepicker .calendar-table tbody td {
+  padding: 0.2rem 0;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  background-clip: content-box; }
+
 .daterangepicker thead tr:nth-child(2) th {
   padding-top: 2rem;
   padding-bottom: 1rem;
