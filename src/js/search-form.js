@@ -5,6 +5,8 @@ export default function Searchform () {
   const Input = SearchForm.querySelector('.page-header__search-form-input');
   const SubmitButton = SearchForm.querySelector('.js-header-search-form-button');
   const PhoneNumber = document.querySelector('.page-header__phone-number');
+  const MenuButton = document.querySelector('.page-header__menu-button');
+  const LogoText = document.querySelector('.page-header__logo-link-text');
 
   document.body.addEventListener('click', clickHandler);
 
@@ -55,6 +57,10 @@ export default function Searchform () {
 
   function toggleForm (enable) {
     SearchForm.classList.toggle('page-header__search-form-active', enable);
+
+    MenuButton.classList.toggle('page-header__phone-number--fadeout', enable);
+
+    LogoText.classList.toggle('page-header__logo-link-text--fadeout', enable);
 
     if (window.matchMedia('(max-width: 1600px)').matches) {
       PhoneNumber.classList.toggle('page-header__phone-number--fadeout', enable);

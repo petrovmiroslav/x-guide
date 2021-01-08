@@ -6,9 +6,10 @@
           <a href="#" class="blog__item">
             <div class="blog__item-bg-container">
               <img class="blog__item-bg" src="./img/blog__item-1.jpg" alt="item bg">
+              <div class="blog__bg-mask">
+              </div>
             </div>
-            <div class="blog__bg-mask">
-            </div>
+            
             <div class="blog__item-info-label">
               <span class="blog__item-info-labelContent">Восхождение</span>
             </div>
@@ -30,9 +31,10 @@
           <a href="#" class="blog__item">
             <div class="blog__item-bg-container">
               <img class="blog__item-bg" src="./img/blog__item-2.jpg" alt="item bg">
+              <div class="blog__bg-mask">
+              </div>
             </div>
-            <div class="blog__bg-mask">
-            </div>
+      
             <div class="blog__item-info-label">
               <span class="blog__item-info-labelContent">Восхождение</span>
             </div>
@@ -52,9 +54,10 @@
           <a href="#" class="blog__item">
             <div class="blog__item-bg-container">
               <img class="blog__item-bg" src="./img/blog__item-3.jpg" alt="item bg">
+              <div class="blog__bg-mask">
+              </div>
             </div>
-            <div class="blog__bg-mask">
-            </div>
+            
             <div class="blog__item-info-label">
               <span class="blog__item-info-labelContent"></span>
             </div>
@@ -75,9 +78,10 @@
           <a href="#" class="blog__item">
             <div class="blog__item-bg-container">
               <img class="blog__item-bg" src="./img/blog__item-4.jpg" alt="item bg">
+              <div class="blog__bg-mask">
+              </div>
             </div>
-            <div class="blog__bg-mask">
-            </div>
+            
             <div class="blog__item-info-label">
               <span class="blog__item-info-labelContent"></span>
             </div>
@@ -97,9 +101,10 @@
           <a href="#" class="blog__item">
             <div class="blog__item-bg-container">
               <img class="blog__item-bg" src="./img/blog__item-3.jpg" alt="item bg">
+              <div class="blog__bg-mask">
+              </div>
             </div>
-            <div class="blog__bg-mask">
-            </div>
+            
             <div class="blog__item-info-label">
               <span class="blog__item-info-labelContent"></span>
             </div>
@@ -120,21 +125,33 @@
 
         <div class="blog__bottom-row">
           <div class="blog__form-container">
-            <h3 class="blog__form-header">Подпишитесь на нашу рассылку и будьте в курсе всех новостей!
-            </h3>
+            <div class="blog__form-wrapper">
+              <h3 class="blog__form-header">Подпишитесь на нашу рассылку и будьте в курсе всех новостей!
+              </h3>
 
-            <form action="/" method="POST" class="blog__form" data-need-validation="">
-              <div class="blog__form-group">
-                <input id="email-input" type="email" class="blog__form-input" placeholder="Введите адрес эл. почты" required>
-                
-              </div>
+              <form action="/" method="POST" class="blog__form" data-need-validation="">
+                <div class="blog__form-group">
+                  <input id="email-input" type="email" class="blog__form-input" placeholder="Введите адрес эл. почты" required>
+                  
+                </div>
 
-              <button type="submit" class="blog__form-submit">
-                <svg class="blog__form-submit-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <use href="#arrow"/>
+                <button type="submit" class="blog__form-submit">
+                  <svg class="blog__form-submit-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <use href="#arrow"/>
+                  </svg>
+                </button>
+              </form>
+            </div>
+
+            <div class="blog__form-success-wrapper">
+              <div class="blog__form-success-icon-container">
+                <svg class="blog__form-success-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <use href="#success"/>
                 </svg>
-              </button>
-            </form>
+              </div>
+              <h3 class="blog__form-success-header">Спасибо! Вы подписались на нашу рассылку
+              </h3>
+            </div>
           </div>
 
           <div class="blog__link-container">

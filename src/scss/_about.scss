@@ -64,6 +64,7 @@
   @include breakpoint (mobile) {
     padding-top: 3.8rem;
     padding-bottom: 5rem;
+    z-index: 1;
   }
 }
 .about__link {

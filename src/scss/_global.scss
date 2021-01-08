@@ -228,6 +228,17 @@ td, th {
     }
 }
 
+.no-scroll-with-scrollbar {
+    height: 100% !important;
+    overflow: hidden !important;
+    overflow-y: scroll !important;
+
+    body {
+        height: 100% !important;
+        overflow: hidden !important;
+    }
+}
+
 ::selection {
     color: white;
     background-color: var(--primary-color);
