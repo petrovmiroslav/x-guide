@@ -2,86 +2,101 @@
     <div class="container gallery-reviews__container">
 
       <h3 class="gallery-reviews__header">Галерея</h3>
-      <div class="gallery__grid">
-        <a href="#" class="gallery__item">
-          <div class="gallery__item-bg-wrapper">
-            <img class="gallery__item-bg" src="./img/gallery__item-1.jpg" alt="item bg">
-            <div class="gallery__item-bg-mask">
+      <div class="gallery__grid-container js-gallery-slider">
+        <div class="swiper-container gallery-reviews__swiper-container">
+          <div class="swiper-wrapper gallery__grid">
+            <div class="swiper-slide">
+              <a href="#" class="gallery__item">
+                <div class="gallery__item-bg-wrapper">
+                  <img class="gallery__item-bg" src="./img/gallery__item-1.jpg" alt="item bg">
+                  <div class="gallery__item-bg-mask">
+                  </div>
+                </div>
+                
+                <div class="gallery__item-info-label">
+                  <span class="gallery__item-info-labelContent">5:30</span>
+                </div>
+                <div class="gallery__item-contentContainer">
+                  <div class="gallery__item-content">
+                    <p class="gallery__item-date">09.09.20
+                    </p>
+                    <p class="gallery__item-header">Восхождение на эльбрус
+                    </p>
+                  </div>
+                  <div class="gallery__item-play-button">
+                    {{> play-button }}
+                  </div>
+                </div>
+              </a>
+            </div>
+              
+            <div class="swiper-slide">
+              <a href="#" class="gallery__item">
+                <div class="gallery__item-bg-wrapper">
+                  <img class="gallery__item-bg" src="./img/gallery__item-2.jpg" alt="item bg">
+                  <div class="gallery__item-bg-mask">
+                  </div>
+                </div>
+                <div class="gallery__item-info-label">
+                  <span class="gallery__item-info-labelContent">20 фото</span>
+                </div>
+                <div class="gallery__item-contentContainer">
+                  <div class="gallery__item-content">
+                    <p class="gallery__item-date">09.09.20
+                    </p>
+                    <p class="gallery__item-header">Восхождение на Непал
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="swiper-slide">
+              <a href="#" class="gallery__item">
+                <div class="gallery__item-bg-wrapper">
+                  <img class="gallery__item-bg" src="./img/gallery__item-3.jpg" alt="item bg">
+                  <div class="gallery__item-bg-mask">
+                  </div>
+                </div>
+                <div class="gallery__item-info-label">
+                  <span class="gallery__item-info-labelContent">20 фото</span>
+                </div>
+                <div class="gallery__item-contentContainer">
+                  <div class="gallery__item-content">
+                    <p class="gallery__item-date">09.09.20
+                    </p>
+                    <p class="gallery__item-header">Восхождение на Казбек
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="swiper-slide">
+              <a href="#" class="gallery__item">
+                <div class="gallery__item-bg-wrapper">
+                  <img class="gallery__item-bg" src="./img/gallery__item-1.jpg" alt="item bg">
+                  <div class="gallery__item-bg-mask">
+                  </div>
+                </div>
+                <div class="gallery__item-info-label">
+                  <span class="gallery__item-info-labelContent">5:30</span>
+                </div>
+                <div class="gallery__item-contentContainer">
+                  <div class="gallery__item-content">
+                    <p class="gallery__item-date">09.09.20
+                    </p>
+                    <p class="gallery__item-header">Восхождение на Эльбрус
+                    </p>
+                  </div>
+                  <div class="gallery__item-play-button">
+                    {{> play-button }}
+                  </div>
+                </div>
+              </a>
             </div>
           </div>
-          
-          <div class="gallery__item-info-label">
-            <span class="gallery__item-info-labelContent">5:30</span>
-          </div>
-          <div class="gallery__item-contentContainer">
-            <div class="gallery__item-content">
-              <p class="gallery__item-date">09.09.20
-              </p>
-              <p class="gallery__item-header">Восхождение на эльбрус
-              </p>
-            </div>
-            <div class="gallery__item-play-button">
-              {{> play-button }}
-            </div>
-          </div>
-        </a>
-        <a href="#" class="gallery__item">
-          <div class="gallery__item-bg-wrapper">
-            <img class="gallery__item-bg" src="./img/gallery__item-2.jpg" alt="item bg">
-            <div class="gallery__item-bg-mask">
-            </div>
-          </div>
-          <div class="gallery__item-info-label">
-            <span class="gallery__item-info-labelContent">20 фото</span>
-          </div>
-          <div class="gallery__item-contentContainer">
-            <div class="gallery__item-content">
-              <p class="gallery__item-date">09.09.20
-              </p>
-              <p class="gallery__item-header">Восхождение на Непал
-              </p>
-            </div>
-          </div>
-        </a>
-        <a href="#" class="gallery__item">
-          <div class="gallery__item-bg-wrapper">
-            <img class="gallery__item-bg" src="./img/gallery__item-3.jpg" alt="item bg">
-            <div class="gallery__item-bg-mask">
-            </div>
-          </div>
-          <div class="gallery__item-info-label">
-            <span class="gallery__item-info-labelContent">20 фото</span>
-          </div>
-          <div class="gallery__item-contentContainer">
-            <div class="gallery__item-content">
-              <p class="gallery__item-date">09.09.20
-              </p>
-              <p class="gallery__item-header">Восхождение на Казбек
-              </p>
-            </div>
-          </div>
-        </a>
-        <a href="#" class="gallery__item">
-          <div class="gallery__item-bg-wrapper">
-            <img class="gallery__item-bg" src="./img/gallery__item-1.jpg" alt="item bg">
-            <div class="gallery__item-bg-mask">
-            </div>
-          </div>
-          <div class="gallery__item-info-label">
-            <span class="gallery__item-info-labelContent">5:30</span>
-          </div>
-          <div class="gallery__item-contentContainer">
-            <div class="gallery__item-content">
-              <p class="gallery__item-date">09.09.20
-              </p>
-              <p class="gallery__item-header">Восхождение на Эльбрус
-              </p>
-            </div>
-            <div class="gallery__item-play-button">
-              {{> play-button }}
-            </div>
-          </div>
-        </a>
+        </div>
       </div>
       <div class="gallery-reviews__link-container gallery__link-container">
         <a href="#" class="link--button">

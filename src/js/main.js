@@ -9,6 +9,7 @@ import Tabs from './tabs';
 import ToursSlider from './tours-slider';
 import AboutTextFadeout from './about-fadeout';
 import TeamSlider from './team-slider';
+import GallerySlider from './gallery-slider';
 import ReviewsSlider from './reviews-slider';
 import MainAccordion from './accordion';
 import FormBGParallax from './form-section-parallax';
@@ -28,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
     ToursSlider.init();
     AboutTextFadeout();
     TeamSlider();
+    GallerySlider();
     ReviewsSlider();
     MainAccordion();
     FormBGParallax();
