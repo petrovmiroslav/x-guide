@@ -71,6 +71,7 @@
   @include breakpoint (mobile) {
     order: 1;
     padding-top: 4rem;
+    align-self: flex-end;
     z-index: 1;
   }
 }

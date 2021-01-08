@@ -1550,9 +1550,6 @@ select:-webkit-autofill:focus {
   border-radius: 1.1rem;
   cursor: pointer;
   overflow: hidden; }
-  @media only screen and (max-width: 767px) {
-    .link--button {
-      width: 100%; } }
   .link--button:link {
     color: var(--soft-red); }
   .link--button:active {
@@ -3155,6 +3152,8 @@ select:-webkit-autofill:focus {
         -ms-flex-order: 1;
             order: 1;
     padding-top: 4rem;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
     z-index: 1; } }
 
 .about__video-container {
