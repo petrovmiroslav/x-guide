@@ -2585,7 +2585,8 @@ select:-webkit-autofill:focus {
   right: 2.7rem;
   -webkit-transition: 0.25s ease-in-out;
   transition: 0.25s ease-in-out;
-  fill: #B6B6B6; }
+  fill: #B6B6B6;
+  pointer-events: none; }
   .is-open ~ .search-tours-form__input-icon {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg); }

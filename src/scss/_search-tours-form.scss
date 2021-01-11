@@ -141,6 +141,7 @@
   right: 2.7rem;
   transition: 0.25s ease-in-out;
   fill: #B6B6B6;
+  pointer-events: none;
 
   .is-open ~ & {
     transform: rotate(180deg);
