@@ -109,6 +109,10 @@
     top: 50%;
     transform: translate(-36%,-40%);
   }
+
+  @media (max-width: 767px) and (max-height: 720px) and (orientation: landscape) {
+    max-width: 135%;
+  }
 }
 .about__video {
   width: 100%;
