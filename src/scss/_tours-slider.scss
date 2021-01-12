@@ -74,6 +74,8 @@
   }
 
   @include breakpoint (mobile) {
+    margin-right: 0.5rem;
+    padding: 1rem 1.5rem;
     font-size: 1.6rem;
   }
 }
@@ -181,6 +183,10 @@
   overflow: hidden;
   transition: 0.7s;
 
+  @include breakpoint (mobile) {
+    padding: 1.6rem 1.6rem 0;
+  }
+
   .swiper-slide-active & {
     transform: scale(1.1) translateX(-5%);
 
@@ -204,6 +210,12 @@
   line-height: 130%;
   text-transform: uppercase;
   color: var(--white);
+
+  @include breakpoint (mobile) {
+    padding-bottom: 0;
+    font-size: 1.6rem;
+    line-height: 125%;
+  }
 }
 .tours-slider__item-description-container {
   max-height: 0;
@@ -225,6 +237,10 @@
   font-size: 1.4rem;
   line-height: 130%;
   color: var(--white);
+
+  @include breakpoint (mobile) {
+    display: none;
+  }
 }
 .tours-slider__item-specifications {
   margin-top: 2.4rem;
@@ -242,6 +258,7 @@
   color: var(--white);
 }
 .tours-slider__item-specification-name {
+  margin-right: 1rem;
   opacity: 0.6;
 }
 .tours-slider__slider-wrapper {
@@ -252,12 +269,15 @@
   & .swiper-slide {
     width: 32.2rem;
     height: 50.6rem;
+    margin-right: 2rem;
 
     transition: opacity 0.7s, transform 0.7s, visibility 0.7s;
     transform-origin: left center;
 
     @include breakpoint (mobile) {
-      width: 32.2rem;
+      width: 24rem;
+      height: 37rem;
+      margin-right: 1.2rem;
     }
 
     

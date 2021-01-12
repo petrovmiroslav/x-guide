@@ -17,7 +17,7 @@ function init() {
           slidesPerView: 'auto',
           watchOverflow: true,
           watchSlidesProgress: true,
-          spaceBetween: 20,
+          //spaceBetween: 20,
           speed: 700,
           watchSlidesVisibility: true,
           /* breakpoints: {

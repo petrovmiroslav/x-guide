@@ -126,6 +126,10 @@
   color: var(--white);
   background-color: rgba(18, 33, 77, 0.4);
   border-radius: 0.6rem;
+
+  @include breakpoint (mobile) {
+    padding: 0.6rem 1rem;
+  }
 }
 .gallery__item-contentContainer {
   position: relative;
