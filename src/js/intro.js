@@ -10,7 +10,7 @@ const MainSlider = Header.querySelector('.hero__main-slider');
 const FirstSlide = MainSlider.querySelector('.swiper-slide');
 const SlideLink = FirstSlide.querySelector('.hero__main-slider-item-link');
 const ThumbsSlider = Header.querySelector('.hero__thumbs-slider');
-const SearchToursForm = Header.querySelector('.search-tours-form');
+const SearchToursForm = document.querySelector('.search-tours-form');
 
 function init () {
   introTimeline
@@ -41,16 +41,21 @@ function init () {
     { autoAlpha: 0 },
     { autoAlpha: 1,
       duration: 1 },
+  )
+  .fromTo(
+    SearchToursForm,
+    { opacity: 0 },
+    { opacity: 1,
+      duration: 0.25 },
   );
 
   if (window.matchMedia("(min-width: 768px)").matches) {
     introTimeline.fromTo(
       SearchToursForm,
-      { yPercent: 0,
-        opacity: 0 },
+      { yPercent: 0 },
       { yPercent: -50,
-        opacity: 1,
         duration: 1 },
+      '<',
     );
   }
 

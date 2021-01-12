@@ -23,6 +23,10 @@
   padding: 2rem 2.6rem;
   display: block;
   border-radius: 1.1rem;
+
+  @include breakpoint(mobile) {
+    padding: 1.4rem 2.6rem;
+  }
 }
 .link--button__text--bg {
   margin: auto;

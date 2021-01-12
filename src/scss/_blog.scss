@@ -46,7 +46,7 @@
 
   @include breakpoint (mobile) {
     
-    :nth-child(n+4) {
+    &:nth-child(n+5) {
       display: none;
     }
   }

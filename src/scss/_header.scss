@@ -3,13 +3,21 @@
   opacity: 0;
   visibility: hidden;
   background-color: var(--blue);
-  z-index: 3;
 }
 .page-header__content-layout {
-  min-height: 100vh;
+  height: 95.8rem;
+  max-height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;
+
+  @include breakpoint(mobile) {
+    height: 48.2rem;
+  }
+
+  @media (min-width: 1700px) {
+    height: 120rem;
+  }
 }
 .hero__bg-slider {
   width: 100%;
