@@ -1981,7 +1981,7 @@ select:-webkit-autofill:focus {
 
 @media only screen and (max-width: 767px) {
   .page-header__logo {
-    margin-right: 4rem; } }
+    margin-right: 2rem; } }
 
 .menu-open .page-header__logo {
   position: relative;

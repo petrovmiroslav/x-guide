@@ -166,7 +166,7 @@
 }
 .page-header__logo {
   @include breakpoint (mobile) {
-    margin-right: 4rem;
+    margin-right: 2rem;
   }
 
   .menu-open & {
