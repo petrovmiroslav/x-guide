@@ -33,10 +33,17 @@
     
 
     <div class="page-content">
-        <section class="menu">
-          <div class="menu__inner">
-            <div class="container">
-              
+        <section class="video-modal">
+          <div class="video-modal__inner">
+            <div class="container video-modal__container">
+              <div class="video-modal__wrapper">
+                <div class="video-modal__close-area js-video-modal-button"></div>
+                <button class="video-modal__button js-video-modal-button">
+                </button>
+                <div id="player" class="video-modal__layout">
+                  <iframe class="video-modal__iframe" src="https://www.youtube.com/embed/CNpqVWhgdZs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              </div>
             </div>
           </div>
         </section>        <header class="page-header hero js-hero-slider">

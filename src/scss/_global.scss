@@ -230,7 +230,7 @@ td, th {
 
 .no-scroll-with-scrollbar {
     height: 100% !important;
-    overflow: hidden !important;
+    overflow-x: hidden !important;
     overflow-y: scroll !important;
 
     body {

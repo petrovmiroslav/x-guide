@@ -16,7 +16,7 @@ import MainAccordion from './accordion';
 import FormBGParallax from './form-section-parallax';
 import PhoneMask from './phoneMask';
 import Validation from './validation';
-
+import VideoModal from './video-modal';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
     FormBGParallax();
     PhoneMask();
     Validation();
+    VideoModal();
 });
 
 window.addEventListener('load', function() {
