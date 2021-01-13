@@ -1889,6 +1889,10 @@ body {
   -o-object-position: center;
      object-position: center;
   font-family: 'object-fit: cover; object-position: center;'; }
+  @media only screen and (max-width: 767px) {
+    .hero__bg-slider-item-bg-img {
+      -o-object-position: 64% 50%;
+         object-position: 64% 50%; } }
 
 .page-header__nav {
   padding: 4rem 4.4rem;
@@ -2356,7 +2360,7 @@ body {
   @media only screen and (max-width: 767px) {
     .hero__main-slider-item-header {
       max-width: 100%;
-      font-size: 3rem; } }
+      font-size: 2.4rem; } }
 
 .hero__main-slider-item-link {
   padding-top: 4rem;
