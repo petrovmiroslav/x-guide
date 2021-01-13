@@ -10,7 +10,7 @@ const MainSlider = Header.querySelector('.hero__main-slider');
 const FirstSlide = MainSlider.querySelector('.swiper-slide');
 const SlideLink = FirstSlide.querySelector('.hero__main-slider-item-link');
 const ThumbsSlider = Header.querySelector('.hero__thumbs-slider');
-const SearchToursForm = document.querySelector('.search-tours-form');
+const SearchToursForm = document.querySelector('.search-tours-form__accordion');
 
 function init () {
   introTimeline

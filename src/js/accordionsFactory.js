@@ -17,6 +17,7 @@ function openAccordeon(element) {
         console.log('Tranisitionnd Initiated');
         element.style.maxHeight = 'none';
         element.removeEventListener('transitionend', transitionEndHandler);
+        element.classList.add('open');
         animating = false;
         console.log(ScrollTrigger)
         ScrollTrigger.refresh(true);
@@ -33,6 +34,7 @@ function closeAccordeon(element) {
     element && element.scrollTop;
 
     element.style.maxHeight = '';
+    element.classList.remove('open');
 
     ScrollTrigger.refresh(true);
 }

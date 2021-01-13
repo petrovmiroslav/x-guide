@@ -2,14 +2,18 @@ import Choices from 'choices.js';
 import $ from "jquery";
 import moment from 'moment';
 import daterangepicker from 'daterangepicker';
+import accordionsFactory from './accordionsFactory';
 
 moment.locale('ru');
 
 const SearchToursForm = document.querySelector('.search-tours-form');
+const DateRangeInput = SearchToursForm.querySelector('.search-tours-form__input--date-range');
+const SearchToursFormSelectInputs = Array.from(SearchToursForm.querySelectorAll('.search-tours-form__input--select'));
+let applyButton;
+
+let DatePickerIsShown = false;
 
 function init () {
-  const DateRangeInput = SearchToursForm.querySelector('.search-tours-form__input--date-range');
-
   let date = new Date();
   date.setDate(date.getDate() + 7);
 
@@ -59,8 +63,27 @@ function init () {
 
   $(DateRangeInput).daterangepicker(PickerOption);
 
+  $(DateRangeInput).on('show.daterangepicker', toggleDateRangeInput);
+  $(DateRangeInput).on('hide.daterangepicker', toggleDateRangeInput);
 
-  const SearchToursFormSelectInputs = Array.from(SearchToursForm.querySelectorAll('.search-tours-form__input--select'));
+  applyButton = document.querySelector('.search-tours-form__date-button--apply');
+
+  DateRangeInput.addEventListener('click', clickHandler);
+
+  function clickHandler (e) {
+    if (!DatePickerIsShown) {
+      return DatePickerIsShown = !DatePickerIsShown;
+    }
+
+    applyButton.click();
+  }
+
+  function toggleDateRangeInput (ev, picker) {
+    DatePickerIsShown = picker.isShowing;
+    DateRangeInput.classList.toggle('calendar-shown');
+  }
+
+
 
   SearchToursFormSelectInputs.forEach(input => {
     const choices = new Choices(input, {
@@ -87,6 +110,27 @@ function init () {
       false,
     );
   });
+
+  SearchToursAccordion();
+
+  date = null;
+}
+
+function SearchToursAccordion() {
+  let factory = null;
+  const initializeMainAccordion = () => {
+      if (factory) {
+          factory.destroy();
+          factory = null;
+      }
+      factory = accordionsFactory(Array.from(document.querySelectorAll('.search-tours-form__accordion')));
+      
+      factory.init();
+  };
+
+  window.initializeMainAccordion = initializeMainAccordion;
+
+  initializeMainAccordion();
 }
 
 export default {

@@ -2,31 +2,125 @@
   position: relative;
   z-index: 1;
 }
-.search-tours-form__wrapper {
-  position: relative;
-}
-.search-tours-form {
-  width: 100%;
-  height: 9rem;
-  padding: 0 14.4rem 0 2rem;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5rem;
-  background-color: var(--white);
-  box-shadow: 0px 13px 20px rgba(0, 0, 0, 0.09);
+.search-tours-form__accordion {
   opacity: 0;
   transform: translateY(-50%);
 
   @include breakpoint (mobile) {
+    margin-top: -3.4rem;
+    border-radius: 3.4rem;
+    background-color: var(--white);
+    box-shadow: 0px 13px 20px rgba(0, 0, 0, 0.09);
+    transform: none !important;
+  }
+}
+.search-tours-form__mobile-button {
+  display: none;
+  width: 100%;
+  height: 6.8rem;
+  padding: 0 1.5rem 0 2.9rem;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 3.4rem 3.4rem 0 0;
+
+  @include breakpoint (mobile) {
+    display: flex;
+  }
+
+  &::after {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #EDEDED;
+    opacity: 0;
+    transition: opacity 0.1s 0.3s;
+  }
+  .active &::after {
+    opacity: 1;
+    transition-delay: 0s;
+  }
+}
+.search-tours-form__mobile-button-text {
+  font-family: var(--nunito);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 140%;
+  color: var(--blue);
+}
+.search-tours-form__mobile-button-icon-wrapper {
+  width: 4rem;
+  height: 4rem;
+  position: relative;
+  border-radius: 50%;
+  background-color: var(--blue);
+}
+.search-tours-form__mobile-button-icon {
+  width: 1.2rem;
+  height: 0.6rem;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  fill: var(--white);
+  transition: 0.15s ease-in-out;
+
+  .active & {
+    transform: rotate(180deg);
+  }
+}
+.search-tours-form__wrapper {
+  position: relative;
+  transition: max-height .4s ease-in-out;
+
+  @include breakpoint (mobile) {
+    max-height: 0;
+    overflow: hidden;
+
+    &.open {
+      overflow: visible;
+    }
+  }
+}
+
+.search-tours-form {
+  width: 100%;
+  height: 9rem;
+  padding: 0 14.4rem 0 2rem;
+  //position: absolute;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // opacity: 0;
+  // transform: translateY(-50%);
+  border-radius: 5rem;
+  background-color: var(--white);
+  box-shadow: 0px 13px 20px rgba(0, 0, 0, 0.09);
+
+  @include breakpoint (mobile) {
     height: auto;
-    margin-bottom: 3rem;
     padding: 1rem 0;
     position: relative;
     flex-direction: column;
-    border-radius: 1rem;
-    transform: none !important;
+    border-radius: unset;
+    background-color: unset;
+    box-shadow: unset;
+    // transform: none !important;
+    // transition: opacity 0.15s 0.1s ease-in-out;
+
+    // .active & {
+    //   opacity: 1;
+    //   transition: opacity 0.3s 0.2s ease-in-out;
+    // }
   }
 }
 .search-tours-form__group {
@@ -38,7 +132,12 @@
 
   @include breakpoint (mobile) {
     width: 100%;
+    margin-bottom: 2rem;
     padding: 2rem 0 0;
+
+    &:after {
+      display: none;
+    }
   }
 
   &:after {
@@ -61,11 +160,19 @@
   border-radius: 50%;
   background-color: var(--blue);
   transition: 0.15s ease-in-out;
+  transition-property: background-color, opacity;
 
   @include breakpoint (mobile) {
-    margin: 4rem 0 2rem;
+    width: calc(100% - 5.2rem);
+    height: auto;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    padding: 1.6rem 0;
     position: relative;
-    right: auto;
+    right: unset;
+    border-radius: 1.1rem;
+    background-color: var(--soft-red);
+    transition-property: opacity;
   }
 
   &:hover {
@@ -86,6 +193,24 @@
   right: 0;
   margin: auto;
   fill: var(--white);
+
+  @include breakpoint (mobile) {
+    display: none;
+  }
+}
+.search-tours-form__submit-text {
+  display: none;
+  font-family: var(--jost);
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: var(--white);
+
+  @include breakpoint (mobile) {
+    display: inline-block;
+  }
 }
 .search-tours-form__label {
   margin-left: 6rem;
@@ -96,6 +221,13 @@
   font-size: 1.4rem;
   line-height: 140%;
   color: var(--primary-color);
+  cursor: pointer;
+
+  @include breakpoint (mobile) {
+    margin-left: 2.7rem;
+    margin-bottom: 0.2rem;
+    font-size: 1.6rem;
+  }
 }
 .search-tours-form__input-placeholder {
   padding-left: 6rem;
@@ -110,6 +242,11 @@
   pointer-events: none;
   user-select: none;
   transition: 0.15s ease-in-out;
+
+  @include breakpoint (mobile) {
+    padding-left: 2.7rem;
+    font-size: 1.8rem;
+  }
 }
 .search-tours-form__input-placeholder--hidden {
   opacity: 0;
@@ -123,6 +260,8 @@
 }
 .search-tours-form__input--select {
   margin: 0;
+  font-size: 1.6rem;
+  line-height: 137%;
 }
 .search-tours-form__input--select-inner {
   min-height: auto;
@@ -131,6 +270,10 @@
 
   .choices.search-tours-form__input--select & {
     padding: 0 4rem 0 6rem;
+
+    @include breakpoint (mobile) {
+      padding-left: 2.7rem;
+    }
   }
 }
 .search-tours-form__input-icon {
@@ -145,13 +288,26 @@
   fill: #B6B6B6;
   pointer-events: none;
 
-  .is-open ~ & {
+  &.search-tours-form__input-icon--date-range-icon {
+    display: none;
+
+    @include breakpoint (mobile) {
+      display: block;
+    }
+  }
+
+  .is-open ~ &,
+  .calendar-shown ~ & {
     transform: rotate(180deg);
   }
 }
 .search-tours-form__select-option-list {
   border-radius: 0 0 1rem 1rem;
   border: none;
+
+  @include breakpoint (mobile) {
+    border-radius: 0 0 3.4rem 3.4rem;
+  }
 
   &.choices__list--single {
     padding: 0;
@@ -179,6 +335,10 @@
   }
   .choices__list--dropdown & {
     padding: 1.2rem 1rem 1.2rem 6rem;
+
+    @include breakpoint (mobile) {
+      padding-left: 2.7rem;
+    }
 
     &:hover {
       color: var(--soft-red);
@@ -221,6 +381,7 @@
   @include breakpoint (mobile) {
     display: inline-block !important;
     float: none !important;
+    width: 100%;
     padding: 0 !important;
   }
 }
@@ -365,4 +526,12 @@
   font-size: 1.6rem;
   line-height: 137%;
   color: var(--blue);
+  cursor: pointer;
+
+  @include breakpoint (mobile) {
+    width: calc(100% - 2rem);
+    margin-left: 2.6rem;
+    padding-left: 0;
+    font-size: 1.8rem;
+  }
 }
