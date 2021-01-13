@@ -1537,6 +1537,10 @@ select:-webkit-autofill:focus {
       -ms-flex-direction: column;
           flex-direction: column; }
 
+body {
+  opacity: 0;
+  visibility: hidden; }
+
 .link--button {
   position: relative;
   display: inline-block;
@@ -1800,8 +1804,6 @@ select:-webkit-autofill:focus {
 
 .page-header {
   position: relative;
-  opacity: 0;
-  visibility: hidden;
   background-color: var(--blue); }
 
 .page-header__content-layout {

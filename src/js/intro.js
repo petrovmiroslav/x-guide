@@ -18,15 +18,15 @@ function init () {
     FirstSlide.classList.add('slide--visible');
   })
   .to(
-    Header,
+    document.body,
     { autoAlpha: 1,
-      duration: 2 },
+      duration: 1 },
   )
   .fromTo(
     Nav,
     { autoAlpha: 0 },
     { autoAlpha: 1,
-      duration: 1.5, },
+      duration: 1, },
     0.5
   )
   .fromTo(
@@ -34,7 +34,7 @@ function init () {
     { autoAlpha: 0 },
     { autoAlpha: 1,
       duration: 1, },
-      1.5
+      0.5
   )
   .fromTo(
     ThumbsSlider,
