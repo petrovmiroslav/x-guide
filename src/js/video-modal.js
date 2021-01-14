@@ -53,7 +53,7 @@ function openModal (e) {
 }
 
 function closeModal (e) {
-  unlockScroll();
+  unlockScroll(Modal);
   Player.pauseVideo ? Player.pauseVideo() : void 0;
 }
 

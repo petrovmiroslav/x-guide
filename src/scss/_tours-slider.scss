@@ -99,14 +99,6 @@
   /* delete */
   z-index: 10;
 
-  @include breakpoint (mobile) {
-    display: contents;
-
-    &::before {
-      display: none;
-    }
-  }
-
   &::before {
     content: " ";
     display: block;
@@ -116,11 +108,19 @@
     top: 50%;
     right: -30%;
     transform: translate(0%, -50%);
-    z-index: -1;
     background-image: linear-gradient(-90deg, transparent, white 30%);
+  }
+
+  @include breakpoint (mobile) {
+    display: contents;
+
+    &::before {
+      display: none;
+    }
   }
 }
 .tours-slider__description {
+  position: relative;
   font-family: var(--nunito);
   font-style: normal;
   font-weight: normal;

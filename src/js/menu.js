@@ -1,4 +1,7 @@
+import { lockScroll, unlockScroll } from "./scrollBlocker";
+
 let menuIsOpen = false;
+const Modal = document.querySelector('.page-header__nav');
 const Buttons = document.querySelectorAll('.js-menu-button');
 
 export default function Menu () {
@@ -13,7 +16,10 @@ function toggleMenu () {
   menuIsOpen = !menuIsOpen;
 
   document.documentElement.classList.toggle('menu-open');
-  document.documentElement.classList.toggle('no-scroll-with-scrollbar');
+  //document.documentElement.classList.toggle('no-scroll-with-scrollbar');
+  menuIsOpen
+    ? lockScroll(Modal)
+    : unlockScroll(Modal);
 }
 
 function resizeHandler () {
