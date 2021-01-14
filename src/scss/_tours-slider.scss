@@ -91,6 +91,7 @@
 .tours-slider__left-col {
   max-width: 25rem;
   margin-right: 10rem;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -100,6 +101,23 @@
 
   @include breakpoint (mobile) {
     display: contents;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  &::before {
+    content: " ";
+    display: block;
+    width: 200%;
+    height: 120%;
+    position: absolute;
+    top: 50%;
+    right: -30%;
+    transform: translate(0%, -50%);
+    z-index: -1;
+    background-image: linear-gradient(-90deg, transparent, white 30%);
   }
 }
 .tours-slider__description {

@@ -3342,6 +3342,7 @@ body {
 .tours-slider__left-col {
   max-width: 25rem;
   margin-right: 10rem;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3356,7 +3357,22 @@ body {
   z-index: 10; }
   @media only screen and (max-width: 767px) {
     .tours-slider__left-col {
-      display: contents; } }
+      display: contents; }
+      .tours-slider__left-col::before {
+        display: none; } }
+  .tours-slider__left-col::before {
+    content: " ";
+    display: block;
+    width: 200%;
+    height: 120%;
+    position: absolute;
+    top: 50%;
+    right: -30%;
+    -webkit-transform: translate(0%, -50%);
+            transform: translate(0%, -50%);
+    z-index: -1;
+    background-image: -webkit-gradient(linear, right top, left top, from(transparent), color-stop(30%, white));
+    background-image: linear-gradient(-90deg, transparent, white 30%); }
 
 .tours-slider__description {
   font-family: var(--nunito);
