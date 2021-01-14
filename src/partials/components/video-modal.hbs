@@ -5,8 +5,17 @@
         <div class="video-modal__close-area js-video-modal-button"></div>
         <button class="video-modal__button js-video-modal-button">
         </button>
-        <div id="player" class="video-modal__layout">
-          <iframe class="video-modal__iframe" src="https://www.youtube.com/embed/CNpqVWhgdZs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="video-modal__layout">
+          <div class="video-modal__iframe-wrapper-scroll-fixer">
+            <div id="player" class="video-modal__iframe"></div>
+            {{!-- <iframe id="player" class="video-modal__iframe" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> --}}
+            <div class="video-modal__cover">
+              <img class="video-modal__cover-img" src="" alt="video cover">
+              <div class="video-modal__play-button">
+                {{> play-button }}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

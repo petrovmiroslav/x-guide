@@ -63,8 +63,8 @@
     opacity: 0.6;
   }
 
-  &.swiper-button-disabled,
-  &.button-disabled {
+  &.swiper-button-disabled:hover,
+  &.button-disabled:hover {
     opacity: 0.2;
   }
 }

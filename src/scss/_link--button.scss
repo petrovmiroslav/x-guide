@@ -46,6 +46,10 @@
   mask-repeat: no-repeat;
   animation: link--button-anim2 0.8s steps(29) forwards;
 
+  @include breakpoint (mobile) {
+    animation: none;
+  }
+
   .link--button:hover & {
     animation-name: link--button-anim;
   }

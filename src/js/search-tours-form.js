@@ -1,5 +1,4 @@
 import Choices from 'choices.js';
-import $ from "jquery";
 import moment from 'moment';
 import daterangepicker from 'daterangepicker';
 import accordionsFactory from './accordionsFactory';

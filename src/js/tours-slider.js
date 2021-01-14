@@ -1,5 +1,7 @@
 import Swiper from 'swiper';
+import detectIt from 'detect-it';
 
+const isTouch = detectIt.hasTouch;
 
 let instances = [];
 
@@ -20,16 +22,11 @@ function init() {
           //spaceBetween: 20,
           speed: 700,
           watchSlidesVisibility: true,
-          /* breakpoints: {
+          breakpoints: {
               768: {
-                  slidesPerView: 'auto',
-                  spaceBetween: 40
+                allowTouchMove: isTouch,
               },
-              1025: {
-                  slidesPerView: 'auto',
-                  spaceBetween: 60
-              }
-          } */
+          }
       };
 
       if (hasTabs) {

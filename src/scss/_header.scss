@@ -677,7 +677,7 @@
   font-size: 1.6rem;
   line-height: 140%;
   color: var(--white);
-  transition: transform 0.25s ease-in-out, opacity 0.15s linear;
+  transition: transform 0.25s ease-in-out, opacity 0.1s linear;
   transform-origin: 3rem 50%;
   transform: scaleX(0);
   opacity: 0;
@@ -747,11 +747,13 @@
 .page-header__search-button-icon {
   width: 1.8rem;
   height: 1.8rem;
+  margin-top: -0.4rem;
   fill: var(--white);
   vertical-align: middle;
 
   @include breakpoint (mobile) {
     width: 2rem;
     height: 2rem;
+    margin-top: 0;
   }
 }

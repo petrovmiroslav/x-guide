@@ -11,6 +11,10 @@
   left: 0;
   right: 0;
   @include objectFitCoverTop;
+
+  @include breakpoint(mobile) {
+    transform: none !important;
+  }
 }
 .form-section__container {
   padding-top: 18rem;
@@ -88,7 +92,7 @@
   position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  grid-gap: 2.5rem;
+  grid-gap: 1.8rem;
   transition: 0.35s ease-in-out;
 
   @include breakpoint(mobile) {
