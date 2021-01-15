@@ -46,6 +46,7 @@ export default function Searchform () {
     searchFormIsEnable = true;
 
     toggleForm(true);
+    Input.focus();
   }
 
   function disableSearchForm () {

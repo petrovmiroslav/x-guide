@@ -13,6 +13,20 @@ const ThumbsSlider = Header.querySelector('.hero__thumbs-slider');
 const SearchToursForm = document.querySelector('.search-tours-form__accordion');
 
 function init () {
+  if (window.matchMedia("(max-width: 767px)").matches) {
+    //return;
+    introTimeline
+    .set(
+      document.body,
+      { autoAlpha: 1},
+    )
+    .set(
+      SearchToursForm,
+      { opacity: 1},
+    );
+    return;
+  }
+
   introTimeline
   .call(()=>{
     FirstSlide.classList.add('slide--visible');
@@ -47,19 +61,14 @@ function init () {
     { opacity: 0 },
     { opacity: 1,
       duration: 0.25 },
-  );
-
-  if (window.matchMedia("(min-width: 768px)").matches) {
-    introTimeline.fromTo(
-      SearchToursForm,
-      { yPercent: 0 },
-      { yPercent: -50,
-        duration: 1 },
-      '<',
-    );
-  }
-
-  introTimeline
+  )
+  .fromTo(
+    SearchToursForm,
+    { yPercent: 0 },
+    { yPercent: -50,
+      duration: 1 },
+    '<',
+  )
   .call(()=>{
     FirstSlide.classList.remove('slide--visible');
   });
