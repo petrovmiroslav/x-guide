@@ -9,8 +9,8 @@ function init() {
   const toursSliders = Array.from(document.querySelectorAll('.js-tours-slider'));
 
   toursSliders.forEach(element => {
-      const prev = element.querySelector('.slider__nav-button--prev');
-      const next = element.querySelector('.slider__nav-button--next');
+      const prev = element.querySelector('.tours-slider__slider-nav-buttons-container .slider__nav-button--prev');
+      const next = element.querySelector('.tours-slider__slider-nav-buttons-container .slider__nav-button--next');
       const tabBtns = Array.from(element.querySelectorAll('.js-tabs-nav'));
       const tabItems = Array.from(element.querySelectorAll('.js-tabs-item'));
       const hasTabs = tabBtns.length > 0 && tabItems.length > 0;
@@ -149,6 +149,25 @@ function init() {
       tabBtns.forEach(btn => btn.addEventListener('click', handleButtonsActivity));
 
       handleButtonsActivity();
+  });
+
+
+  /*tabs nav slider*/
+  let tabsNavSwiper = new Swiper('.tours-slider__tabs-nav-swiper-container', {
+    speed: 400,
+    slidesPerView: 'auto',
+    watchOverflow: true,
+    watchSlidesProgress: true,
+    updateOnWindowResize: true,
+    
+    breakpoints: {
+        768: {
+            navigation: {
+                nextEl: '.tours-slider__tabs-nav-buttons-container .slider__nav-button--next',
+                prevEl: '.tours-slider__tabs-nav-buttons-container .slider__nav-button--prev',
+            },
+        },
+    }
   });
 }
 
