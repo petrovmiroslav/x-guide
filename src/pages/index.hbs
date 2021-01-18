@@ -1,16 +1,22 @@
 {{#extend "layout"}}
-{{#content "main"}}
+{{#content "page-content"}}
+  {{> header }}
 
-{{> search-tours-form }}
-{{> tours-slider }}
-{{> about }}
-{{> team }}
-{{> gallery-reviews }}
+  <main class="page-main">
+    {{> search-tours-form }}
+    {{> tours-slider }}
+    {{> about }}
+    {{> team }}
+    {{> gallery-reviews }}
 
-{{> blog }}
+    {{> blog }}
 
-{{> accordion }}
-{{> form-section }}
+    {{> accordion }}
+    {{> form-section }}
+  </main>
+  
+  {{> footer }}
+  {{> video-modal }}
 
 {{/content}}
 {{/extend}}
