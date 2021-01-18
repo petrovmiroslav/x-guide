@@ -33,11 +33,11 @@ console.log('toggleModal');
 }
 
 function openModal (e) {
-  let videoId = e.currentTarget.dataset.videoId;
-  videoId = videoId ? videoId : 'XfjS6_xO0uI';
+  let videoId = e.currentTarget.dataset.videoId || 'XfjS6_xO0uI';
+  
   console.log(Player);
-  let coverImgSrc = e.currentTarget.dataset.videoImgSrc;
-  coverImgSrc = coverImgSrc ? coverImgSrc : './img/gallery__item-2.jpg';
+  let coverImgSrc = e.currentTarget.dataset.videoImgSrc || './img/gallery__item-2.jpg';
+
 
   CoverImg.setAttribute('src', coverImgSrc);
   
