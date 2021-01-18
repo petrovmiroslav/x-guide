@@ -7,19 +7,21 @@ const introTimeline = gsap.timeline();
 const Header = document.querySelector('.page-header');
 const Nav = Header.querySelector('.page-header__nav');
 const MainSlider = Header.querySelector('.hero__main-slider');
-const FirstSlide = MainSlider.querySelector('.swiper-slide');
-const SlideLink = FirstSlide.querySelector('.hero__main-slider-item-link');
+const FirstSlide = MainSlider && MainSlider.querySelector('.swiper-slide');
+const SlideLink = FirstSlide && FirstSlide.querySelector('.hero__main-slider-item-link');
 const ThumbsSlider = Header.querySelector('.hero__thumbs-slider');
 const SearchToursForm = document.querySelector('.search-tours-form__accordion');
 
 function init () {
   if (window.matchMedia("(max-width: 767px)").matches) {
-    //return;
     introTimeline
     .set(
       document.body,
       { autoAlpha: 1},
-    )
+    );
+
+    SearchToursForm &&
+    introTimeline
     .set(
       SearchToursForm,
       { opacity: 1},
@@ -29,7 +31,7 @@ function init () {
 
   introTimeline
   .call(()=>{
-    FirstSlide.classList.add('slide--visible');
+    FirstSlide && FirstSlide.classList.add('slide--visible');
   })
   .to(
     document.body,
@@ -42,20 +44,29 @@ function init () {
     { autoAlpha: 1,
       duration: 1, },
     0.5
-  )
+  );
+
+  SlideLink &&
+  introTimeline
   .fromTo(
     SlideLink,
     { autoAlpha: 0 },
     { autoAlpha: 1,
       duration: 1, },
       0.5
-  )
+  );
+
+  ThumbsSlider &&
+  introTimeline
   .fromTo(
     ThumbsSlider,
     { autoAlpha: 0 },
     { autoAlpha: 1,
       duration: 1 },
-  )
+  );
+
+  SearchToursForm &&
+  introTimeline
   .fromTo(
     SearchToursForm,
     { opacity: 0 },
@@ -68,9 +79,11 @@ function init () {
     { yPercent: -50,
       duration: 1 },
     '<',
-  )
+  );
+
+  introTimeline
   .call(()=>{
-    FirstSlide.classList.remove('slide--visible');
+    FirstSlide && FirstSlide.classList.remove('slide--visible');
   });
 }
 

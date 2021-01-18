@@ -20,13 +20,48 @@ body {
   display: flex;
   flex-direction: column;
 
+  .page-header--thin & {
+    height: 44rem;
+  }
+
   @include breakpoint(mobile) {
     height: 48.2rem;
+
+    .page-header--thin & {
+      height: 27.5rem;
+    }
   }
 
   @media (min-width: 1700px) {
     height: 120rem;
   }
+}
+.hero__bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  &::after {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(180deg, rgba(66, 129, 205, 0) 50%, #2B669B 98.87%);
+  }
+}
+.hero__bg-img {
+  width: 100%;
+  height: 100%;
+  @include objectFitCover;
 }
 .hero__bg-slider {
   width: 100%;
@@ -45,7 +80,7 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(180deg, rgba(66, 129, 205, 0) 50%, #2B669B 98.87%);
+  background: linear-gradient(180deg, rgba(66, 129, 205, 0) 47.09%, #2B669B 79.2%);
   z-index: 1;
 }
 .hero__bg-slider-wrapper {
@@ -557,8 +592,16 @@ body {
   justify-content: flex-end;
   z-index: 1;
 
+  .page-header--thin & {
+    padding-bottom: 9rem;
+  }
+
   @include breakpoint(mobile) {
     padding-bottom: 4rem;
+
+    .page-header--thin & {
+      padding-bottom: 6.4rem;
+    }
   }
 }
 .hero__main-slider {
@@ -776,5 +819,61 @@ body {
     width: 2rem;
     height: 2rem;
     margin-top: 0;
+  }
+}
+.page-header__header {
+  font-family: var(--jost);
+  font-style: italic;
+  font-weight: 900;
+  font-size: 6.2rem;
+  line-height: 123%;
+  text-transform: uppercase;
+  color: var(--white);
+
+  @include breakpoint(mobile) {
+    font-size: 2.4rem;
+    line-height: 125%;
+  }
+}
+.page-header__breadcrumbs {
+  margin-bottom: 2.5rem;
+  font-family: var(--nunito);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 125%;
+  color: var(--white);
+
+  @include breakpoint(mobile) {
+    display: none;
+  }
+}
+.breadcrumbs__item {
+  display: inline-block;
+  transition: opacity 0.15s;
+
+  &:hover {
+    opacity: 0.6;
+    transition: opacity 0s;
+  }
+}
+.breadcrumbs__text {
+  display: inline-block;
+  vertical-align: middle;
+
+  .breadcrumbs__item:first-child & {
+    box-shadow: inset 0px -1px 0px var(--white);
+  }
+}
+.breadcrumbs__icon {
+  display: inline-block;
+  width: 1rem;
+  height: .5rem;
+  fill: var(--white);
+  vertical-align: middle;
+  transform: rotate(-90deg);
+
+  .breadcrumbs__item:last-child & {
+    display: none;
   }
 }

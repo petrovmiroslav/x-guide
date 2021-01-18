@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@1,700;1,900&family=Nunito:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.min.css" />
     <title>
-        
+        X-Guide - Главная
     </title>
 </head>
 
@@ -2630,8 +2630,7 @@
       <div class="container form-section__container">
         <div class="form-section__form-row">
           <div class="form-section__form-col">
-            <h3 class="form-section__header">Остались вопросы? Получите нашу консультацию
-            </h3>
+            <h3 class="form-section__header">Остались вопросы? Получите нашу консультацию</h3>
             <p class="form-section__header-description">Оставьте ваши контактные данные, и мы ответим на все ваши вопросы и расскажем о подробностях туров
             </p>
           </div>
@@ -2641,18 +2640,16 @@
                 <img class="form-section__form-bg-img" src="./img/bg-shape.png" alt="bg-shape">
               </div>
               <form action="/" method="POST" class="form-section__form" data-need-validation="">
-                <h2 class="form-section__form-heading">
-                  Заявка на консультацию
-                </h2>
+                <h2 class="form-section__form-heading">Заявка на консультацию</h2>
                 <div class="form-section__form-group">
-                  <input id="phone-number-input" type="tel" class="form-section__form-input js-phone-input" placeholder="Телефон" data-parsley-phone required>
+                  <input id="phone-number-input" type="tel" class="form-section__form-input js-phone-input" name="phone" placeholder="Телефон" data-parsley-phone required>
                   <label for="phone-number-input" class="form-section__form-label">
                     <span class="form-section__form-label-text">Телефон</span>
                   </label>
                 </div>
     
                 <div class="form-section__form-group">
-                  <textarea id="tour-wishes-input" class="form-section__form-input" placeholder="Пожелания к туру"></textarea>
+                  <textarea id="tour-wishes-input" class="form-section__form-input" name="wishes" placeholder="Пожелания к туру"></textarea>
                   <label for="tour-wishes-input" class="form-section__form-label">
                     <span class="form-section__form-label-text">Пожелания к туру</span>
                   </label>

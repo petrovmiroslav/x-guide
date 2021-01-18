@@ -4,11 +4,15 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function AboutTextFadeout () {
+  const AboutDescriptionContainer = document.querySelector('.about__description-container');
+
+  if (!AboutDescriptionContainer)
+    return;
   
   ScrollTrigger.matchMedia({
     "(min-width: 768px)": function() {
       let tl = gsap.timeline({scrollTrigger: {
-        trigger: '.about__description-container',
+        trigger: AboutDescriptionContainer,
         start: 'top 80%',
       }});
 
