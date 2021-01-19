@@ -56,7 +56,6 @@ export default function(accordionElements, openFirst = false) {
 
             
             const handler = function(event) {
-                
                 if (animating) return;
 
 

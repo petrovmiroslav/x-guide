@@ -110,26 +110,7 @@ function init () {
     );
   });
 
-  SearchToursAccordion();
-
   date = null;
-}
-
-function SearchToursAccordion() {
-  let factory = null;
-  const initializeMainAccordion = () => {
-      if (factory) {
-          factory.destroy();
-          factory = null;
-      }
-      factory = accordionsFactory(Array.from(document.querySelectorAll('.search-tours-form__accordion')));
-      
-      factory.init();
-  };
-
-  window.initializeMainAccordion = initializeMainAccordion;
-
-  initializeMainAccordion();
 }
 
 export default {

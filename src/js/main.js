@@ -1,7 +1,6 @@
 import polyfills from './polyfills';
 import detectTouch from './detectTouch';
 import Menu from './menu';
-import MenuAccordion from './menu-accordion';
 import Intro from './intro';
 import Searchform from './search-form';
 import SearchToursForm from './search-tours-form';
@@ -13,7 +12,7 @@ import AboutTextFadeout from './about-fadeout';
 import TeamSlider from './team-slider';
 import GallerySlider from './gallery-slider';
 import ReviewsSlider from './reviews-slider';
-import MainAccordion from './accordion';
+import Accordions from './accordions';
 import FormBGParallax from './form-section-parallax';
 import PhoneMask from './phoneMask';
 import Validation from './validation';
@@ -23,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
     polyfills();
     detectTouch();
     Menu();
-    MenuAccordion();
     Intro.init();
     Searchform();
     SearchToursForm.init();
@@ -35,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
     TeamSlider();
     GallerySlider();
     ReviewsSlider();
-    MainAccordion();
+    Accordions();
     FormBGParallax();
     PhoneMask();
     Validation();
