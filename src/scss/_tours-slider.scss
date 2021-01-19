@@ -3,13 +3,21 @@
 }
 .tours-slider__container {
   padding-top: 6.5rem;
-  padding-bottom: 20rem;
+  padding-bottom: 6rem;
+
+  &.tours-slider__container--main {
+    padding-bottom: 20rem;    
+  }
 
   @include breakpoint (mobile) {
     padding-top: 4rem;
     padding-bottom: 6rem;
     display: flex;
     flex-direction: column;
+
+    &.tours-slider__container--main {
+      padding-bottom: 6rem;    
+    }
   }
 }
 .tours-slider__top-row {
