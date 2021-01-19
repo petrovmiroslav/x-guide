@@ -8,6 +8,7 @@ import SearchToursForm from './search-tours-form';
 import Hero from './hero';
 import Tabs from './tabs';
 import ToursSlider from './tours-slider';
+import TabsSlider from './tabs-slider';
 import AboutTextFadeout from './about-fadeout';
 import TeamSlider from './team-slider';
 import GallerySlider from './gallery-slider';
@@ -28,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
     SearchToursForm.init();
     Hero();
     Tabs.init();
+    TabsSlider();
     ToursSlider.init();
     AboutTextFadeout();
     TeamSlider();
