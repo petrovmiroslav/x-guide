@@ -60,7 +60,7 @@ export default function(accordionElements, openFirst = false) {
 
 
                 if (event) {
-                    event.preventDefault();
+                    event.target.dataset.notPrevent || event.preventDefault();
                     if (event.relatedTarget) {
                         event.relatedTarget.focus();
                     } else {

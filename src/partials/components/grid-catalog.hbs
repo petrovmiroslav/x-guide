@@ -1,5 +1,6 @@
 <section class="grid-catalog">
   <div class="container grid-catalog__container">
+    {{!-- шрифт менять только у блока .sort целиком--}}
     <div class="sort js-accordion">
       <div class="sort__select-container js-accordion-item">
         <span class="sort__label">Сортировать:</span>
@@ -12,12 +13,299 @@
           </div>
           
           <ul class="sort__list js-accordion-content">
-            <li><a class="sort__list-item" href="#">Все</a></li>
-            <li><a class="sort__list-item" href="#">По месяцу</a></li>
-            <li><a class="sort__list-item" href="#">По региону</a></li>
-            <li><a class="sort__list-item" href="#">По программе</a></li>
-            <li><a class="sort__list-item" href="#">По сложности</a></li>
+            <li><a class="sort__list-item" href="#" data-not-prevent="true">Все</a></li>
+            <li><a class="sort__list-item" href="#" data-not-prevent="true">По месяцу</a></li>
+            <li><a class="sort__list-item" href="#" data-not-prevent="true">По региону</a></li>
+            <li><a class="sort__list-item" href="#" data-not-prevent="true">По программе</a></li>
+            <li><a class="sort__list-item" href="#" data-not-prevent="true">По сложности</a></li>
           </ul>
+        </div>
+      </div>
+    </div>
+    <div class="js-accordion">
+      <div class="grid-catalog__section">
+        <div class="grid-catalog__item">
+          <div class="grid-catalog__item-header-container">
+            <img class="grid-catalog__item-bg-img" src="./img/catalog__item-4.jpg" alt="tour background image">
+            <div class="grid-catalog__item-header-bg-gradient"></div>
+            <img class="grid-catalog__item-header-soldout-label" src="./img/soldout-label.png" alt="soldout label">
+            <h3 class="grid-catalog__item-header">
+              {{!-- добавить возможность из админки добавлять классы с размером шрифта. 
+              Либо grid-catalog__item-header-text--m , либо grid-catalog__item-header-text--l  --}}
+              <div class="grid-catalog__item-header-text grid-catalog__item-header-text--l">Казбек</div>
+              <div class="grid-catalog__item-header-text">Чудо, как хорош
+              </div>
+            </h3>
+            <span class="gallery__item-info-labelContent">Восхождения</span>
+          </div>
+          <div class="grid-catalog__item-content">
+            {{!-- ограничить количество символов --}}
+            <p class="grid-catalog__item-description">Программа рассчитана на обычных людей, но желательна хорошая физическая форма и готовность проходить...
+            </p>
+            <div class="grid-catalog__item-specification">
+              <div class="grid-catalog__item-level grid-catalog__item-level--medium">
+                <span class="grid-catalog__item-level-text">Средней сложности
+                </span>
+                <div class="grid-catalog__item-info-container">
+                  <svg class="grid-catalog__item-info-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <use href="#info-icon"/>
+                  </svg>
+                  <div class="grid-catalog__item-info">
+
+                  </div>
+                </div>
+              </div>
+              <div class="grid-catalog__item-level-price">
+                от
+                <span class="grid-catalog__item-level-price-amount">36 200</span>
+              </div>
+            </div>
+
+            <div class="grid-catalog__item-date-select js-accordion-item">
+              <div class="grid-catalog__item-date-select-container js-accordion-btn">
+                <div class="grid-catalog__item-date-selected">30 янв-10 фев 2021
+                </div>
+                <div class="grid-catalog__item-date-select-more">
+                  <span class="grid-catalog__item-date-select-more-text">еще 12 дат</span>
+                  <svg class="accordion__item-button-icon grid-catalog__item-date-select-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <use href="#icon-chevron"/>
+                  </svg>
+                </div>
+                <div class="grid-catalog__item-date-list-container">
+                  <ul class="grid-catalog__item-date-list js-accordion-content">
+                    <li><a class="grid-catalog__item-date-list-item" href="/" data-not-prevent="true">30 янв-10 фев 2021</a></li>
+                    <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
+                    <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
+                    <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
+                    <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
+                    <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
+                    <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            
+          </div>
+          <div class="grid-catalog__item-link-container">
+            <a href="#" class="link--button">
+              <span class="link--button__text link--button__text--bg">Подробнее </span>
+              <span class="link--button__text link--button__text--for">Подробнее </span>
+            </a>
+          </div>
+        </div>
+
+        <div class="grid-catalog__item">
+          <div class="grid-catalog__item-header-container">
+            <img class="grid-catalog__item-bg-img" src="./img/catalog__item-4.jpg" alt="tour background image">
+            <div class="grid-catalog__item-header-bg-gradient"></div>
+            <img class="grid-catalog__item-header-soldout-label" src="./img/soldout-label.png" alt="soldout label">
+            <h3 class="grid-catalog__item-header">
+              {{!-- добавить возможность из админки добавлять классы с размером шрифта. 
+              Либо grid-catalog__item-header-text--m , либо grid-catalog__item-header-text--l  --}}
+              <div class="grid-catalog__item-header-text grid-catalog__item-header-text--l">Казбек</div>
+              <div class="grid-catalog__item-header-text">Чудо, как хорош
+              </div>
+            </h3>
+            <span class="gallery__item-info-labelContent">Восхождения</span>
+          </div>
+          <div class="grid-catalog__item-content">
+            {{!-- ограничить количество символов --}}
+            <p class="grid-catalog__item-description">Программа рассчитана на обычных людей, но желательна хорошая физическая форма и готовность проходить...
+            </p>
+            <div class="grid-catalog__item-specification">
+              <div class="grid-catalog__item-level grid-catalog__item-level--medium">
+                <span class="grid-catalog__item-level-text">Средней сложности
+                </span>
+                <div class="grid-catalog__item-info-container">
+                  <svg class="grid-catalog__item-info-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <use href="#info-icon"/>
+                  </svg>
+                  <div class="grid-catalog__item-info">
+
+                  </div>
+                </div>
+              </div>
+              <div class="grid-catalog__item-level-price">
+                от
+                <span class="grid-catalog__item-level-price-amount">36 200</span>
+              </div>
+            </div>
+
+            <div class="grid-catalog__item-date-select js-accordion-item">
+              <div class="grid-catalog__item-date-select-container js-accordion-btn">
+                <div class="grid-catalog__item-date-selected">30 янв-10 фев 2021
+                </div>
+                <div class="grid-catalog__item-date-select-more">
+                  <span class="grid-catalog__item-date-select-more-text">еще 12 дат</span>
+                  <svg class="accordion__item-button-icon grid-catalog__item-date-select-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <use href="#icon-chevron"/>
+                  </svg>
+                </div>
+                <div class="grid-catalog__item-date-list-container">
+                  <ul class="grid-catalog__item-date-list js-accordion-content">
+                    <li><a class="grid-catalog__item-date-list-item" href="/" data-not-prevent="true">30 янв-10 фев 2021</a></li>
+                    <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
+                    <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
+                    <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
+                    <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
+                    <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
+                    <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            
+          </div>
+          <div class="grid-catalog__item-link-container">
+            <a href="#" class="link--button">
+              <span class="link--button__text link--button__text--bg">Подробнее </span>
+              <span class="link--button__text link--button__text--for">Подробнее </span>
+            </a>
+          </div>
+        </div>
+
+        <div class="grid-catalog__item">
+          <div class="grid-catalog__item-header-container">
+            <img class="grid-catalog__item-bg-img" src="./img/catalog__item-4.jpg" alt="tour background image">
+            <div class="grid-catalog__item-header-bg-gradient"></div>
+            <img class="grid-catalog__item-header-soldout-label" src="./img/soldout-label.png" alt="soldout label">
+            <h3 class="grid-catalog__item-header">
+              {{!-- добавить возможность из админки добавлять классы с размером шрифта. 
+              Либо grid-catalog__item-header-text--m , либо grid-catalog__item-header-text--l  --}}
+              <div class="grid-catalog__item-header-text grid-catalog__item-header-text--l">Казбек</div>
+              <div class="grid-catalog__item-header-text">Чудо, как хорош
+              </div>
+            </h3>
+            <span class="gallery__item-info-labelContent">Восхождения</span>
+          </div>
+          <div class="grid-catalog__item-content">
+            {{!-- ограничить количество символов --}}
+            <p class="grid-catalog__item-description">Программа рассчитана на обычных людей, но желательна хорошая физическая форма и готовность проходить...
+            </p>
+            <div class="grid-catalog__item-specification">
+              <div class="grid-catalog__item-level grid-catalog__item-level--medium">
+                <span class="grid-catalog__item-level-text">Средней сложности
+                </span>
+                <div class="grid-catalog__item-info-container">
+                  <svg class="grid-catalog__item-info-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <use href="#info-icon"/>
+                  </svg>
+                  <div class="grid-catalog__item-info">
+
+                  </div>
+                </div>
+              </div>
+              <div class="grid-catalog__item-level-price">
+                от
+                <span class="grid-catalog__item-level-price-amount">36 200</span>
+              </div>
+            </div>
+
+            <div class="grid-catalog__item-date-select js-accordion-item">
+              <div class="grid-catalog__item-date-select-container js-accordion-btn">
+                <div class="grid-catalog__item-date-selected">30 янв-10 фев 2021
+                </div>
+                <div class="grid-catalog__item-date-select-more">
+                  <span class="grid-catalog__item-date-select-more-text">еще 12 дат</span>
+                  <svg class="accordion__item-button-icon grid-catalog__item-date-select-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <use href="#icon-chevron"/>
+                  </svg>
+                </div>
+                <div class="grid-catalog__item-date-list-container">
+                  <ul class="grid-catalog__item-date-list js-accordion-content">
+                    <li><a class="grid-catalog__item-date-list-item" href="/" data-not-prevent="true">30 янв-10 фев 2021</a></li>
+                    <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
+                    <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
+                    <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
+                    <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
+                    <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
+                    <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            
+          </div>
+          <div class="grid-catalog__item-link-container">
+            <a href="#" class="link--button">
+              <span class="link--button__text link--button__text--bg">Подробнее </span>
+              <span class="link--button__text link--button__text--for">Подробнее </span>
+            </a>
+          </div>
+        </div>
+
+        <div class="grid-catalog__item">
+          <div class="grid-catalog__item-header-container">
+            <img class="grid-catalog__item-bg-img" src="./img/catalog__item-4.jpg" alt="tour background image">
+            <div class="grid-catalog__item-header-bg-gradient"></div>
+            <img class="grid-catalog__item-header-soldout-label" src="./img/soldout-label.png" alt="soldout label">
+            <h3 class="grid-catalog__item-header">
+              {{!-- добавить возможность из админки добавлять классы с размером шрифта. 
+              Либо grid-catalog__item-header-text--m , либо grid-catalog__item-header-text--l  --}}
+              <div class="grid-catalog__item-header-text grid-catalog__item-header-text--l">Казбек</div>
+              <div class="grid-catalog__item-header-text">Чудо, как хорош
+              </div>
+            </h3>
+            <span class="gallery__item-info-labelContent">Восхождения</span>
+          </div>
+          <div class="grid-catalog__item-content">
+            {{!-- ограничить количество символов --}}
+            <p class="grid-catalog__item-description">Программа рассчитана на обычных людей, но желательна хорошая физическая форма и готовность проходить...
+            </p>
+            <div class="grid-catalog__item-specification">
+              <div class="grid-catalog__item-level grid-catalog__item-level--medium">
+                <span class="grid-catalog__item-level-text">Средней сложности
+                </span>
+                <div class="grid-catalog__item-info-container">
+                  <svg class="grid-catalog__item-info-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <use href="#info-icon"/>
+                  </svg>
+                  <div class="grid-catalog__item-info">
+
+                  </div>
+                </div>
+              </div>
+              <div class="grid-catalog__item-level-price">
+                от
+                <span class="grid-catalog__item-level-price-amount">36 200</span>
+              </div>
+            </div>
+
+            <div class="grid-catalog__item-date-select js-accordion-item">
+              <div class="grid-catalog__item-date-select-container js-accordion-btn">
+                <div class="grid-catalog__item-date-selected">30 янв-10 фев 2021
+                </div>
+                <div class="grid-catalog__item-date-select-more">
+                  <span class="grid-catalog__item-date-select-more-text">еще 12 дат</span>
+                  <svg class="accordion__item-button-icon grid-catalog__item-date-select-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <use href="#icon-chevron"/>
+                  </svg>
+                </div>
+                <div class="grid-catalog__item-date-list-container">
+                  <ul class="grid-catalog__item-date-list js-accordion-content">
+                    <li><a class="grid-catalog__item-date-list-item" href="/" data-not-prevent="true">30 янв-10 фев 2021</a></li>
+                    <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
+                    <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
+                    <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
+                    <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
+                    <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
+                    <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            
+          </div>
+          <div class="grid-catalog__item-link-container">
+            <a href="#" class="link--button">
+              <span class="link--button__text link--button__text--bg">Подробнее </span>
+              <span class="link--button__text link--button__text--for">Подробнее </span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
