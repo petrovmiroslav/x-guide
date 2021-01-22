@@ -17,6 +17,7 @@ import FormBGParallax from './form-section-parallax';
 import PhoneMask from './phoneMask';
 import Validation from './validation';
 import VideoModal from './video-modal';
+import TourInfo from './tour-info';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -38,6 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
     PhoneMask();
     Validation();
     VideoModal();
+    TourInfo();
 });
 
 window.addEventListener('load', function() {
