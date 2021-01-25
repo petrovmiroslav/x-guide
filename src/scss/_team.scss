@@ -34,7 +34,8 @@
   color: var(--primary-color);
 
   @include breakpoint (mobile) {
-    font-size: 3rem;
+    font-size: 2.4rem;
+    line-height: 3.5rem;
   }
 }
 .team__slider-nav-buttons-container {

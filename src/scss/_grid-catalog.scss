@@ -144,6 +144,11 @@
   line-height: 117%;
   text-transform: uppercase;
   color: var(--primary-color);
+
+  @include breakpoint (mobile) {
+    font-size: 2.4rem;
+    line-height: 3.5rem;
+  }
 }
 .grid-catalog__banner,
 .grid-catalog__item {
