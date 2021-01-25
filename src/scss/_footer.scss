@@ -143,13 +143,14 @@
 }
 
 .page-footer__bottom-panel-copyright {
+  display: inline-block;
   font-size: 1.2rem;
   line-height: 1.5rem;
-  margin-right: 2.4rem;
+  margin-right: 0.7rem;
   color: var(--white);
   @include breakpoint(mobile) {
     margin: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
 }
 
@@ -209,8 +210,7 @@
   margin-left: auto;
 
   @include breakpoint(mobile) {
-    margin: 0 0 1rem -0.5rem;
-    order: -1;
+    margin: 2.7rem 0 0 -0.5rem;
   }
 }
 .page-footer__socials-link {

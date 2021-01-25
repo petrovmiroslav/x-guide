@@ -7001,14 +7001,15 @@ textarea.form-section__form-input {
         pointer-events: none; } }
 
 .page-footer__bottom-panel-copyright {
+  display: inline-block;
   font-size: 1.2rem;
   line-height: 1.5rem;
-  margin-right: 2.4rem;
+  margin-right: 0.7rem;
   color: var(--white); }
   @media only screen and (max-width: 767px) {
     .page-footer__bottom-panel-copyright {
       margin: 0;
-      margin-bottom: 1rem; } }
+      margin-bottom: 2rem; } }
 
 .page-footer__bottom-panel-link {
   -ms-flex-negative: 0;
@@ -7059,10 +7060,7 @@ textarea.form-section__form-input {
   margin-left: auto; }
   @media only screen and (max-width: 767px) {
     .page-footer__socials {
-      margin: 0 0 1rem -0.5rem;
-      -webkit-box-ordinal-group: 0;
-          -ms-flex-order: -1;
-              order: -1; } }
+      margin: 2.7rem 0 0 -0.5rem; } }
 
 .page-footer__socials-link {
   padding: 0 2rem;
