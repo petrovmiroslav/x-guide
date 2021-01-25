@@ -303,6 +303,7 @@
   border-radius: 1rem;
   overflow: hidden;
   transition: transform 0.7s;
+  transform: translate3d(0,0,0);
 
   @include breakpoint (mobile) {
     padding: 1.6rem 1.6rem;
@@ -310,7 +311,7 @@
   }
 
   .swiper-slide-active & {
-    transform: scale(1.1) translateX(-5%);
+    transform: scale(1.1) translate3d(-5%,0,0);
 
     @include breakpoint (mobile) {
       transform: none;
@@ -318,10 +319,13 @@
   }
 }
 .tours-slider__item-content-container {
+  margin-top: auto;
   position: relative;
 }
-.tours-slider__item .slider__item-bg-img {
-  transition: 0.7s ease-in-out;
+.slider__item-bg-img {
+  .tours-slider__item:hover & {
+    transform: scale(1.05);
+  }
 }
 .tours-slider__item-header {
   padding-bottom: 2.2rem;
