@@ -2,24 +2,23 @@ import Swiper from 'swiper';
 
 export default function TabsSlider () {
   /*tabs nav slider*/
-  const TabsSliderContainer = document.querySelector('.js-tabs-slider');
-  if (!TabsSliderContainer)
-    return;
+  const TabsSliders = document.querySelectorAll('.js-tabs-slider');
 
-  let tabsNavSwiper = new Swiper(TabsSliderContainer, {
-    speed: 400,
-    slidesPerView: 'auto',
-    watchOverflow: true,
-    watchSlidesProgress: true,
-    updateOnWindowResize: true,
-    
-    breakpoints: {
-        768: {
-            navigation: {
-                nextEl: '.tours-slider__tabs-nav-buttons-container .slider__nav-button--next',
-                prevEl: '.tours-slider__tabs-nav-buttons-container .slider__nav-button--prev',
-            },
-        },
-    }
+  TabsSliders.forEach(TabsSlider => {
+    const TabsSliderContainer = TabsSlider.querySelector('.swiper-container');
+    const PrevButton = TabsSlider.querySelector('.slider__nav-button--prev');
+    const NextButton = TabsSlider.querySelector('.slider__nav-button--next');
+
+    let tabsNavSwiper = new Swiper(TabsSliderContainer, {
+      speed: 400,
+      slidesPerView: 'auto',
+      watchOverflow: true,
+      watchSlidesProgress: true,
+      updateOnWindowResize: true,
+      navigation: {
+        nextEl: NextButton,
+        prevEl: PrevButton,
+      },
+    });
   });
 }

@@ -19,6 +19,7 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 
   .page-header--thin & {
     height: 44rem;
@@ -55,7 +56,7 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(180deg, rgba(66, 129, 205, 0) 50%, #2B669B 98.87%);
+    background: linear-gradient(180deg, rgba(66, 129, 205, 0) 30%, #2B669B 98.87%);
   }
 }
 .hero__bg-img {
@@ -71,17 +72,24 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-}
-.hero__bg-slider-mask {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(180deg, rgba(66, 129, 205, 0) 47.09%, #2B669B 79.2%);
-  z-index: 1;
+
+  &::after {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(180deg, rgba(66, 129, 205, 0) 47.09%, #2B669B 79.2%);
+    z-index: 1;
+  }
+
+  .page-header--about &::after {
+    background: linear-gradient(180deg, rgba(66, 129, 205, 0) 45.2%, #2B669B 133.31%);
+  }
 }
 .hero__bg-slider-wrapper {
   height: 100%;
@@ -596,11 +604,19 @@ body {
     padding-bottom: 9rem;
   }
 
+  .page-header--about & {
+    padding-bottom: 6rem;
+  }
+
   @include breakpoint(mobile) {
     padding-bottom: 4rem;
 
     .page-header--thin & {
       padding-bottom: 6.4rem;
+    }
+
+    .page-header--about & {
+      padding-bottom: 3.6rem;
     }
   }
 }
@@ -618,13 +634,44 @@ body {
   text-transform: uppercase;
   color: var(--white);
 
+  .page-header--about & {
+    max-width: 85rem;
+  }
+
   @include breakpoint (mobile) {
-    max-width: 100%;
+    max-width: 100% !important;
     font-size: 2.4rem;
   }
 
   @media (min-width: 768px) and (max-height: 414px) {
     font-size: 4.4rem;
+  }
+}
+.hero__main-slider-item-text {
+  max-width: 75rem;
+  margin-top: 4rem;
+  margin-bottom: 6rem;
+  font-family: var(--nunito);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2rem;
+  line-height: 130%;
+  color: var(--white);
+
+  @include breakpoint (mobile) {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+
+  @media (min-height: 541px) and (max-width: 767px) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 7;
+    height: 2rem*7;
   }
 }
 .hero__main-slider-item-link {

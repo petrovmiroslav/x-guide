@@ -1,6 +1,6 @@
 <header class="page-header page-header--thin hero">
   <div class="hero__bg">
-    <img class="hero__bg-img" src="./img/hero__bg1.jpg" alt="hero bg">
+    <img class="hero__bg-img" src={{ Header.hero-img-src }} alt="hero bg">
   </div>
 
   <div class="page-header__content-layout">
@@ -48,7 +48,7 @@
             </li>
           </ul>
         </div>
-        <a href="#" class="nav-links-link">
+        <a href="/regions.html" class="nav-links-link">
           Регионы
         </a>
         <a href="#" class="nav-links-link">
@@ -111,23 +111,20 @@
 
     <div class="container page-header__container">
       <ul class="page-header__breadcrumbs breadcrumbs">
-        <li class="breadcrumbs__item">
-          <a href="/">
-            <span class="breadcrumbs__text">Главная </span>
-            <svg class="breadcrumbs__icon"
-            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <use href="#icon-chevron"/>
-            </svg>
-          </a>
-        </li>
-        <li class="breadcrumbs__item">
-          <a href="/catalog.html">
-            <span class="breadcrumbs__text">Туры</span>
-          </a>
-        </li>
+        {{#each Header.breadcrumbs }}
+          <li class="breadcrumbs__item">
+            <a href={{ this.href }}>
+              <span class="breadcrumbs__text">{{ this.text }} </span>
+              <svg class="breadcrumbs__icon"
+              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use href="#icon-chevron"/>
+              </svg>
+            </a>
+          </li>
+        {{/each}}
       </ul>
     
-      <h1 class="page-header__header">Каталог туров</h1>
+      <h1 class="page-header__header">{{ Header.header }}</h1>
     </div>
   </div>
 </header>

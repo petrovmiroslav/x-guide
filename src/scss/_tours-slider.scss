@@ -67,7 +67,7 @@
     overflow-y: hidden;
     margin-left: calc(-1*var(--content-padding));
     margin-right: calc(-1*var(--content-padding));
-    padding: 2rem var(--content-padding);
+    // padding: 2rem var(--content-padding);
   }
 }
 .tours-slider__tabs-nav-swiper-layout {
@@ -136,6 +136,13 @@
 
   .swiper-button-disabled + & {
     opacity: 0;
+  }
+}
+.swiper-container {
+  .tours-slider__tabs-nav & {
+    @include breakpoint(mobile) {
+      padding: 2rem var(--content-padding);
+    }
   }
 }
 .swiper-slide {
@@ -265,7 +272,9 @@
   left: 0;
   visibility: hidden;
   opacity: 0;
-  transition: opacity 0.4s, transform 0s linear 0.4s, visibility 0s linear 0.4s;
+  transition: 
+    opacity 0.4s,
+    transform 0s linear 0.4s, visibility 0s linear 0.4s;
   transform: translateX(20%);
   z-index: 1;
 
@@ -275,7 +284,10 @@
     visibility: visible;
     z-index: 2;
     transform: translateX(0);
-    transition: all 0.4s, transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: 
+      opacity 0.4s,
+      visibility 0.4s,
+      transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 }
 .tours-slider__item {

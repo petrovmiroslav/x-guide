@@ -1,0 +1,14 @@
+{
+  "title": "X-Guide - О нас",
+  "Header": {
+    "breadcrumbs": [
+      { "text": "Главная",
+        "href": "/" },
+      { "text": "О нас",
+        "href": "/about.html" }
+    ],
+    "hero-img-src": "./img/hero__bg2.jpg"
+  },
+  "form-section-header": "Отправляйтесь\n в путешествие\n с нами",
+  "form-header": "Заявка на подбор тура"
+}

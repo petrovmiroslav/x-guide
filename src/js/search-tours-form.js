@@ -5,14 +5,16 @@ import accordionsFactory from './accordionsFactory';
 
 moment.locale('ru');
 
-const SearchToursForm = document.querySelector('.search-tours-form');
-const DateRangeInput = SearchToursForm.querySelector('.search-tours-form__input--date-range');
-const SearchToursFormSelectInputs = Array.from(SearchToursForm.querySelectorAll('.search-tours-form__input--select'));
-let applyButton;
-
-let DatePickerIsShown = false;
-
 function init () {
+  const SearchToursForm = document.querySelector('.search-tours-form');
+  if (!SearchToursForm)
+    return;
+  const DateRangeInput = SearchToursForm.querySelector('.search-tours-form__input--date-range');
+  const SearchToursFormSelectInputs = Array.from(SearchToursForm.querySelectorAll('.search-tours-form__input--select'));
+  let applyButton;
+
+  let DatePickerIsShown = false;
+
   let date = new Date();
   date.setDate(date.getDate() + 7);
 
