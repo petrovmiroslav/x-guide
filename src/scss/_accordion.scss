@@ -24,6 +24,8 @@
 
   @include breakpoint (mobile) {
     max-width: unset;
+    font-size: 1.8rem;
+    line-height: 2.6rem;
   }
 }
 .accordion__item-text {
@@ -34,6 +36,11 @@
   font-size: 2rem;
   line-height: 130%;
   color: var(--gray);
+
+  @include breakpoint (mobile) {
+    font-size: 1.6rem;
+    line-height: 125%;
+  }
 }
 .accordion__item-text--hidden {
   max-height: 0;

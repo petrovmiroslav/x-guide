@@ -6403,7 +6403,9 @@ body {
   color: var(--primary-color); }
   @media only screen and (max-width: 767px) {
     .accordion__item-header {
-      max-width: unset; } }
+      max-width: unset;
+      font-size: 1.8rem;
+      line-height: 2.6rem; } }
 
 .accordion__item-text {
   margin-bottom: 2rem;
@@ -6413,6 +6415,10 @@ body {
   font-size: 2rem;
   line-height: 130%;
   color: var(--gray); }
+  @media only screen and (max-width: 767px) {
+    .accordion__item-text {
+      font-size: 1.6rem;
+      line-height: 125%; } }
 
 .accordion__item-text--hidden {
   max-height: 0;
@@ -6940,6 +6946,7 @@ textarea.form-section__form-input {
   @media only screen and (max-width: 767px) {
     footer .nav-links-link {
       margin-right: 0;
+      padding-left: 0;
       display: inline-block;
       width: 100%; } }
 

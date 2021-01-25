@@ -81,6 +81,7 @@
   @include breakpoint(mobile) {
     footer & {
       margin-right: 0;
+      padding-left: 0;
       display: inline-block;
       width: 100%;
     }
