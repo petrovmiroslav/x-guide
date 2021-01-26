@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   window.Parsley.on('form:submit', function() {
 
-    let Container = this.$element.closest('.form-section__form-content')[0];
+    let Container = this.$element.closest('.js-submit-message')[0];
     if (Container) {
       form = Container.querySelector('form'),
       modal = Container.querySelector('.form-section__form-modal');

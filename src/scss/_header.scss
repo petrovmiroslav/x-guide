@@ -13,6 +13,9 @@ body {
   // visibility: hidden;
   background-color: var(--blue);
 }
+.page-header--mini {
+  background: unset;
+}
 .page-header__content-layout {
   height: 95.8rem;
   max-height: 100vh;
@@ -23,6 +26,11 @@ body {
 
   .page-header--thin & {
     height: 44rem;
+  }
+
+  .page-header--mini & {
+    height: auto;
+    min-height: 6rem;
   }
 
   @include breakpoint(mobile) {
@@ -284,6 +292,10 @@ body {
   max-height: 2.1rem;
   fill: var(--white);
 
+  .page-header--mini & {
+    fill: var(--primary-color);
+  }
+
   @include breakpoint(mobile) {
     max-width: 8.7rem;
     max-height: 1.5rem;
@@ -440,13 +452,13 @@ body {
   @include breakpoint(mobile) {
     padding-left: 1rem;
     padding-right: 1rem;
-    border: none;
+    border: none !important;
   }
 
   .menu-open & {
     padding-left: 2.3rem;
     padding-right: 2.3rem;
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.5) !important;
     transition: transform 0.25s ease-in-out;
     transform: translateY(3rem);
   }
@@ -466,6 +478,10 @@ body {
   display: none;
   fill: var(--white);
   vertical-align: middle;
+
+  .page-header--mini & {
+    fill: var(--primary-color);
+  }
 
   @include breakpoint(mobile) {
     display: inline-block;
@@ -522,6 +538,11 @@ body {
       transform: translateY(-0.9rem) rotate(-45deg);
     }
   }
+
+  .page-header--mini &::before,
+  .page-header--mini &::after {
+    background-color: var(--primary-color);
+  }
 }
 .page-header__menu-button-line {
   width: 100%;
@@ -532,6 +553,10 @@ body {
   bottom: 0;
   border-radius: 2px;
   background-color: var(--white);
+
+  .page-header--mini & {
+    background-color: var(--primary-color);
+  }
 
   .menu-open & {
     opacity: 0;
@@ -796,6 +821,12 @@ body {
   transform: scaleX(0);
   opacity: 0;
 
+  .page-header--mini & {
+    background-color: rgba($color: #12214D, $alpha: 0.02);
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+  }
+
   @include breakpoint (large-desktop) {
     width: 100%;
   }
@@ -816,6 +847,9 @@ body {
     font-size: 1.6rem;
     color: var(--white);
     opacity: 0.3;
+  }
+  .page-header--mini &::placeholder {
+    color: var(--primary-color);
   }
 }
 .page-header__search-button-wrapper {
@@ -863,6 +897,10 @@ body {
   margin-top: -0.4rem;
   fill: var(--white);
   vertical-align: middle;
+  
+  .page-header--mini & {
+    fill: var(--primary-color);
+  }
 
   @include breakpoint (mobile) {
     width: 2rem;

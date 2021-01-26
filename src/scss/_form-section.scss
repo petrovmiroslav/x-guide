@@ -170,7 +170,7 @@ textarea.form-section__form-input {
   align-items: center;
   pointer-events: none;
   user-select: none;
-  transform-origin: 30% 50%;
+  transform-origin: 0% 50%;
   transition: 0.25s ease-in-out;
   transition-property: color, transform;
 
@@ -186,7 +186,10 @@ textarea.form-section__form-input {
     color: var(--soft-red);
   }
 
-  .form-section__form-input:focus ~ &, .form-section__form-input:not(:placeholder-shown) ~ & {
+  .form-section__form-input:focus ~ &,
+  .form-section__form-input:not(:placeholder-shown) ~ &,
+  .is-open ~ &,
+  .is-not-empty ~ & {
     transform: translateY(-50%) scale(0.8);
   }
 }
@@ -283,11 +286,6 @@ textarea.form-section__form-input {
   font-size: 1.5rem;
   line-height: 120%;
   color: var(--primary-color);
-
-  @include breakpoint(mobile) {
-    font-size: 1.2rem;
-    line-height: 1.2;
-  }
 }
 
 .form-section__form-checkbox-input {
@@ -305,8 +303,11 @@ textarea.form-section__form-input {
   cursor: pointer;
   transition: background-color 0.2s;
   opacity: 0.4;
-  
 
+  @include breakpoint(mobile) {
+    margin-top: 0.1rem;
+  }
+  
   &::before {
     content: '';
     position: absolute;

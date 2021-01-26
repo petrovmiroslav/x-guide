@@ -58,6 +58,10 @@
 .nav-links {
   color: var(--white);
 
+  .page-header--mini & {
+    color: var(--primary-color);
+  }
+
   @include breakpoint(mobile) {
     footer & {
       column-count: 2;
@@ -91,7 +95,13 @@
   margin-left: auto;
   color: var(--white);
 
-  
+  .page-header--mini & {
+    color: var(--primary-color);
+  }
+
+  .menu-open & {
+    color: var(--white);
+  }
 }
 .footer__phone-number {
   @include breakpoint(mobile) {
@@ -109,6 +119,10 @@
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 7rem;
   white-space: nowrap;
+
+  .page-header--mini & {
+    border: 1px solid rgba($color: #12214D, $alpha: 0.5);
+  }
 
   &:hover, &:focus {
     opacity: 0.6;

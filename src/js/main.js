@@ -1,5 +1,6 @@
 import polyfills from './polyfills';
 import detectTouch from './detectTouch';
+import Selects from './selects';
 import Menu from './menu';
 import Intro from './intro';
 import Searchform from './search-form';
@@ -22,6 +23,7 @@ import TourInfo from './tour-info';
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
     detectTouch();
+    Selects();
     Menu();
     Intro.init();
     Searchform();
