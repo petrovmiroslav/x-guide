@@ -261,26 +261,23 @@
         <div class="sort js-accordion">
           <div class="sort__select-container js-accordion-item">
             <span class="sort__label">Сортировать:</span>
-            <div class="sort__select js-accordion-btn">
-              <div class="sort__selected-item-container">
-                <span class="sort__selected-item">Все</span>
-                <svg class="accordion__item-button-icon sort__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <use href="#icon-chevron"/>
-                </svg>
-              </div>
-              
-              <ul class="sort__list js-accordion-content">
-                <li><a class="sort__list-item" href="#" data-not-prevent="true">Все</a></li>
-                <li><a class="sort__list-item" href="#" data-not-prevent="true">По месяцу</a></li>
-                <li><a class="sort__list-item" href="#" data-not-prevent="true">По региону</a></li>
-                <li><a class="sort__list-item" href="#" data-not-prevent="true">По программе</a></li>
-                <li><a class="sort__list-item" href="#" data-not-prevent="true">По сложности</a></li>
-              </ul>
+    
+            <div class="sort__select">
+              <select id="communication-way" name="" class="js-selects-for-choices">
+                <option value="" selected="">Все</option>
+                <option value="">По месяцу</option>
+                <option value="">По региону</option>
+                <option value="">По программе</option>
+                <option value="">По сложности</option>
+              </select>  
+              <svg class="selects__choices-input-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use href="#icon-chevron--thin"/>
+              </svg>
             </div>
           </div>
         </div>
         
-        <div class="js-accordion">
+        <div class="">
           <div class="grid-catalog__section">
             <h3 class="grid-catalog__section-header">Январь
             </h3>
@@ -340,28 +337,21 @@
                     </div>
                   </div>
     
-                  <div class="grid-catalog__item-date-select js-accordion-item">
-                    <div class="grid-catalog__item-date-select-container js-accordion-btn">
-                      <div class="grid-catalog__item-date-selected">30 янв-10 фев 2021
-                      </div>
-                      <div class="grid-catalog__item-date-select-more">
-                        <span class="grid-catalog__item-date-select-more-text">еще 12 дат</span>
-                        <svg class="accordion__item-button-icon grid-catalog__item-date-select-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                          <use href="#icon-chevron"/>
-                        </svg>
-                      </div>
-                      <div class="grid-catalog__item-date-list-container">
-                        <ul class="grid-catalog__item-date-list js-accordion-content">
-                          <li><a class="grid-catalog__item-date-list-item" href="/" data-not-prevent="true">30 янв-10 фев 2021</a></li>
-                          <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
-                          <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
-                          <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
-                          <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
-                          <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
-                          <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
-                        </ul>
-                      </div>
-                    </div>
+                  <div class="grid-catalog__item-date-select">
+    
+                    <select id="communication-way" name="" class="js-selects-for-choices">
+                      <option value="" selected="">30 янв-10 фев 2021</option>
+                      <option value="">30 янв-10 фев 2021</option>
+                      <option value="">30 янв-10 фев 2021</option>
+                      <option value="">30 янв-10 фев 2021</option>
+                      <option value="">30 янв-10 фев 2021</option>
+                      <option value="">30 янв-10 фев 2021</option>
+                      <option value="">30 янв-10 фев 2021</option>
+                    </select> 
+                    <span class="grid-catalog__item-more-date-label">еще 12 дат</span>
+                    <svg class="selects__choices-input-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <use href="#icon-chevron--thin"/>
+                    </svg>
                   </div>
     
                   <div class="grid-catalog__item-link-wrapper">
@@ -435,28 +425,20 @@
                     </div>
                   </div>
     
-                  <div class="grid-catalog__item-date-select js-accordion-item">
-                    <div class="grid-catalog__item-date-select-container js-accordion-btn">
-                      <div class="grid-catalog__item-date-selected">30 янв-10 фев 2021
-                      </div>
-                      <div class="grid-catalog__item-date-select-more">
-                        <span class="grid-catalog__item-date-select-more-text">еще 12 дат</span>
-                        <svg class="accordion__item-button-icon grid-catalog__item-date-select-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                          <use href="#icon-chevron"/>
-                        </svg>
-                      </div>
-                      <div class="grid-catalog__item-date-list-container">
-                        <ul class="grid-catalog__item-date-list js-accordion-content">
-                          <li><a class="grid-catalog__item-date-list-item" href="/" data-not-prevent="true">30 янв-10 фев 2021</a></li>
-                          <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
-                          <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
-                          <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
-                          <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
-                          <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
-                          <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
-                        </ul>
-                      </div>
-                    </div>
+                  <div class="grid-catalog__item-date-select">
+                    <select id="communication-way" name="" class="js-selects-for-choices">
+                      <option value="" selected="">30 янв-10 фев 2021</option>
+                      <option value="">30 янв-10 фев 2021</option>
+                      <option value="">30 янв-10 фев 2021</option>
+                      <option value="">30 янв-10 фев 2021</option>
+                      <option value="">30 янв-10 фев 2021</option>
+                      <option value="">30 янв-10 фев 2021</option>
+                      <option value="">30 янв-10 фев 2021</option>
+                    </select> 
+                    <span class="grid-catalog__item-more-date-label">еще 12 дат</span>
+                    <svg class="selects__choices-input-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <use href="#icon-chevron--thin"/>
+                    </svg>
                   </div>
     
                   <div class="grid-catalog__item-link-wrapper">
@@ -527,28 +509,20 @@
                     </div>
                   </div>
     
-                  <div class="grid-catalog__item-date-select js-accordion-item">
-                    <div class="grid-catalog__item-date-select-container js-accordion-btn">
-                      <div class="grid-catalog__item-date-selected">30 янв-10 фев 2021
-                      </div>
-                      <div class="grid-catalog__item-date-select-more">
-                        <span class="grid-catalog__item-date-select-more-text">еще 12 дат</span>
-                        <svg class="accordion__item-button-icon grid-catalog__item-date-select-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                          <use href="#icon-chevron"/>
-                        </svg>
-                      </div>
-                      <div class="grid-catalog__item-date-list-container">
-                        <ul class="grid-catalog__item-date-list js-accordion-content">
-                          <li><a class="grid-catalog__item-date-list-item" href="/" data-not-prevent="true">30 янв-10 фев 2021</a></li>
-                          <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
-                          <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
-                          <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
-                          <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
-                          <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
-                          <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
-                        </ul>
-                      </div>
-                    </div>
+                  <div class="grid-catalog__item-date-select">
+                    <select id="communication-way" name="" class="js-selects-for-choices">
+                      <option value="" selected="">30 янв-10 фев 2021</option>
+                      <option value="">30 янв-10 фев 2021</option>
+                      <option value="">30 янв-10 фев 2021</option>
+                      <option value="">30 янв-10 фев 2021</option>
+                      <option value="">30 янв-10 фев 2021</option>
+                      <option value="">30 янв-10 фев 2021</option>
+                      <option value="">30 янв-10 фев 2021</option>
+                    </select> 
+                    <span class="grid-catalog__item-more-date-label">еще 12 дат</span>
+                    <svg class="selects__choices-input-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <use href="#icon-chevron--thin"/>
+                    </svg>
                   </div>
     
                   <div class="grid-catalog__item-link-wrapper">
@@ -619,28 +593,20 @@
                     </div>
                   </div>
     
-                  <div class="grid-catalog__item-date-select js-accordion-item">
-                    <div class="grid-catalog__item-date-select-container js-accordion-btn">
-                      <div class="grid-catalog__item-date-selected">30 янв-10 фев 2021
-                      </div>
-                      <div class="grid-catalog__item-date-select-more">
-                        <span class="grid-catalog__item-date-select-more-text">еще 12 дат</span>
-                        <svg class="accordion__item-button-icon grid-catalog__item-date-select-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                          <use href="#icon-chevron"/>
-                        </svg>
-                      </div>
-                      <div class="grid-catalog__item-date-list-container">
-                        <ul class="grid-catalog__item-date-list js-accordion-content">
-                          <li><a class="grid-catalog__item-date-list-item" href="/" data-not-prevent="true">30 янв-10 фев 2021</a></li>
-                          <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
-                          <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
-                          <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
-                          <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
-                          <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
-                          <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
-                        </ul>
-                      </div>
-                    </div>
+                  <div class="grid-catalog__item-date-select">
+                    <select id="communication-way" name="" class="js-selects-for-choices">
+                      <option value="" selected="">30 янв-10 фев 2021</option>
+                      <option value="">30 янв-10 фев 2021</option>
+                      <option value="">30 янв-10 фев 2021</option>
+                      <option value="">30 янв-10 фев 2021</option>
+                      <option value="">30 янв-10 фев 2021</option>
+                      <option value="">30 янв-10 фев 2021</option>
+                      <option value="">30 янв-10 фев 2021</option>
+                    </select> 
+                    <span class="grid-catalog__item-more-date-label">еще 12 дат</span>
+                    <svg class="selects__choices-input-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <use href="#icon-chevron--thin"/>
+                    </svg>
                   </div>
     
                   <div class="grid-catalog__item-link-wrapper">
@@ -711,28 +677,20 @@
                     </div>
                   </div>
     
-                  <div class="grid-catalog__item-date-select js-accordion-item">
-                    <div class="grid-catalog__item-date-select-container js-accordion-btn">
-                      <div class="grid-catalog__item-date-selected">30 янв-10 фев 2021
-                      </div>
-                      <div class="grid-catalog__item-date-select-more">
-                        <span class="grid-catalog__item-date-select-more-text">еще 12 дат</span>
-                        <svg class="accordion__item-button-icon grid-catalog__item-date-select-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                          <use href="#icon-chevron"/>
-                        </svg>
-                      </div>
-                      <div class="grid-catalog__item-date-list-container">
-                        <ul class="grid-catalog__item-date-list js-accordion-content">
-                          <li><a class="grid-catalog__item-date-list-item" href="/" data-not-prevent="true">30 янв-10 фев 2021</a></li>
-                          <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
-                          <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
-                          <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
-                          <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
-                          <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
-                          <li><a class="grid-catalog__item-date-list-item" href="#" data-not-prevent="true">30 янв-10 фев 2021</a></li>
-                        </ul>
-                      </div>
-                    </div>
+                  <div class="grid-catalog__item-date-select">
+                    <select id="communication-way" name="" class="js-selects-for-choices">
+                      <option value="" selected="">30 янв-10 фев 2021</option>
+                      <option value="">30 янв-10 фев 2021</option>
+                      <option value="">30 янв-10 фев 2021</option>
+                      <option value="">30 янв-10 фев 2021</option>
+                      <option value="">30 янв-10 фев 2021</option>
+                      <option value="">30 янв-10 фев 2021</option>
+                      <option value="">30 янв-10 фев 2021</option>
+                    </select> 
+                    <span class="grid-catalog__item-more-date-label">еще 12 дат</span>
+                    <svg class="selects__choices-input-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <use href="#icon-chevron--thin"/>
+                    </svg>
                   </div>
     
                   <div class="grid-catalog__item-link-wrapper">

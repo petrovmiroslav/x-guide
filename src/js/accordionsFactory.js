@@ -58,7 +58,6 @@ export default function(accordionElements, openFirst = false) {
             const handler = function(event) {
                 if (animating) return;
 
-
                 if (event) {
                     event.target.dataset.notPrevent || event.preventDefault();
                     if (event.relatedTarget) {
