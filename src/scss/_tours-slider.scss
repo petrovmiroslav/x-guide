@@ -165,6 +165,10 @@
   line-height: 122%;
   opacity: 0.7;
 
+  &:link {
+    color: var(--blue);
+  }
+
   &.active {
     background-color: var(--blue);
     color: var(--white);

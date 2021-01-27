@@ -24,7 +24,8 @@ body {
   flex-direction: column;
   overflow: hidden;
 
-  .page-header--thin & {
+  .page-header--thin &,
+  .page-header--reviews & {
     height: 44rem;
   }
 
@@ -627,8 +628,9 @@ body {
   justify-content: flex-end;
   z-index: 1;
 
-  .page-header--thin & {
-    padding-bottom: 9rem;
+  .page-header--thin &,
+  .page-header--reviews & {
+    padding-bottom: 7rem;
   }
 
   .page-header--about & {
@@ -645,6 +647,10 @@ body {
     .page-header--about & {
       padding-bottom: 3.6rem;
     }
+
+    .page-header--reviews & {
+      padding-bottom: 3rem;
+    }
   }
 }
 .hero__main-slider {
@@ -653,6 +659,7 @@ body {
 }
 .hero__main-slider-item-header {
   max-width: 66.8rem;
+  margin-bottom: 4rem;
   font-family: var(--jost);
   font-style: italic;
   font-weight: 900;
@@ -667,6 +674,7 @@ body {
 
   @include breakpoint (mobile) {
     max-width: 100% !important;
+    margin-bottom: 2rem;
     font-size: 2.4rem;
   }
 
@@ -686,28 +694,27 @@ body {
   color: var(--white);
 
   @include breakpoint (mobile) {
-    margin-top: 2rem;
-    margin-bottom: 4rem;
-    font-size: 1.6rem;
-    line-height: 2rem;
+    // margin-top: 2rem;
+    // margin-bottom: 4rem;
+    // font-size: 1.6rem;
+    // line-height: 2rem;
+    display: none;
   }
 
-  @media (min-height: 541px) and (max-width: 767px) {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 7;
-    height: 2rem*7;
-  }
+  // @media (min-height: 541px) and (max-width: 767px) {
+  //   overflow: hidden;
+  //   text-overflow: ellipsis;
+  //   display: -webkit-box;
+  //   -webkit-box-orient: vertical;
+  //   -webkit-line-clamp: 7;
+  //   height: 2rem*7;
+  // }
 }
 .hero__main-slider-item-link {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  margin-bottom: 4rem;
 
   @include breakpoint (mobile) {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    margin-bottom: 2rem;
   }
 }
 .hero__thumbs-slider {
@@ -963,4 +970,33 @@ body {
   .breadcrumbs__item:last-child & {
     display: none;
   }
+}
+.page-header__description-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  @include breakpoint(mobile) {
+    display: block;
+  }
+}
+.page-header__description-text {
+  max-width: 67rem;
+  margin-top: 1rem;
+  font-family: var(--nunito);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2rem;
+  line-height: 130%;
+  color: var(--white);
+
+  @include breakpoint(mobile) {
+    max-width: 32rem;
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+    line-height: 125%;
+  }
+}
+.page-header__description-link-container {
+  margin-left: auto;
 }

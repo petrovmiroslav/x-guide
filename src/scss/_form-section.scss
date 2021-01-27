@@ -102,11 +102,16 @@
   @include breakpoint(mobile) {
     padding: 2.4rem 2.4rem 3.4rem;
   }
+
+  .js-success & {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
-.form--hidden {
-  opacity: 0;
-  visibility: hidden;
-}
+// .form--hidden {
+//   opacity: 0;
+//   visibility: hidden;
+// }
 .form-section__form-heading {
   padding-bottom: 1rem;
   font-family: var(--jost);
@@ -373,13 +378,19 @@ textarea.form-section__form-input {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-
-  transition: 0.35s ease-in-out;
-}
-.form-modal--hidden {
   opacity: 0;
   visibility: hidden;
+  transition: 0.35s ease-in-out;
+
+  .js-success & {
+    opacity: 1;
+    visibility: visible;
+  }
 }
+// .form-modal--hidden {
+//   opacity: 0;
+//   visibility: hidden;
+// }
 .form-section__form-modal-header {
   font-family: var(--jost);
   font-style: italic;

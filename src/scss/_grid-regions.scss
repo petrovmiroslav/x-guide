@@ -185,3 +185,7 @@
     transform: none !important;
   }
 }
+.grid-regions__tabs-nav .tours-slider__nav-link.active {
+  background-color: var(--gray-blue);
+  color: var(--blue);
+}
