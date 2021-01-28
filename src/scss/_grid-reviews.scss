@@ -18,7 +18,6 @@
   position: relative;
   background-color: var(--gray-blue);
   border-radius: 10px;
-  overflow: hidden;
 
   @include breakpoint(mobile) {
     margin-top: 2rem;
@@ -46,6 +45,14 @@
   @include breakpoint (mobile) {
     width: 100%;
   }
+}
+.grid-catalog__form-bg-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
 }
 .grid-catalog__form-bg {
   width: 52%;
