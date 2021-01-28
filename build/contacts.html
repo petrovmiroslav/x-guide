@@ -268,8 +268,11 @@
             </ul>
           </div>
         </div>
+    
+        <div id="map" class="contacts__map"></div>
       </div>
-    </section>    <section class="form-section">
+      </script>
+    </section>    <section class="requisites-section">
       <picture>
         <source type="image/webp" media="(min-width: 768px)" srcset="./img/form-section-bg-crop.webp">
         <source media="(max-width: 767px)" srcset="./img/form-section-bg-crop-768.png">
@@ -278,59 +281,15 @@
       <div class="container form-section__container">
         <div class="form-section__form-row">
           <div class="form-section__form-col">
-            <h3 class="form-section__header">Отправляйтесь
-     в путешествие
-     с нами</h3>
-            <p class="form-section__header-description">Оставьте ваши контактные данные, и&nbsp;мы ответим на все ваши вопросы и&nbsp;расскажем о подробностях туров
+            <h3 class="form-section__header">Реквизиты компании</h3>
+            <p class="form-section__header-description">
+            ООО “ИКС ГИД”<br>
+            ОГРН: 1151690048036 <br>
+            ИНН: 1661045080
             </p>
           </div>
           <div class="form-section__form-col">
-            <div class="form-section__form-content js-submit-message">
-              <div class="form-section__form-bg">
-                <img class="form-section__form-bg-img" src="./img/bg-shape.png" alt="bg-shape">
-              </div>
-              <form action="/" method="POST" class="form-section__form" data-need-validation="">
-                <h2 class="form-section__form-heading">Заявка на подбор тура</h2>
-                <div class="form-section__form-group">
-                  <input id="phone-number-input" type="tel" class="form-section__form-input js-phone-input" name="phone" placeholder="Телефон" data-parsley-phone required>
-                  <label for="phone-number-input" class="form-section__form-label">
-                    <span class="form-section__form-label-text">Телефон</span>
-                  </label>
-                </div>
     
-                <div class="form-section__form-group">
-                  <textarea id="tour-wishes-input" class="form-section__form-input" name="wishes" placeholder="Пожелания к туру"></textarea>
-                  <label for="tour-wishes-input" class="form-section__form-label">
-                    <span class="form-section__form-label-text">Пожелания к туру</span>
-                  </label>
-                </div>
-    
-                <div class="form-section__form-group">
-                  <label for="policy" class="form-section__form-checkbox">
-                    <input id="policy" type="checkbox" name="policy" class="form-section__form-checkbox-input" checked required>
-                    <span class="form-section__form-checkbox-mark">
-                    </span>
-                    <div class="form-section__form-checkbox-text">
-                      Даю согласие на обработку персональных данных
-                    </div>
-                  </label>
-                </div>
-    
-                <div class="form-section__form-group">
-                  <button type="submit" class="link--button form-section__submit">
-                    <span class="link--button__text link--button__text--bg">Отправить</span>
-                    <span class="link--button__text link--button__text--for">Отправить</span>
-                  </button>
-                </div>
-              </form>
-    
-              <div class="form-section__form-modal form-modal--hidden">
-                <h3 class="form-section__form-modal-header">Спасибо! Ваша заявка отправлена!
-                </h3>
-                <p class="form-section__form-modal-text">Наши специалисты свяжутся с Вами после обработки заявки
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -414,11 +373,11 @@
         </div>
       </div>
     </div>
-  </footer>
+  </footer>  <script src="https://api-maps.yandex.ru/2.1/?apikey=87e1a4bf-b96c-4bd1-a387-9213a09a0518&lang=ru_RU" type="text/javascript"></script>
         
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://www.youtube.com/iframe_api"></script>
+    
     <script src="js/app.js"></script>
     <script src="assets/js/submit-form.js"></script>
 </body>

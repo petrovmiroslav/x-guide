@@ -19,6 +19,7 @@ import PhoneMask from './phoneMask';
 import Validation from './validation';
 import VideoModal from './video-modal';
 import TourInfo from './tour-info';
+import Map from './map';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -42,6 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
     Validation();
     VideoModal();
     TourInfo();
+    Map();
 });
 
 window.addEventListener('load', function() {
