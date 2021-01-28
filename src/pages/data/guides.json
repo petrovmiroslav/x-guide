@@ -1,7 +1,7 @@
 {
   "title": "X-Guide - Регионы",
   "Header": {
-    "header": "Регионы",
+    "header": "Гиды",
     "breadcrumbs": [
       { "text": "Главная",
         "href": "/" },
@@ -10,25 +10,25 @@
     ],
     "hero-img-src": "./img/hero__bg2.jpg"
   },
-  "Grid-regions": {
+  "Grid-guides": {
     "tabs-nav": ["Все", "Восхождения", "Походы", "Скитур и фрирайд", "Скалолазание", "Кайт бординг", "Дайвинг", "Парапланеризм", "Спелеология"],
     "tabs-items": [
-      { "header": "Крым",
-        "bg-src": "./img/regions__item-bg-1.jpg" },
-      { "header": "Байкал",
-        "bg-src": "./img/regions__item-bg-2.jpg" },
-      { "header": "Кавказ",
-        "bg-src": "./img/regions__item-bg-3.jpg" },
-      { "header": "Кавказ",
-        "bg-src": "./img/regions__item-bg-1.jpg" },
-      { "header": "Крым",
-        "bg-src": "./img/regions__item-bg-2.jpg" },
-      { "header": "Байкал",
-        "bg-src": "./img/regions__item-bg-3.jpg" },
-      { "header": "Крым",
-        "bg-src": "./img/regions__item-bg-1.jpg" },
-      { "header": "Байкал",
-        "bg-src": "./img/regions__item-bg-2.jpg" }]
+      { "header": "Зубко максим",
+        "bg-src": "./img/grid-guides-1.jpg" },
+      { "header": "Халиуллин Ильдар",
+        "bg-src": "./img/grid-guides-2.jpg" },
+      { "header": "Халиуллин Ильдар",
+        "bg-src": "./img/grid-guides-3.jpg" },
+      { "header": "Халиуллин Ильдар",
+        "bg-src": "./img/grid-guides-2.jpg" },
+      { "header": "Халиуллин Ильдар",
+        "bg-src": "./img/grid-guides-1.jpg" },
+      { "header": "Халиуллин Ильдар",
+        "bg-src": "./img/grid-guides-3.jpg" },
+      { "header": "Халиуллин Ильдар",
+        "bg-src": "./img/grid-guides-1.jpg" },
+      { "header": "Халиуллин Ильдар",
+        "bg-src": "./img/grid-guides-3.jpg" }]
   },
   "form-section-header": "Отправляйтесь\n в путешествие\n с нами",
   "form-header": "Заявка на подбор тура"

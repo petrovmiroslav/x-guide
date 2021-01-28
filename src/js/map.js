@@ -1,4 +1,8 @@
 export default function Map () {
+  let ymaps = ymaps;
+  if (!ymaps)
+    return;
+
   ymaps.ready(init);
 
   function init () {
