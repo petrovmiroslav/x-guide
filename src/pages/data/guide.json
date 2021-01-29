@@ -1,0 +1,17 @@
+{
+  "title": "X-Guide - Ильдар Халиуллин",
+  "Header": {
+    "header": "Гиды",
+    "breadcrumbs": [
+      { "text": "Главная",
+        "href": "/" },
+      { "text": "Гиды",
+        "href": "/guides.html" },
+      { "text": "Ильдар Халиуллин",
+        "href": "/guide.html" }
+    ],
+    "hero-img-src": "./img/header--gudes__item-1--2x.jpg"
+  },
+  "form-section-header": "Отправляйтесь\n в путешествие\n с нами",
+  "form-header": "Заявка на подбор тура"
+}

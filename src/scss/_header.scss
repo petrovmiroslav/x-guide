@@ -638,6 +638,10 @@ body {
     padding-bottom: 6rem;
   }
 
+  .page-header--guide & {
+    padding-bottom: 9rem;
+  }
+
   @include breakpoint(mobile) {
     padding-bottom: 4rem;
 
@@ -654,6 +658,13 @@ body {
       padding-bottom: 3rem;
     }
   }
+}
+.hero__content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex: 1 0 auto;
 }
 .hero__main-slider {
   flex: 1;
