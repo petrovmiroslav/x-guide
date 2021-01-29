@@ -66,6 +66,10 @@
     left: 0;
     border-radius: 50%;
     background-color: var(--blue);
+
+    @include breakpoint(mobile) {
+      top: calc((2.2rem - 6px) / 2);
+    }
   }
 
   span {

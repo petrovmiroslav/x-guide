@@ -1,6 +1,5 @@
 export default function Map () {
-  let ymaps = ymaps;
-  if (!ymaps)
+  if (!window.ymaps)
     return;
 
   ymaps.ready(init);
