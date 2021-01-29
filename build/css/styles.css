@@ -3075,13 +3075,19 @@ body {
 
 .page-header__description-text {
   max-width: 67rem;
+  max-height: calc(2.6rem * 4);
   margin-top: 1rem;
   font-family: var(--nunito);
   font-style: normal;
   font-weight: normal;
   font-size: 2rem;
-  line-height: 130%;
-  color: var(--white); }
+  line-height: 2.6rem;
+  color: var(--white);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4; }
   @media only screen and (max-width: 767px) {
     .page-header__description-text {
       max-width: 32rem;
@@ -5572,8 +5578,8 @@ body {
   padding: 1rem 2rem;
   display: inline-block;
   border-radius: 1rem;
-  -webkit-transition: 0.25s ease-in-out;
-  transition: 0.25s ease-in-out;
+  -webkit-transition: 0.15s ease-in-out;
+  transition: 0.15s ease-in-out;
   -webkit-transition-property: opacity, color, background-color;
   transition-property: opacity, color, background-color;
   font-family: var(--nunito);
@@ -5583,6 +5589,9 @@ body {
   line-height: 122%;
   opacity: 0.7; }
   .tours-slider__nav-link:link {
+    color: var(--blue); }
+  .tours-slider__nav-link:hover {
+    background-color: var(--gray-blue);
     color: var(--blue); }
   .tours-slider__nav-link.active {
     background-color: var(--blue);

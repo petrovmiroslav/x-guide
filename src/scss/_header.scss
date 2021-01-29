@@ -1026,13 +1026,19 @@ body {
 }
 .page-header__description-text {
   max-width: 67rem;
+  max-height: calc(2.6rem * 4);
   margin-top: 1rem;
   font-family: var(--nunito);
   font-style: normal;
   font-weight: normal;
   font-size: 2rem;
-  line-height: 130%;
+  line-height: 2.6rem;
   color: var(--white);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
 
   @include breakpoint(mobile) {
     max-width: 32rem;
