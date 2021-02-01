@@ -685,7 +685,7 @@ body {
     max-width: 85rem;
   }
   .page-header--guides & {
-    max-width: unset;
+    max-width: 85rem;
     margin-bottom: 0;
   }
 
@@ -700,6 +700,7 @@ body {
   }
 }
 .hero__main-slider-item-category-header {
+  max-width: 66.8rem;
   margin-bottom: 3rem;
   font-family: var(--jost);
   font-style: italic;
@@ -710,6 +711,7 @@ body {
   color: var(--white);
 
   @include breakpoint (mobile) {
+    max-width: 100%;
     margin-bottom: 0;
     font-size: 2.4rem;
   }

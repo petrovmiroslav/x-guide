@@ -10,7 +10,6 @@
   @include breakpoint(mobile) {
     display: block;
     padding-top: 4rem;
-    padding-bottom: 3rem;
   }
 }
 .guide-description__block {
@@ -206,6 +205,7 @@
   }
 }
 .guide-description__credo-quote-border-bottom {
+  width: calc(100% + 2px);
   position: absolute;
   top: 100%;
   left: -1px;
@@ -224,5 +224,34 @@
     width: 7rem;
     height: 3.5rem;
     transform: translate(-38%, -18%);
+  }
+}
+
+.tours-of-guide {
+  background-color: var(--gray-blue);
+}
+.tours-of-guide__container {
+  padding-top: 10rem;
+  padding-bottom: 12rem;
+
+  @include breakpoint(mobile) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+.tours-of-guide__header {
+  margin-bottom: 3rem;
+  font-family: var(--jost);
+  font-style: italic;
+  font-weight: 900;
+  font-size: 4.5rem;
+  line-height: 6.5rem;
+  text-transform: uppercase;
+  color: var(--primary-color);
+
+  @include breakpoint(mobile) {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    line-height: 140%;
   }
 }

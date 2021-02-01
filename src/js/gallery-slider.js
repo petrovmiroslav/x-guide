@@ -27,10 +27,13 @@ function checkDeviceWidth () {
   if (itIsMobile === newItIsMobile) return;
 
   itIsMobile = newItIsMobile;
-  
+
   destroyAllSwipers();
 
-  window.setTimeout(createAllSwipers,2000);
+  //window.setTimeout(createAllSwipers,0);
+  window.requestAnimationFrame(()=>{
+    window.requestAnimationFrame(createAllSwipers);
+  });
 }
 
 function destroyAllSwipers () {
@@ -43,7 +46,7 @@ function destroyAllSwipers () {
 function createAllSwipers () {
   if (!itIsMobile) 
     return;
-
+    console.log(Date.now());
   elements.forEach(element => {
     const container = element.querySelector('.swiper-container');
 
