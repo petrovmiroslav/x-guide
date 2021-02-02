@@ -72,10 +72,11 @@ export default function VideoModal () {
     Modal.classList.remove('play');
   }
   
+
   function onYouTubeIframeAPIReady () {
     console.log('onYouTubeIframeAPIReady');
     Player = new YT.Player('player', {
-      videoId: 'XfjS6_xO0uI',
+      // videoId: 'XfjS6_xO0uI',
       playerVars: {
         'autoplay': 0,
         'modestbranding': 1,
@@ -83,6 +84,10 @@ export default function VideoModal () {
         'showinfo': 0,
       },
     });
+  }
+
+  if (!Player && typeof YT !== 'undefined' && typeof YT.Player === 'function') {
+    return onYouTubeIframeAPIReady();
   }
   window.onYouTubeIframeAPIReady = onYouTubeIframeAPIReady;
 }

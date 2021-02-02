@@ -1,0 +1,15 @@
+{
+  "title": "X-Guide - Ответы на вопросы",
+  "Header": {
+    "header": "Гиды",
+    "breadcrumbs": [
+      { "text": "Главная",
+        "href": "/" },
+      { "text": "Ответы на вопросы",
+        "href": "/questions.html" }
+    ],
+    "hero-img-src": "./img/header--gudes__item-1--2x.jpg"
+  },
+  "form-section-header": "Отправляйтесь\n в путешествие\n с нами",
+  "form-header": "Заявка на подбор тура"
+}
