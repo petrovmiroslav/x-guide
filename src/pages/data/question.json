@@ -1,7 +1,6 @@
 {
   "title": "X-Guide - Ответы на вопросы",
   "Header": {
-    "header": "Гиды",
     "breadcrumbs": [
       { "text": "Главная",
         "href": "/" },
@@ -9,8 +8,7 @@
         "href": "/questions.html" },
       { "text": "Я новичок, с чего начать?",
         "href": "/question.html" }
-    ],
-    "hero-img-src": "./img/header--gudes__item-1--2x.jpg"
+    ]
   },
   "form-section-header": "Не нашли ответ \nна свой вопрос?",
   "form-header": "Задайте свой вопрос"

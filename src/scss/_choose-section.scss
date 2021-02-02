@@ -1,0 +1,126 @@
+.choose-section__container {
+
+}
+.choose-section__top-row {
+  display: flex;
+  align-items: center;
+}
+.choose-section__header {
+  font-family: var(--jost);
+  font-style: italic;
+  font-weight: 900;
+  font-size: 2rem;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: var(--primary-color);
+}
+.choose-section__right-column {
+  display: flex;
+  margin-left: 4rem;
+  flex: 1 0 auto;
+}
+.choose-section__selected-tag {
+  padding: 1rem 2rem;
+  background-color: var(--gray-blue);
+  border-radius: 1rem;
+  font-family: var(--nunito);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  text-transform: uppercase;
+  color: var(--primary-color);
+
+  span {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+.choose-section__selected-tag-link {
+  display: inline-block;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-left: 2.6rem;
+  position: relative;
+  vertical-align: middle;
+  opacity: 0.6;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &::before,
+  &::after {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: var(--primary-color);
+    transform: rotate(-45deg);
+  }
+  &::after {
+    transform: rotate(45deg);
+  }
+}
+.choose-section__button {
+  margin-left: auto;
+  padding: 1rem 2rem;
+  background-color: rgba($color: #295F98, $alpha: 0.05);
+  border-radius: 1rem;
+  font-family: var(--nunito);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: var(--blue);
+
+  &:hover {
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 1;
+  }
+
+  span {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+.choose-section__button-icon {
+  display: inline-block;
+  width: 1.2rem;
+  height: 0.6rem;
+  margin-left: 4.6rem;
+  vertical-align: middle;
+  fill: var(--blue);
+  transition: transform 0.25s ease-in-out;
+
+  .js-accordion-item.active & {
+    transform: rotate(180deg);
+  }
+}
+.choose-section__accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .4s ease-in-out;
+}
+.choose-section__tags-list {
+  margin-top: 4rem;
+  columns: 5;
+}
+.choose-section__tag {
+  margin-bottom: 2rem;
+  font-family: var(--nunito);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  color: var(--blue);
+}
+.choose-section__number-label {
+  opacity: 0.5;
+}

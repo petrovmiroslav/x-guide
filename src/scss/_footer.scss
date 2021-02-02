@@ -58,7 +58,8 @@
 .nav-links {
   color: var(--white);
 
-  .page-header--mini & {
+  .page-header--mini &,
+  .header--questions & {
     color: var(--primary-color);
   }
 
@@ -95,7 +96,8 @@
   margin-left: auto;
   color: var(--white);
 
-  .page-header--mini & {
+  .page-header--mini &,
+  .header--questions & {
     color: var(--primary-color);
   }
 
@@ -120,7 +122,8 @@
   border-radius: 7rem;
   white-space: nowrap;
 
-  .page-header--mini & {
+  .page-header--mini &,
+  .header--questions & {
     border: 1px solid rgba($color: #12214D, $alpha: 0.5);
   }
 
