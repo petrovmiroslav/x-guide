@@ -642,6 +642,11 @@ body {
     padding-bottom: 9rem;
   }
 
+  .header--question & {
+    padding-top: 4rem;
+    padding-bottom: 0rem;
+  }
+
   @include breakpoint(mobile) {
     padding-bottom: 4rem;
 
@@ -656,6 +661,11 @@ body {
     .page-header--reviews &,
     .page-header--guides & {
       padding-bottom: 3rem;
+    }
+
+    .header--question & {
+      padding-top: 0;
+      padding-bottom: 4rem;
     }
   }
 }
@@ -987,6 +997,10 @@ body {
   @include breakpoint(mobile) {
     display: none;
   }
+
+  .header--question & {
+    color: var(--gray);
+  }
 }
 .breadcrumbs__item {
   display: inline-block;
@@ -1003,6 +1017,10 @@ body {
 
   .breadcrumbs__item:first-child & {
     box-shadow: inset 0px -1px 0px var(--white);
+
+    .header--question & {
+      box-shadow: inset 0px -1px 0px var(--gray);
+    }
   }
 }
 .breadcrumbs__icon {
@@ -1015,6 +1033,10 @@ body {
 
   .breadcrumbs__item:last-child & {
     display: none;
+  }
+
+  .header--question & {
+    fill: var(--gray);
   }
 }
 .page-header__description-container {
